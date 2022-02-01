@@ -12,8 +12,21 @@ export const theme = createTheme({
     },
   },
   typography: {
+    fontFamily: 'Open Sans',
+
+    h2: {},
     title: {
-      lineHeight: 1.3,
+      lineHeight: 1,
+      fontSize: '2rem',
+      fontWeight: 700,
+      letterSpacing: '0.05em',
+    },
+    body1: {
+      lineHeight: 1.13,
+      fontSize: '1.3rem',
+      fontWeight: 400,
+      letterSpacing: '0.05em',
+      fontFamily: 'Open Sans',
     },
   },
 
@@ -29,7 +42,14 @@ export const theme = createTheme({
         },
       },
     },
+
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          wordBreak: 'break-word',
+          wordWrap: 'break-word',
+        },
+      },
+    },
   },
 });
-
-// export default theme

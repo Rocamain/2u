@@ -8,11 +8,9 @@ const NavBar = styled(Box)(() => ({
   justifyContent: 'space-between',
   width: '90%',
   background: 'secondary',
-  height: '5em',
+  height: '4em',
   alignItems: 'center',
-
   margin: '0 auto',
-  marginBottom: '30px',
 }));
 
 export default function Header() {
