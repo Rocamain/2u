@@ -1,5 +1,4 @@
-import React from 'react';
-import Carousel from '../components/accesories/Carousel';
+import Carousel from '../components/accessories/Carousel';
 
 export default function Main() {
   return (

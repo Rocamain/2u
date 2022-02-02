@@ -51,5 +51,19 @@ export const theme = createTheme({
         },
       },
     },
+    MuiMobileStepper: {
+      styleOverrides: {
+        root: {
+          border: 'none',
+          background: 'none',
+          color: '#75C9CC',
+          contrastText: '#fff',
+          '&:hover': {},
+        },
+        dotActive: {
+          background: 'white',
+        },
+      },
+    },
   },
 });

@@ -4,19 +4,19 @@
       "title": "Discover our promotions",
       "content": "Now beforehand before everybody all the promotions of our treatments and products.",
       "button": "Learn More",
-      "id": "1"
+      "id": 1
+    },
+    {
+      "title": "the best products ",
+      "content": "Now beforehand before everybody all the promotions of our treatments and products.",
+      "button": "Learn More",
+      "id": 2
     },
     {
       "title": "Discover our promotions",
       "content": "Now beforehand before everybody all the promotions of our treatments and products.",
       "button": "Learn More",
-      "id": "2"
-    },
-    {
-      "title": "Discover our promotions",
-      "content": "Now beforehand before everybody all the promotions of our treatments and products.",
-      "button": "Learn More",
-      "id": "3"
+      "id": 3
     }
   ]
 }
