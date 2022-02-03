@@ -2,12 +2,11 @@ import { makeStyles } from '@mui/styles';
 
 const useSlideAnimation = makeStyles((theme) => ({
   animatedItem: {
-    animation: `$myEffect 3000ms ${theme.transitions.easing.easeInOut}`,
+    animation: `$myEffect 2000ms ${theme.transitions.easing.easeInOut}`,
   },
   animatedItemExiting: {
-    animation: `$myEffectExit 1000ms ${theme.transitions.easing.easeInOut}`,
-    opacity: 0.5,
-    display: 'none',
+    animation: `$myEffectExit 500ms ${theme.transitions.easing.easeInOut}`,
+    opacity: 0,
   },
   '@keyframes myEffect': {
     '0%': {

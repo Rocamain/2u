@@ -15,15 +15,11 @@ export default function StyledCard(props) {
   let classes = useCardStyles();
   let animationStyles = useSlideAnimation();
 
-  const { animation, cardInfo, exit } = props;
+  const { cardInfo, exit } = props;
 
-  if (animation) {
-    classes = `${clsx(animationStyles.animatedItem, {
-      [animationStyles.animatedItemExiting]: exit,
-    })} ${classes.card}`;
-  } else {
-    classes = `{${classes.card} ${classes.hidden}`;
-  }
+  classes = `${clsx(animationStyles.animatedItem, {
+    [animationStyles.animatedItemExiting]: exit,
+  })} ${classes.card}`;
 
   return (
     <Card key={'index'} className={classes} elevation={8}>

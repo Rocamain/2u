@@ -7,7 +7,9 @@ import useCardStyles from '../../hooks/styles/useCardStyles';
 
 export default function Carousel() {
   const [cards, setCards] = useState(null);
-  const [slide, setSlide] = useState(1);
+  const [slide, setSlide] = useState(0);
+  const [exit, setExit] = useState(false);
+
   const classes = useCardStyles();
 
   useEffect(() => {
@@ -21,12 +23,15 @@ export default function Carousel() {
       });
   }, []);
 
-  const handleNext = () => {
-    setSlide((prev) => prev - 1);
-  };
+  const handleSlider = (event) => {
+    const increment = event.target === 'next' ? +1 : -1;
+    const newIndex = (slide + increment + cards.length) % cards.length;
+    setExit(true);
 
-  const handleBack = () => {
-    setSlide((prev) => prev + 1);
+    setTimeout(() => {
+      setSlide(newIndex);
+      setExit(false);
+    }, 500);
   };
 
   return (
@@ -34,46 +39,28 @@ export default function Carousel() {
       <Box alt="sea water on the background" className={classes.carousel}>
         <Box className={classes.slideContainer}>
           <Box className={classes.slideShowWrapper}>
-            <Button
-              size="small"
-              onClick={handleNext}
-              // disabled={activeCard === 5}
-              sx={{ color: 'white' }}
-            >
+            <Button size="small" onClick={handleSlider}>
               <KeyboardArrowLeft
+                name="back"
+                className="back"
                 fontSize="large"
                 sx={{
                   color: 'white',
-                  position: 'relative',
-                  bottom: '50%',
                 }}
               />
             </Button>
 
-            {cards.map((card) =>
-              card.id === slide ? (
-                <Card
-                  key={card.id}
-                  animation={true}
-                  cardInfo={card}
-                  exit={false}
-                />
-              ) : (
-                <Card
-                  key={card.id}
-                  animation={true}
-                  cardInfo={card}
-                  exit={true}
-                />
-              )
-            )}
+            <Card
+              key={1}
+              animation={true}
+              cardInfo={cards[slide]}
+              exit={exit}
+            />
 
-            <Button
-              size="large"
-              onClick={handleBack}
-              // disabled={activeCard === 0}
-            >
+            <Button size="large" onClick={handleSlider}>
               <KeyboardArrowRight
+                className="next"
+                name="next"
                 fontSize="large"
                 sx={{
                   color: 'white',
@@ -81,7 +68,7 @@ export default function Carousel() {
               />
             </Button>
           </Box>
-          <Stepper steps={cards.length} activeStep={slide - 1} />
+          <Stepper steps={cards.length} activeStep={slide} />
         </Box>
       </Box>
     )
