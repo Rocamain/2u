@@ -1,42 +1,82 @@
-import { useState, useEffect } from 'react';
+import { styled } from '@mui/material/styles';
+import clsx from 'clsx';
+import useCardStyles from '../../hooks/styles/useCardStyles';
+import useSlideAnimation from '../../hooks/styles/useSlideAnimation';
+
 import {
   Card,
   CardHeader,
   CardActions,
   CardContent,
   Typography,
+  IconButton,
 } from '@mui/material';
+
 import StyledButton from './Button';
-import clsx from 'clsx';
 
-import useCardStyles from '../../hooks/styles/useCardStyles';
-import useSlideAnimation from '../../hooks/styles/useSlideAnimation';
 export default function StyledCard(props) {
-  let classes = useCardStyles();
+  const { cardInfo, exit, carousel, icon, first } = props;
+  let iconURL = null;
+  if (icon) {
+    let path = icon.replaceAll(' ', '_');
+    console.log(first, icon);
+    iconURL = require(`../../static/images/${path}.png`);
+  }
+
+  // Styles
+  let { carouselContent, carouselTitle, card, cardFirst } = useCardStyles();
   let animationStyles = useSlideAnimation();
-
-  const { cardInfo, exit } = props;
-
-  classes = `${clsx(animationStyles.animatedItem, {
+  // animated card styles. thnx clx that allow to check if executes the exit animation of the card
+  let animatedCard = `${clsx(animationStyles.animatedItem, {
     [animationStyles.animatedItemExiting]: exit,
-  })} ${classes.card}`;
+  })} ${card}`;
+
+  const StyledIconButton = styled(IconButton)(({ theme }) => ({
+    width: '5em',
+    height: '5em',
+    margin: '0 auto',
+    borderRadius: '0',
+    backgroundSize: 'cover',
+  }));
 
   return (
-    <Card key={'index'} className={classes} elevation={8}>
+    <Card
+      key={'index'}
+      className={
+        (carousel ? animatedCard : card) &&
+        (first ? `${cardFirst} ${card}` : card)
+      }
+      elevation={8}
+    >
       <CardHeader
         title={
-          <Typography variant="title" component="h2" align="center">
+          <Typography
+            {...(carousel
+              ? { className: carouselTitle }
+              : { variant: 'title' })}
+            component="h2"
+            align="center"
+          >
             {cardInfo.title}
           </Typography>
         }
       />
-      <CardContent variant="body1" sx={{ pb: '0.5em' }}>
-        <Typography>{cardInfo.content}</Typography>
+      {icon && <StyledIconButton sx={{ backgroundImage: `url(${iconURL})` }} />}
+      <CardContent sx={{ pb: '0.5em' }}>
+        <Typography
+          {...(carousel
+            ? { className: carouselContent }
+            : { variant: 'body1' })}
+        >
+          {cardInfo.content}
+        </Typography>
       </CardContent>
 
-      <CardActions sx={{ py: '1em' }}>
-        <StyledButton activeCard={{ button: cardInfo.button }} />
-      </CardActions>
+      {carousel && (
+        <CardActions sx={{ py: '1em' }}>
+          <StyledButton content={cardInfo.button} />
+        </CardActions>
+      )}
     </Card>
   );
 }

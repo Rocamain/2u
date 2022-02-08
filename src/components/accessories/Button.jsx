@@ -1,16 +1,16 @@
 import React from 'react';
 import { Button } from '@mui/material';
 
-export default function StyledButton({ activeCard }) {
+export default function StyledButton({ content }) {
   return (
     <>
       <Button
         size="small"
         variant="contained"
-        sx={{ fontWeight: 'bold' }}
+        sx={{ fontWeight: 'semi-bold', letterSpacing: '0.15rem' }}
         disableRipple
       >
-        {activeCard.button}
+        {content}
       </Button>
     </>
   );

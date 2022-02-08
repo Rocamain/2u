@@ -10,23 +10,43 @@ export const theme = createTheme({
       main: '#fff',
       contrastText: '#75C9CC',
     },
+    text: {
+      primary: 'rgba(51,51,51,0.8)',
+    },
   },
-  typography: {
-    fontFamily: 'Open Sans',
 
-    h2: {},
+  typography: {
+    fontFamily: ['Abel', 'Open Sans'].join(','),
+    h1: {
+      fontFamily: ['Abel', 'Open Sans'].join(','),
+    },
+    h2: {
+      fontFamily: ['Abel', 'Open Sans'].join(','),
+    },
+    h3: {
+      fontFamily: ['Abel', 'Open Sans'].join(','),
+    },
+    h4: {
+      fontFamily: ['Abel', 'Open Sans'].join(','),
+    },
+    p: {
+      fontFamily: ['Abel', 'Open Sans'].join(','),
+    },
     title: {
       lineHeight: 1,
-      fontSize: '2rem',
-      fontWeight: 700,
-      letterSpacing: '0.05em',
+      fontSize: '1.5rem',
+      fontWeight: 500,
+      letterSpacing: '0.02rem',
+      fontFamily: 'Abel',
+      marginBottom: '1.3em',
     },
+
     body1: {
-      lineHeight: 1.13,
-      fontSize: '1.3rem',
+      lineHeight: '1.4rem',
+      fontSize: '1rem',
       fontWeight: 400,
-      letterSpacing: '0.05em',
-      fontFamily: 'Open Sans',
+      letterSpacing: '0.03rem',
+      // fontFamily: 'Open Sans',
     },
   },
 

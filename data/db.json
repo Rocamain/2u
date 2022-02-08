@@ -7,7 +7,7 @@
       "id": 1
     },
     {
-      "title": "the best products ",
+      "title": "the best products",
       "content": "Now beforehand before everybody all the promotions of our treatments and products.",
       "button": "Learn More",
       "id": 2
@@ -17,6 +17,32 @@
       "content": "Now beforehand before everybody all the promotions of our treatments and products.",
       "button": "Learn More",
       "id": 3
+    }
+  ],
+  "sections": [
+    {
+      "title": "Nuestros servicios",
+      "content1": "Ofrecemos una selección de tratamientos faciales y corporales de última generación con los que conseguirás resultados y objetivos reales. Déjate asesorar por nuestras profesionales y diseñaremos un tratamiento a medida y personalizado para ti.",
+      "content2": "También somos especialistas en la belleza de tus manos y pies. Para ello contamos con la marca líder internacional CND con sus esmaltes semi-permanentes Shellac y esmaltes de larga duración Vinylux.",
+      "button": "Make Appoinment",
+      "cards": [
+        {
+          "title": "Tratamientos Corporales",
+          "content": "Disponemos de una amplia selección de tratamientos corporales para tratar la celulitis, remodelar, drenar o reafirmar tu piel en los que combinamos técnicas manuales con aparatología avanzada."
+        },
+        {
+          "title": "Manicuras y Pedicuras",
+          "content": "Trabajamos con productos innovadores y seguros como CND en sus versiones Vinylux y Shellac."
+        },
+        {
+          "title": "Tratamientos faciales",
+          "content": "Para nuestros tratamientos faciales elegimos Thalgo, cosmética 100% de origen marino que nace en las profundidades del océano."
+        },
+        {
+          "title": "Fotodepilacion",
+          "content": "Olvídate del vello con nuestro tratamiento de fotodepilación IPL, luz pulsada de alta intensidad."
+        }
+      ]
     }
   ]
 }
