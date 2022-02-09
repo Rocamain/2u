@@ -1,12 +1,11 @@
 import { useState } from 'react';
-
+import useCardStyles from '../../hooks/styles/useCardStyles';
 import useDb from '../../hooks/custom/useDb';
+
 import { Box, Button } from '@mui/material';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material/';
-
 import Card from './Card';
 import Stepper from './Stepper';
-import useCardStyles from '../../hooks/styles/useCardStyles';
 
 export default function Carousel() {
   // Hooks
@@ -43,7 +42,7 @@ export default function Carousel() {
               animation={true}
               cardInfo={cards[slide]}
               exit={exit}
-              carousel={true}
+              carousel={'true'}
             />
             <Button className={classes.slideButton} onClick={handleSlider}>
               <KeyboardArrowRight name="next" className={classes.chevron} />

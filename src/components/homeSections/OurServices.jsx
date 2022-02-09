@@ -1,6 +1,5 @@
 import { useRef } from 'react';
-import { Divider, Box, Typography, Grid, Paper } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { Divider, Box, Typography, Grid } from '@mui/material';
 
 import StyledButton from '../accessories/Button';
 import StyledCard from '../accessories/Card';
@@ -24,15 +23,6 @@ export default function Article() {
   const classes = useCardStyles();
   const theme = useTheme();
 
-  const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-    height: '100%',
-    width: '100%',
-  }));
-
   return (
     data && (
       <Box
@@ -42,21 +32,22 @@ export default function Article() {
       >
         <Grid
           container
-          rowSpacing={{ xs: 4, sm: 4, md: '0', lg: '0' }}
-          columnSpacing={{ sm: '0', md: 4 }}
+          rowSpacing={{ xs: 2, sm: 2, md: 6, lg: 7 }}
           className={classes.articlesWrapper}
           ref={overlapContainer}
           component="div"
-          sx={{ flexGrow: 1, boxShadow: 8 }}
+          sx={{
+            flexGrow: 1,
+            boxShadow: 'rgba(56, 21, 11, 0.09) 0px 50px 80px 0px',
+          }}
         >
-          <Grid item component="div" xs={12} sm={12} md={6} lg={6}>
+          <Grid item component="div" xs={12} sm={12} md={6}>
             <Typography
-              component="h3"
-              variant="title"
+              component="h2"
+              variant="h4"
               children={data[0].title}
-              sx={{
-                color: theme.palette.text.primary,
-              }}
+              className={classes.cardTitle}
+              sx={{ mb: 3 }}
             />
 
             <Divider classes={{ root: classes.divider }} />
@@ -68,10 +59,12 @@ export default function Article() {
                 color: theme.palette.text.primary,
                 marginBottom: '1em',
               }}
+              variant="body2"
             />
 
             <Typography
               component="p"
+              variant="body2"
               children={data[0].content2}
               sx={{ color: theme.palette.text.primary, marginBottom: '1em' }}
             />
@@ -84,19 +77,63 @@ export default function Article() {
             xs={12}
             sm={12}
             md={6}
-            lg={6}
-            spacing={1}
             container
+            spacing={5}
+            // rowSpacing={{ xs: 2, sm: 2, md: 6, lg: 7 }}
           >
-            {data[0].cards.map((card, index) => (
-              <Grid key={index} item xs={12} sm={6} md={6} lg={4}>
-                <StyledCard
-                  cardInfo={card}
-                  icon={card.title}
-                  {...(!index && { first: true })}
-                />
-              </Grid>
-            ))}
+            <Grid
+              item
+              component="div"
+              xs={12}
+              sm={6}
+              container
+              rowSpacing={{ xs: 3, md: 5 }}
+            >
+              {data[0].cards.map(
+                (card, index) =>
+                  index % 2 === 0 && (
+                    <Grid key={index} item>
+                      <StyledCard
+                        cardInfo={card}
+                        icon={card.title}
+                        {...(index === 0 && {
+                          cardStyles: {
+                            bgcolor: '#75C9CC',
+                            boxShadow: '0px 50px 80px 0px #75c9cc',
+                          },
+                        })}
+                      />
+                    </Grid>
+                  )
+              )}
+            </Grid>
+            <Grid
+              item
+              component="div"
+              xs={12}
+              sm={6}
+              container
+              alignContent="flex-start"
+              rowSpacing={{ xs: 3, md: 5 }}
+            >
+              {data[0].cards.map(
+                (card, index, array) =>
+                  index % 2 !== 0 && (
+                    <Grid key={index} item>
+                      <StyledCard
+                        cardInfo={card}
+                        icon={card.title}
+                        {...(index === array.length - 1 && {
+                          cardStyles: {
+                            bgcolor: 'rgb(255, 251, 245)',
+                            boxShadow: '0px 50px 80px 0px rgb(12 2 2 / 10%)',
+                          },
+                        })}
+                      />
+                    </Grid>
+                  )
+              )}
+            </Grid>
           </Grid>
         </Grid>
       </Box>

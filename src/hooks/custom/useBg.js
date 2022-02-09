@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 export default function useBg(data, overlapContainer) {
   const [height, setHeight] = useState();
   const setWrapperSize = () => {
-    let bgHeight = overlapContainer.current.scrollHeight / 16 - 10 + 'em';
+    let bgHeight = overlapContainer.current.scrollHeight / 16 - 14 + 'em';
     setHeight(bgHeight);
   };
 
