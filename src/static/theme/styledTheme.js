@@ -90,8 +90,9 @@ let theme = createTheme({
       fontWeight: '600',
       fontSize: '1.4rem',
       lineHeight: 1.05,
-      fontFamily: ['Open Sans', 'Abel'].join(','),
+      fontFamily: ['Abel', 'Open Sans'].join(','),
       letterSpacing: '0.08em',
+      color: '#8F5F45',
     },
   },
 
