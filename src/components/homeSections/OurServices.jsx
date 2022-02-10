@@ -29,6 +29,7 @@ export default function Article() {
         height={bgHeight}
         className={classes.articlesContainer}
         ref={bgContainer}
+        component={'section'}
       >
         <Grid
           container

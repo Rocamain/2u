@@ -1,10 +1,13 @@
 import Carousel from '../accessories/Carousel';
-import Article from '../homeSections/OurServices';
+import OurServices from '../homeSections/OurServices';
+import AboutUs from '../homeSections/AboutUs';
+
 export default function Main() {
   return (
     <main>
       <Carousel />
-      <Article />
+      <OurServices />
+      <AboutUs />
     </main>
   );
 }

@@ -21,7 +21,7 @@
   ],
   "sections": [
     {
-      "title": "Nuestros servicios",
+      "title": "Our services",
       "content1": "Ofrecemos una selección de tratamientos faciales y corporales de última generación con los que conseguirás resultados y objetivos reales. Déjate asesorar por nuestras profesionales y diseñaremos un tratamiento a medida y personalizado para ti.",
       "content2": "También somos especialistas en la belleza de tus manos y pies. Para ello contamos con la marca líder internacional CND con sus esmaltes semi-permanentes Shellac y esmaltes de larga duración Vinylux.",
       "button": "Make Appoinment",
@@ -43,6 +43,14 @@
           "content": "Olvídate del vello con nuestro tratamiento de fotodepilación IPL, luz pulsada de alta intensidad."
         }
       ]
+    },
+    {
+      "title": "A little bit about us",
+      "content1": "Nuestro concepto destaca por ofrecer las técnicas más vanguardistas y líderes del mercado de la mano de un gran equipo de profesionales motivadas principalmente por la pasión por su profesión.",
+      "content2": "Nuestro trabajo en equipo, constancia y dedicación están enfocados a que nuestros clientes obtengan la máxima satisfacción, objetivos y resultados.",
+      "content3": "Nuestras premisas son innovación, entusiasmo, honestidad, rigor, pasión, eficacia, todo ello enfocado a potenciar la belleza natural.",
+      "content4": "Nuestra filosofía de trabajo se basa en un correcto diagnóstico que permite diseñar un tratamiento a medida y personalizado para cada cliente lo que nos garantizará ofrecer excelentes resultados.",
+      "button": "More about us"
     }
   ]
 }
