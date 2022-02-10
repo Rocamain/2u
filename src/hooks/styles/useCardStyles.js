@@ -4,7 +4,7 @@ import image from '../../static/images/water1.jpg';
 export const useStyles = makeStyles((theme) => {
   return {
     carousel: {
-      height: '90vh',
+      height: '85vh',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',

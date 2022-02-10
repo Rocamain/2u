@@ -67,14 +67,14 @@ let theme = createTheme({
     },
     body1: {
       fontWeight: '400',
-      fontSize: '1.5rem',
+      fontSize: '1.3rem',
       lineHeight: 1.15,
       fontFamily: ['Open Sans', 'Abel'].join(','),
       letterSpacing: '0.090em',
     },
     title1: {
       fontWeight: '600',
-      fontSize: '2rem',
+      fontSize: '2.2rem',
       lineHeight: 1.05,
       fontFamily: ['Open Sans', 'Abel'].join(','),
       letterSpacing: '0.05em',

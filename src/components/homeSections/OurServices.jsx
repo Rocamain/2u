@@ -79,7 +79,6 @@ export default function Article() {
             md={6}
             container
             spacing={5}
-            // rowSpacing={{ xs: 2, sm: 2, md: 6, lg: 7 }}
           >
             <Grid
               item
@@ -100,6 +99,7 @@ export default function Article() {
                           cardStyles: {
                             bgcolor: '#75C9CC',
                             boxShadow: '0px 50px 80px 0px #75c9cc',
+                            color: '#fff',
                           },
                         })}
                       />
