@@ -1,6 +1,8 @@
 import { createTheme, responsiveFontSizes } from '@mui/material';
+let theme = createTheme();
+theme = createTheme(theme, {});
 
-let theme = createTheme({
+theme = createTheme(theme, {
   palette: {
     primary: {
       main: '#75C9CC',
@@ -29,6 +31,7 @@ let theme = createTheme({
     h1: {
       fontWeight: '300',
       fontSize: '5rem',
+
       lineHeight: 1.16,
       fontFamily: ['Abel', 'Open Sans'].join(','),
       letterSpacing: '-0.017em',
@@ -39,7 +42,6 @@ let theme = createTheme({
       lineHeight: 1.2,
       fontFamily: ['Abel', 'Open Sans'].join(','),
       letterSpacing: '-0.008em',
-      // color: '#FFFF00',
     },
     h3: {
       fontWeight: '400',
@@ -72,6 +74,24 @@ let theme = createTheme({
       fontFamily: ['Open Sans', 'Abel'].join(','),
       letterSpacing: '0.090em',
     },
+    title: {
+      fontFamily: ['Abel', 'Open Sans'].join(','),
+      fontWeight: '300',
+      color: 'rgba(51,51,51,0.8)',
+      marginBottom: '1.1em',
+      [theme.breakpoints.between('xs', 'sm')]: {
+        fontSize: '2.1rem', // 20px
+        lineHeight: '1.5rem', //  30px
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        fontSize: '2.5rem', //24px
+        lineHeight: '2rem', // 35px
+      },
+      [theme.breakpoints.up('md')]: {
+        fontSize: '4.5rem', //24px
+        lineHeight: '3.3rem', // 35px
+      },
+    },
     title1: {
       fontWeight: '600',
       fontSize: '2.2rem',
@@ -82,17 +102,27 @@ let theme = createTheme({
     body2: {
       fontWeight: '400',
       fontSize: '1rem',
-      lineHeight: 1.43,
+      color: theme.palette.text.primary,
+      lineHeight: 1.63,
       fontFamily: ['Abel', 'Open Sans'].join(','),
       letterSpacing: '0.05rem',
+      marginBottom: '0.6em',
     },
     title2: {
-      fontWeight: '600',
+      fontWeight: '400',
       fontSize: '1.4rem',
       lineHeight: 1.05,
       fontFamily: ['Abel', 'Open Sans'].join(','),
       letterSpacing: '0.08em',
       color: '#8F5F45',
+      [theme.breakpoints.between('xs', 'sm')]: {
+        fontSize: '1.45rem', // 20px
+        lineHeight: '1.9rem', //  30px
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        fontSize: '1.6rem', //24px
+        lineHeight: '2rem', // 35px
+      },
     },
   },
 

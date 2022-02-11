@@ -2,53 +2,41 @@ import { Divider, Box, Typography, Grid } from '@mui/material';
 
 import StyledButton from '../accessories/Button';
 
+import shop from '../../assets/static/images/illa.jpg';
 import useCardStyles from '../../hooks/styles/useCardStyles';
-import { useTheme } from '@mui/styles';
 import useDb from '../../hooks/custom/useDb';
 
 const AboutUs = () => {
   const data = useDb('http://localhost:8000/sections');
 
-  const classes = useCardStyles();
-  const theme = useTheme();
+  const { aboutUsSection, divider, aboutGridImg, aboutGridImgShadow } =
+    useCardStyles();
+
   return (
     data && (
-      <Box
-        // className={classes.articlesContainer}
-        // ref={bgContainer}
-        component={'section'}
-      >
+      <Box component={'section'} className={aboutUsSection}>
         <Grid
           container
-          rowSpacing={{ xs: 2, sm: 2, md: 6, lg: 7 }}
-          // className={classes.articlesWrapper}
-          // ref={overlapContainer
-
+          rowSpacing={{ xs: 2, sm: 2, md: '0' }}
+          justifyContent="flex-end"
           component="div"
           sx={{
-            flexGrow: 1,
-            width: '85%',
+            width: '85vw',
             margin: '0 auto',
           }}
         >
-          <Grid item component="div" xs={12} sm={12} md={6}>
+          <Grid item component="div" xs={12} sm={12} md={7}>
             <Typography
               component="h2"
-              variant="h4"
+              variant="title"
               children={data[1].title}
-              className={classes.cardTitle}
-              sx={{ mb: 3 }}
             />
 
-            <Divider classes={{ root: classes.divider }} />
+            <Divider classes={divider} />
 
             <Typography
               component="p"
               children={data[1].content1}
-              sx={{
-                color: theme.palette.text.primary,
-                marginBottom: '1em',
-              }}
               variant="body2"
             />
 
@@ -56,25 +44,37 @@ const AboutUs = () => {
               component="p"
               variant="body2"
               children={data[1].content2}
-              sx={{ color: theme.palette.text.primary, marginBottom: '1em' }}
             />
             <Typography
               component="p"
               variant="body2"
               children={data[1].content3}
-              sx={{ color: theme.palette.text.primary, marginBottom: '1em' }}
             />
             <Typography
               component="p"
               variant="body2"
               children={data[1].content4}
-              sx={{ color: theme.palette.text.primary, marginBottom: '1em' }}
             />
 
             <StyledButton content={data[1].button} />
           </Grid>
-          <Grid item component="div" xs={12} sm={12} md={6}>
-            <Box> Hi!!!! HI</Box>
+          <Grid
+            item
+            component="div"
+            xs={12}
+            sm={12}
+            md={5}
+            className={aboutGridImgShadow}
+          >
+            <Box
+              component="img"
+              src={shop}
+              title="shop"
+              alt="shop"
+              srcSet={`${shop} 1200w, ${shop} 980w, ${shop} 480w`}
+              sizes="(min-width: 0px) and (max-width: 480px) 85vw, (min-width: 481px) and (max-width: 980px) 95vw, (min-width: 981px) 60vw, 100vw"
+              className={aboutGridImg}
+            />
           </Grid>
         </Grid>
       </Box>

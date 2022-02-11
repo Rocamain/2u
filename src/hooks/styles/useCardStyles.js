@@ -1,5 +1,6 @@
 import { makeStyles } from '@mui/styles';
-import image from '../../static/images/water1.jpg';
+import image from '../../assets/static/images/water1.jpg';
+import backgroundImage from '../../assets/static/images/bg.jpg';
 
 export const useStyles = makeStyles((theme) => {
   return {
@@ -54,6 +55,33 @@ export const useStyles = makeStyles((theme) => {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
+      overflowX: 'visible',
+    },
+    aboutUsSection: {
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundPosition: '50%',
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat',
+      overflow: 'hidden',
+    },
+    // boxShadow: '20vw 0px 0px 0px #00bccc',
+    aboutGridImgShadow: {
+      [theme.breakpoints.up('md')]: {
+        boxShadow: '20vw 0px 0px 0px #00bccc',
+      },
+    },
+    aboutGridImg: {
+      objectFit: 'cover',
+      width: '95vw',
+      minHeight: '60%',
+      marginRight: '-10vw',
+      float: 'right',
+      boxSizing: 'border-box',
+      boxShadow: '0px 80px 100px -40px rgb(0 0 0 / 30%)',
+      marginBottom: '9em',
+      [theme.breakpoints.up('md')]: {
+        width: '110%',
+      },
     },
 
     articlesWrapper: {

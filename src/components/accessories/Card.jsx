@@ -38,7 +38,7 @@ export default function StyledCard(props) {
             <Typography
               align="center"
               variant={carousel ? 'title1' : 'title2'}
-              component="h2"
+              component="h3"
             >
               {cardInfo.title}
             </Typography>

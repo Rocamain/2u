@@ -13,7 +13,8 @@ export default function Icon(props) {
     // distance from the top to the top of the element
     let { offsetTop } = slideRef.current;
     //  20% of the viewport
-    let thirdViewPort = window.innerHeight * 0.2;
+
+    let thirdViewPort = window.screen.height * 0.2;
     // trigger point
     let triggerPoint = thirdViewPort + offsetTop;
 
@@ -27,14 +28,14 @@ export default function Icon(props) {
     if (!animate) {
       window.addEventListener('scroll', triggerAnimation);
     }
-    console.log('happpens now');
+
     return () => window.removeEventListener('scroll', triggerAnimation);
   }, [animate]);
 
   let iconURL = null;
   if (icon) {
     let path = icon.replaceAll(' ', '_');
-    iconURL = require(`../../static/images/${path}.png`);
+    iconURL = require(`../../assets/static/images/${path}.png`);
   }
   const StyledIconButton = styled(IconButton)(({ theme }) => ({
     width: '5em',
