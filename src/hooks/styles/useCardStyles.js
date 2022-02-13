@@ -64,7 +64,7 @@ export const useStyles = makeStyles((theme) => {
       backgroundRepeat: 'no-repeat',
       overflow: 'hidden',
     },
-    // boxShadow: '20vw 0px 0px 0px #00bccc',
+
     aboutGridImgShadow: {
       [theme.breakpoints.up('md')]: {
         boxShadow: '20vw 0px 0px 0px #00bccc',
@@ -91,6 +91,14 @@ export const useStyles = makeStyles((theme) => {
       margin: '0 auto',
       backgroundColor: theme.palette.background.secondary,
       padding: '1.5em',
+    },
+    wrapper: {
+      width: '85%',
+
+      margin: '0 auto',
+      backgroundColor: theme.palette.background.secondary,
+      padding: '1.5em',
+      display: 'flex',
     },
   };
 });

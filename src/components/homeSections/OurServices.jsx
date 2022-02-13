@@ -5,7 +5,6 @@ import StyledButton from '../accessories/Button';
 import StyledCard from '../accessories/Card';
 
 import useCardStyles from '../../hooks/styles/useCardStyles';
-import { useTheme } from '@mui/styles';
 import useDb from '../../hooks/custom/useDb';
 import useBg from '../../hooks/custom/useBg';
 
@@ -21,8 +20,6 @@ export default function Article() {
 
   // Styles
   const classes = useCardStyles();
-
-  const theme = useTheme();
 
   return (
     data && (

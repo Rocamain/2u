@@ -1,6 +1,7 @@
 import Carousel from '../accessories/Carousel';
 import OurServices from '../homeSections/OurServices';
 import AboutUs from '../homeSections/AboutUs';
+import DownloadApp from '../homeSections/DownloadApp';
 
 export default function Main() {
   return (
@@ -8,6 +9,7 @@ export default function Main() {
       <Carousel />
       <OurServices />
       <AboutUs />
+      <DownloadApp />
     </main>
   );
 }
