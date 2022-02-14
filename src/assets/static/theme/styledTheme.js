@@ -88,8 +88,8 @@ theme = createTheme(theme, {
         lineHeight: '2rem', // 35px
       },
       [theme.breakpoints.up('md')]: {
-        fontSize: '4.5rem', //24px
-        lineHeight: '3.3rem', // 35px
+        fontSize: '3.2rem', //24px
+        lineHeight: '2.8rem', // 35px
       },
     },
     title1: {
@@ -122,6 +122,22 @@ theme = createTheme(theme, {
       [theme.breakpoints.between('sm', 'md')]: {
         fontSize: '1.6rem', //24px
         lineHeight: '2rem', // 35px
+      },
+    },
+    subtitle: {
+      fontWeight: '400',
+      fontSize: '2.1rem',
+      lineHeight: 1.75,
+      fontFamily: ['Abel', 'Open Sans'].join(','),
+
+      color: theme.palette.text.primary,
+      [theme.breakpoints.between('xs', 'sm')]: {
+        fontSize: '1.65rem', // 20px
+        lineHeight: '1.9rem', //  30px
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        fontSize: '1.8rem', //24px
+        lineHeight: '1.7rem', // 35px
       },
     },
   },

@@ -79,8 +79,8 @@ export const useStyles = makeStyles((theme) => {
       boxSizing: 'border-box',
       boxShadow: '0px 80px 100px -40px rgb(0 0 0 / 30%)',
       marginBottom: '9em',
-      [theme.breakpoints.up('md')]: {
-        width: '110%',
+      [theme.breakpoints.up('sm')]: {
+        width: '100%',
       },
     },
 
@@ -92,13 +92,36 @@ export const useStyles = makeStyles((theme) => {
       backgroundColor: theme.palette.background.secondary,
       padding: '1.5em',
     },
-    wrapper: {
-      width: '85%',
-
+    cardBg: {
+      width: '68%',
       margin: '0 auto',
+      position: 'relative',
+      bottom: '4em',
       backgroundColor: theme.palette.background.secondary,
-      padding: '1.5em',
+
+      [theme.breakpoints.up('sm')]: {
+        width: '85%',
+      },
+    },
+    handImg: {
+      marginTop: '-12vh',
+      marginBottom: '1em',
+      width: '90%',
+
+      [theme.breakpoints.up('sm')]: {
+        width: '50%',
+        marginBottom: '0',
+      },
+    },
+    cardWrapper: {
       display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'space-evenly',
+
+      [theme.breakpoints.up('sm')]: {
+        flexWrap: 'nowrap',
+        alignItems: 'flex-end',
+      },
     },
   };
 });
