@@ -1,6 +1,7 @@
 import { makeStyles } from '@mui/styles';
 import image from '../../assets/static/images/water1.jpg';
 import backgroundImage from '../../assets/static/images/bg.jpg';
+import backgroundImage2 from '../../assets/static/images/bg2.jpg';
 
 export const useStyles = makeStyles((theme) => {
   return {
@@ -63,11 +64,17 @@ export const useStyles = makeStyles((theme) => {
       backgroundSize: 'contain',
       backgroundRepeat: 'no-repeat',
       overflow: 'hidden',
+      marginBottom: '10em',
     },
 
     aboutGridImgShadow: {
       [theme.breakpoints.up('md')]: {
         boxShadow: '20vw 0px 0px 0px #00bccc',
+
+        // width: '110%',
+        // marginRight: '50px',
+        // position:"relative",
+        // left:"-50px"
       },
     },
     aboutGridImg: {
@@ -78,9 +85,12 @@ export const useStyles = makeStyles((theme) => {
       float: 'right',
       boxSizing: 'border-box',
       boxShadow: '0px 80px 100px -40px rgb(0 0 0 / 30%)',
-      marginBottom: '9em',
+      marginBottom: '8em',
       [theme.breakpoints.up('sm')]: {
-        width: '100%',
+        width: '90%',
+      },
+      [theme.breakpoints.up('md')]: {
+        width: '110%',
       },
     },
 
@@ -102,6 +112,9 @@ export const useStyles = makeStyles((theme) => {
       [theme.breakpoints.up('sm')]: {
         width: '85%',
       },
+      [theme.breakpoints.up('sm')]: {
+        width: '65%',
+      },
     },
     handImg: {
       marginTop: '-12vh',
@@ -112,6 +125,10 @@ export const useStyles = makeStyles((theme) => {
         width: '50%',
         marginBottom: '0',
       },
+      [theme.breakpoints.up('md')]: {
+        width: '45%',
+        marginBottom: '0',
+      },
     },
     cardWrapper: {
       display: 'flex',
@@ -120,8 +137,22 @@ export const useStyles = makeStyles((theme) => {
 
       [theme.breakpoints.up('sm')]: {
         flexWrap: 'nowrap',
-        alignItems: 'flex-end',
+        alignItems: 'center',
       },
+    },
+    anyDoubtSection: {
+      backgroundImage: `url(${backgroundImage2})`,
+      backgroundSize: 'contain',
+    },
+    anyDoubtImg: {
+      maxWidth: '100%',
+    },
+    yellowCard: {
+      margin: '0 auto',
+      padding: '2.6em',
+      background: '#FFFBF5',
+      marginBottom: '3.5em',
+      boxShadow: ' 0px 45px 84px -40px rgb(0 0 0 / 30%)',
     },
   };
 });

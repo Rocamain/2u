@@ -12,7 +12,14 @@ function DownloadApp() {
 
   return (
     data && (
-      <Box component={'section'} className={articlesContainer}>
+      <Box
+        component={'section'}
+        className={articlesContainer}
+        sx={{
+          marginBottom: '6em !important',
+          marginTop: '3em !important',
+        }}
+      >
         <Box className={cardBg}>
           <Box className={cardWrapper}>
             <Box

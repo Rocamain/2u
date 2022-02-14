@@ -80,16 +80,16 @@ theme = createTheme(theme, {
       color: 'rgba(51,51,51,0.8)',
       marginBottom: '1.1em',
       [theme.breakpoints.between('xs', 'sm')]: {
-        fontSize: '2.1rem', // 20px
-        lineHeight: '1.5rem', //  30px
+        fontSize: '2.1rem',
+        lineHeight: '1.9rem',
       },
       [theme.breakpoints.between('sm', 'md')]: {
-        fontSize: '2.5rem', //24px
-        lineHeight: '2rem', // 35px
+        fontSize: '2.5rem',
+        lineHeight: '2.3rem',
       },
       [theme.breakpoints.up('md')]: {
-        fontSize: '3.2rem', //24px
-        lineHeight: '2.8rem', // 35px
+        fontSize: '3.2rem',
+        lineHeight: '2.8rem',
       },
     },
     title1: {
@@ -107,6 +107,9 @@ theme = createTheme(theme, {
       fontFamily: ['Abel', 'Open Sans'].join(','),
       letterSpacing: '0.05rem',
       marginBottom: '0.6em',
+      [theme.breakpoints.up('md')]: {
+        fontSize: '1.14rem',
+      },
     },
     title2: {
       fontWeight: '400',
@@ -116,12 +119,12 @@ theme = createTheme(theme, {
       letterSpacing: '0.08em',
       color: '#8F5F45',
       [theme.breakpoints.between('xs', 'sm')]: {
-        fontSize: '1.45rem', // 20px
-        lineHeight: '1.9rem', //  30px
+        fontSize: '1.45rem',
+        lineHeight: '1.9rem',
       },
       [theme.breakpoints.between('sm', 'md')]: {
-        fontSize: '1.6rem', //24px
-        lineHeight: '2rem', // 35px
+        fontSize: '1.6rem',
+        lineHeight: '2rem',
       },
     },
     subtitle: {
@@ -132,12 +135,12 @@ theme = createTheme(theme, {
 
       color: theme.palette.text.primary,
       [theme.breakpoints.between('xs', 'sm')]: {
-        fontSize: '1.65rem', // 20px
-        lineHeight: '1.9rem', //  30px
+        fontSize: '1.65rem',
+        lineHeight: '1.9rem',
       },
       [theme.breakpoints.between('sm', 'md')]: {
-        fontSize: '1.8rem', //24px
-        lineHeight: '1.7rem', // 35px
+        fontSize: '1.8rem',
+        lineHeight: '1.7rem',
       },
     },
   },

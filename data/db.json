@@ -56,6 +56,11 @@
       "title": "Advantages to use the app",
       "content1": "Accede a información, promociones y descuentos exclusivos para ti, además de pedir cita de manera muy intuitiva. Es fácil y rápido.",
       "button": "Download App"
+    },
+    {
+      "title": "Any doubt?",
+      "content1": "Muchas veces lo que necesitamos es que nos informen bien sobre los servicios y los tratamientos, es por ello que nos tomamos muy en serio tus consultas. Si tienes dudas estaremos encantados de ayudarte en todo lo que necesites.",
+      "button": "Ask us"
     }
   ]
 }

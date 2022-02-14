@@ -25,7 +25,7 @@ const AboutUs = () => {
             margin: '0 auto',
           }}
         >
-          <Grid item component="div" xs={12} sm={12} md={7}>
+          <Grid item component="div" xs={12} sm={12} md={6}>
             <Typography
               component="h2"
               variant="title"
@@ -63,7 +63,7 @@ const AboutUs = () => {
             component="div"
             xs={12}
             sm={12}
-            md={5}
+            md={6}
             className={aboutGridImgShadow}
           >
             <Box
