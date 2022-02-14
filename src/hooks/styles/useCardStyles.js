@@ -135,7 +135,7 @@ export const useStyles = makeStyles((theme) => {
       flexWrap: 'wrap',
       justifyContent: 'space-evenly',
 
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up('md')]: {
         flexWrap: 'nowrap',
         alignItems: 'center',
       },
@@ -143,16 +143,38 @@ export const useStyles = makeStyles((theme) => {
     anyDoubtSection: {
       backgroundImage: `url(${backgroundImage2})`,
       backgroundSize: 'contain',
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+      padding: '12.5%',
+      [theme.breakpoints.up('md')]: {
+        flexWrap: 'nowrap',
+      },
     },
     anyDoubtImg: {
-      maxWidth: '100%',
+      width: '100%',
+
+      [theme.breakpoints.up('md')]: {
+        maxWidth: '50%',
+        position: 'relative',
+      },
     },
     yellowCard: {
+      width: '100%',
       margin: '0 auto',
       padding: '2.6em',
       background: '#FFFBF5',
       marginBottom: '3.5em',
       boxShadow: ' 0px 45px 84px -40px rgb(0 0 0 / 30%)',
+      [theme.breakpoints.up('md')]: {
+        flexWrap: 'nowrap',
+        width: '130%',
+        top: '-1.9em',
+        zIndex: '100',
+        right: '5vw',
+        position: 'relative',
+      },
     },
   };
 });

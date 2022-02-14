@@ -10,16 +10,19 @@ function AnyDoubt() {
 
   return (
     data && (
-      <Box className={anyDoubtSection} align="center">
-        <Box sx={{ width: '80%', mx: 'auto' }}>
+      <Box className={anyDoubtSection} _>
+        <Box>
           <Typography
             component="h2"
             variant="title"
             children={data[3].title}
             sx={{
+              padding: ['0', '0', '1em 0'],
+              paddingRight: '1em',
               marginBottom: '0.5em',
             }}
           />
+
           <Box className={yellowCard}>
             <Divider className={divider} />
             <Typography
@@ -33,17 +36,16 @@ function AnyDoubt() {
 
             <StyledButton content={data[3].button} />
           </Box>
-
-          <Box
-            component="img"
-            src={shop}
-            title="shop"
-            alt="shop"
-            srcSet={`${shop} 1200w, ${shop} 980w, ${shop} 480w`}
-            sizes="(min-width: 0px) and (max-width: 480px) 85vw, (min-width: 481px) and (max-width: 980px) 95vw, (min-width: 981px) 60vw, 100vw"
-            className={anyDoubtImg}
-          />
         </Box>
+        <Box
+          component="img"
+          src={shop}
+          title="shop"
+          alt="shop"
+          srcSet={`${shop} 1200w, ${shop} 980w, ${shop} 480w`}
+          sizes="(min-width: 0px) and (max-width: 480px) 85vw, (min-width: 481px) and (max-width: 980px) 95vw, (min-width: 981px) 60vw, 100vw"
+          className={anyDoubtImg}
+        />
       </Box>
     )
   );

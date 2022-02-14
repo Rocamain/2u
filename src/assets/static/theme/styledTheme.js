@@ -88,8 +88,9 @@ theme = createTheme(theme, {
         lineHeight: '2.3rem',
       },
       [theme.breakpoints.up('md')]: {
-        fontSize: '3.2rem',
+        fontSize: '4.2rem',
         lineHeight: '2.8rem',
+        marginBottom: '0.5em',
       },
     },
     title1: {
