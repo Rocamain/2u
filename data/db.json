@@ -61,6 +61,22 @@
       "title": "Any doubt?",
       "content1": "Muchas veces lo que necesitamos es que nos informen bien sobre los servicios y los tratamientos, es por ello que nos tomamos muy en serio tus consultas. Si tienes dudas estaremos encantados de ayudarte en todo lo que necesites.",
       "button": "Ask us"
+    },
+    {
+      "cards": [
+        {
+          "title": "Quality Products",
+          "content": "Sólo utilizamos los mejores productos del mercado, razón que nos hace diferenciarnos de los demás."
+        },
+        {
+          "title": "Personalized treatments",
+          "content": "Nuestro trato es totalmente personalizado, queremos que tu experiencia con nosotros siempre sea la mejor."
+        },
+        {
+          "title": "Qualified personel",
+          "content": "Contamos con el mejor personal profesional, todos altamente cualificados en terapias estéticas y con amplia experiencia."
+        }
+      ]
     }
   ]
 }

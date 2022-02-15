@@ -9,7 +9,7 @@ import {
   Typography,
 } from '@mui/material';
 
-import StyledIconButton from './Icon';
+import StyledIcon from './Icon';
 import StyledButton from './Button';
 
 export default function StyledCard(props) {
@@ -32,7 +32,7 @@ export default function StyledCard(props) {
           ...cardStyles,
         }}
       >
-        {icon && <StyledIconButton icon={icon} />}
+        {icon && <StyledIcon icon={icon} />}
         <CardHeader
           title={
             <Typography

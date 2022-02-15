@@ -10,7 +10,7 @@ function AnyDoubt() {
 
   return (
     data && (
-      <Box className={anyDoubtSection} _>
+      <Box className={anyDoubtSection}>
         <Box>
           <Typography
             component="h2"

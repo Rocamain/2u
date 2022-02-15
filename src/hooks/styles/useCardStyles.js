@@ -143,11 +143,14 @@ export const useStyles = makeStyles((theme) => {
     anyDoubtSection: {
       backgroundImage: `url(${backgroundImage2})`,
       backgroundSize: 'contain',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
       display: 'flex',
       flexWrap: 'wrap',
       justifyContent: 'center',
       alignItems: 'flex-start',
-      padding: '12.5%',
+      padding: ' 0 12.5%',
+      marginBottom: '2em',
       [theme.breakpoints.up('md')]: {
         flexWrap: 'nowrap',
       },
