@@ -4,6 +4,7 @@ import AboutUs from '../homeSections/AboutUs';
 import DownloadApp from '../homeSections/DownloadApp';
 import AnyDoubt from '../homeSections/AnyDoubt';
 import Values from '../homeSections/Values';
+import Partners from '../homeSections/Partners';
 
 export default function Main() {
   return (
@@ -14,6 +15,7 @@ export default function Main() {
       <DownloadApp />
       <AnyDoubt />
       <Values />
+      <Partners />
     </main>
   );
 }

@@ -32,7 +32,7 @@ const AboutUs = () => {
               children={data[1].title}
             />
 
-            <Divider classes={divider} />
+            <Divider className={divider} />
 
             <Typography
               component="p"

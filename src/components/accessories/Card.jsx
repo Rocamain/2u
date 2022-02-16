@@ -13,7 +13,7 @@ import StyledIcon from './Icon';
 import StyledButton from './Button';
 
 export default function StyledCard(props) {
-  const { cardInfo, exit, carousel, icon, cardStyles } = props;
+  const { cardInfo, exit, carousel, iconFileName, cardStyles } = props;
 
   let animationStyles = useSlideAnimation();
 
@@ -32,7 +32,7 @@ export default function StyledCard(props) {
           ...cardStyles,
         }}
       >
-        {icon && <StyledIcon icon={icon} />}
+        {iconFileName && <StyledIcon iconFileName={iconFileName} />}
         <CardHeader
           title={
             <Typography

@@ -86,7 +86,7 @@ export default function Article() {
                     <Grid key={index} item>
                       <StyledCard
                         cardInfo={card}
-                        icon={card.title}
+                        iconFileName={card.iconFileName}
                         {...(index === 0 && {
                           cardStyles: {
                             bgcolor: '#75C9CC',
@@ -114,7 +114,7 @@ export default function Article() {
                     <Grid key={index} item>
                       <StyledCard
                         cardInfo={card}
-                        icon={card.title}
+                        iconFileName={card.iconFileName}
                         {...(index === array.length - 1 && {
                           cardStyles: {
                             bgcolor: 'rgb(255, 251, 245)',

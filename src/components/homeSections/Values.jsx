@@ -1,6 +1,4 @@
-import { useRef } from 'react';
 import useDb from '../../hooks/custom/useDb';
-import ScrollAnimation from '../accessories/ScrollAnimation';
 import { Box, Typography, Grid } from '@mui/material';
 import StyledIcon from '../accessories/Icon';
 
@@ -28,9 +26,9 @@ function Values() {
               md={3}
               sx={{ textAlign: 'center' }}
             >
-              <StyledIcon icon={card.title} />
+              <StyledIcon iconFileName={card.iconFileName} />
 
-              <Typography variant="title2" component="h4">
+              <Typography variant="title2" component="h4" sx={{ my: '1em' }}>
                 {card.title}
               </Typography>
               <Typography variant="body2" component="p">

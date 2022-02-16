@@ -27,20 +27,24 @@
       "button": "Make Appoinment",
       "cards": [
         {
-          "title": "Tratamientos Corporales",
-          "content": "Disponemos de una amplia selección de tratamientos corporales para tratar la celulitis, remodelar, drenar o reafirmar tu piel en los que combinamos técnicas manuales con aparatología avanzada."
+          "title": "Tratamientos corporales",
+          "content": "Disponemos de una amplia selección de tratamientos corporales para tratar la celulitis, remodelar, drenar o reafirmar tu piel en los que combinamos técnicas manuales con aparatología avanzada.",
+          "iconFileName": "Tratamientos_corporales.png"
         },
         {
-          "title": "Manicuras y Pedicuras",
-          "content": "Trabajamos con productos innovadores y seguros como CND en sus versiones Vinylux y Shellac."
+          "title": "Manicuras y pedicuras",
+          "content": "Trabajamos con productos innovadores y seguros como CND en sus versiones Vinylux y Shellac.",
+          "iconFileName": "Manicuras_y_pedicuras.png"
         },
         {
           "title": "Tratamientos faciales",
-          "content": "Para nuestros tratamientos faciales elegimos Thalgo, cosmética 100% de origen marino que nace en las profundidades del océano."
+          "content": "Para nuestros tratamientos faciales elegimos Thalgo, cosmética 100% de origen marino que nace en las profundidades del océano.",
+          "iconFileName": "Tratamientos_faciales.png"
         },
         {
           "title": "Fotodepilacion",
-          "content": "Olvídate del vello con nuestro tratamiento de fotodepilación IPL, luz pulsada de alta intensidad."
+          "content": "Olvídate del vello con nuestro tratamiento de fotodepilación IPL, luz pulsada de alta intensidad.",
+          "iconFileName": "Fotodepilacion.png"
         }
       ]
     },
@@ -65,16 +69,44 @@
     {
       "cards": [
         {
-          "title": "Quality Products",
-          "content": "Sólo utilizamos los mejores productos del mercado, razón que nos hace diferenciarnos de los demás."
+          "title": "Quality products",
+          "content": "Sólo utilizamos los mejores productos del mercado, razón que nos hace diferenciarnos de los demás.",
+          "iconFileName": "Quality_products.png"
         },
         {
           "title": "Personalized treatments",
-          "content": "Nuestro trato es totalmente personalizado, queremos que tu experiencia con nosotros siempre sea la mejor."
+          "content": "Nuestro trato es totalmente personalizado, queremos que tu experiencia con nosotros siempre sea la mejor.",
+          "iconFileName": "Personalized_treatments.png"
         },
         {
           "title": "Qualified personel",
-          "content": "Contamos con el mejor personal profesional, todos altamente cualificados en terapias estéticas y con amplia experiencia."
+          "content": "Contamos con el mejor personal profesional, todos altamente cualificados en terapias estéticas y con amplia experiencia.",
+          "iconFileName": "Qualified_personel.png"
+        }
+      ]
+    },
+    {
+      "cards": [
+        {
+          "content": "La marca profesional internacional líder que revoluciona el sector de la belleza de manos y pies.",
+          "iconFileName": "cbeauty.jpg"
+        },
+        {
+          "title": "lpg",
+          "content": "Después de más de 30 años de experiencia y de investigación científica LPG Endermologie ofrece una alternativa natural al 100%: estimula la actividad celular latente dentro de nuestra piel para luchar contra todas las manifestaciones antiestéticas (arrugas, flacidez de la piel, la grasa resistente localizada, la apariencia de la celulitis, y más).",
+          "iconFileName": "lpg.png",
+          "black": "estimula la actividad celular latente dentro de nuestra piel"
+        },
+        {
+          "title": "alma",
+          "content": "Alma, uno de los fabricantes líderes en la industria médica y estética que ofrece tecnologías y tratamientos de última generación basados en radiofrecuencia, fotodepilación, laser y ultrasonidos.",
+          "iconFileName": "alma.svg"
+        },
+        {
+          "title": "logo thalgo",
+          "content": "Extractos marinos naturales que concentran principios activos, minerales y oligoelementos, hasta 10.000 veces superiores a las plantas terrestres.",
+          "iconFileName": "thalgo.jpg",
+          "black": "principios activos, minerales y oligoelementos"
         }
       ]
     }

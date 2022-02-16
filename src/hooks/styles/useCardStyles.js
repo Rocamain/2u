@@ -1,7 +1,7 @@
 import { makeStyles } from '@mui/styles';
-import image from '../../assets/static/images/water1.jpg';
-import backgroundImage from '../../assets/static/images/bg.jpg';
-import backgroundImage2 from '../../assets/static/images/bg2.jpg';
+import image from '../../assets/static/backgrounds/water.jpg';
+import backgroundImage from '../../assets/static/backgrounds/bg.jpg';
+import backgroundImage2 from '../../assets/static/backgrounds/bg2.jpg';
 
 export const useStyles = makeStyles((theme) => {
   return {

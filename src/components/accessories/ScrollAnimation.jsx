@@ -41,16 +41,16 @@ const ScrollAnimation = (props) => {
       appear={animate}
       timeout={{ appear: 3000, enter: 3800, exit: 0 }}
     >
-      <div>
+      {/* <div>
         <Slide
           direction="down"
           in={animate}
           appear={animate}
           timeout={{ appear: 5000, enter: 800, exit: 0 }}
-        >
-          {props.children}
-        </Slide>
-      </div>
+        > */}
+      {props.children}
+      {/* </Slide>
+      </div> */}
     </Fade>
   );
 };

@@ -1,32 +1,37 @@
-import { Icon } from '@mui/material';
+import { Icon, Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 import { useRef } from 'react';
 import ScrollAnimation from '../accessories/ScrollAnimation';
 
 const AnimatedIcon = (props) => {
-  const { icon } = props;
+  const { iconFileName } = props;
   let ref = useRef(null);
 
   let iconURL = null;
-  if (icon) {
-    let path = icon.replaceAll(' ', '_');
-    iconURL = require(`../../assets/static/images/${path}.png`);
+  if (iconFileName) {
+    iconURL = require(`../../assets/static/icons/${iconFileName}`);
   }
   const StyledIcon = styled(Icon)(({ theme }) => ({
-    width: '5em',
+    width: '100%',
     height: '5em',
-    margin: '0 auto',
-    borderRadius: '0',
-    backgroundSize: 'cover',
+
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'contain',
+    backgroundPosition: 'center',
     backgroundImage: `url(${iconURL})`,
+
     loading: 'lazy',
   }));
 
   return (
-    icon && (
+    iconFileName && (
       <ScrollAnimation>
-        <StyledIcon key={icon} ref={ref} sx={{ mt: '30px', mb: '10px' }} />
+        <StyledIcon
+          key={iconFileName}
+          ref={ref}
+          sx={{ mt: '30px', mb: '10px' }}
+        />
       </ScrollAnimation>
     )
   );
