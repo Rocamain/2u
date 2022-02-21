@@ -5,6 +5,7 @@ import DownloadApp from '../homeSections/DownloadApp';
 import AnyDoubt from '../homeSections/AnyDoubt';
 import Values from '../homeSections/Values';
 import Partners from '../homeSections/Partners';
+import Maps from '../homeSections/Maps';
 
 export default function Main() {
   return (
@@ -16,6 +17,7 @@ export default function Main() {
       <AnyDoubt />
       <Values />
       <Partners />
+      <Maps />
     </main>
   );
 }
