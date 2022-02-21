@@ -110,5 +110,37 @@
         }
       ]
     }
+  ],
+  "footer": [
+    {
+      "city": "Palma de Mallorca",
+      "shopName": "Palma",
+      "street": "C/ Josep Anselm Clavé, 6",
+      "postcode": "07002 – Palma de Mallorca",
+      "phone": "971 707 281",
+      "mobile": "646 531 481",
+      "openingTimes": ["9:30", "20:30"],
+      "openingTimesWnked": ["10", "15"]
+    },
+    {
+      "city": "Barcelona",
+      "shopName": "Turo Park",
+      "street": "C/ Tenor Viñas, 3",
+      "postcode": "08021 – Barcelona",
+      "phone": "93 200 96 56",
+      "mobile": "640 725 934",
+      "openingTimes": ["9:30", "21"],
+      "openingTimesWnked": ["9", "15"]
+    },
+    {
+      "city": "Barcelona",
+      "shopName": "L´ILLA DIAGONAL",
+      "street": "Avda. Diagonal, 569",
+      "postcode": "08029 – Barcelona",
+      "phone": "93 410 14 87",
+      "mobile": "640 725 935",
+      "openingTimes": ["9:30", "21"],
+      "openingTimesWnked": ["9", "21"]
+    }
   ]
 }

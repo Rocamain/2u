@@ -6,7 +6,8 @@ const ScrollAnimation = (props) => {
   const [animate, setAnimate] = useState(false);
   const { ref } = props.children;
 
-  const triggerAnimation = () => {
+  const triggerAnimation = (e) => {
+    // e.preventDefault();
     // distance from the top to the top of the element
     const element = ref.current;
     let offset = element.offsetTop;
@@ -29,10 +30,11 @@ const ScrollAnimation = (props) => {
 
   useEffect(() => {
     if (!animate && ref) {
-      window.addEventListener('scroll', triggerAnimation);
+      window.addEventListener('scroll', triggerAnimation, { passive: true });
     }
 
-    return () => window.removeEventListener('scroll', triggerAnimation);
+    return () =>
+      window.removeEventListener('scroll', triggerAnimation, { passive: true });
   }, [animate, ref]);
 
   return (
