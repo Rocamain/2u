@@ -4,7 +4,7 @@ import StyledButton from '../accessories/Button';
 
 import shop from '../../assets/static/images/illa.jpg';
 import useCardStyles from '../../hooks/styles/useCardStyles';
-import useDb from '../../hooks/custom/useDb';
+import useDb from '../../hooks/custom/getData';
 
 const AboutUs = () => {
   const data = useDb('http://localhost:8000/sections');

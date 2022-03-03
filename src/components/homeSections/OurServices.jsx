@@ -5,7 +5,7 @@ import StyledButton from '../accessories/Button';
 import StyledCard from '../accessories/Card';
 
 import useCardStyles from '../../hooks/styles/useCardStyles';
-import useDb from '../../hooks/custom/useDb';
+import useDb from '../../hooks/custom/getData';
 import useBg from '../../hooks/custom/useBg';
 
 export default function Article() {

@@ -1,4 +1,4 @@
-import useDb from '../../hooks/custom/useDb';
+import useDb from '../../hooks/custom/getData';
 import { Box, Typography, Grid } from '@mui/material';
 import StyledIcon from '../accessories/Icon';
 
@@ -10,10 +10,9 @@ function Values() {
       <Box xs={{ margin: '4em auto' }}>
         <Grid
           container
-          spacing={5}
           sx={{
-            display: 'flex',
             justifyContent: 'center',
+            gap: '1em',
             marginBottom: '2em',
           }}
         >

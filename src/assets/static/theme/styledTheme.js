@@ -98,11 +98,37 @@ theme = createTheme(theme, {
       },
     },
     title1: {
-      fontWeight: '600',
+      fontWeight: '400',
       fontSize: '2.2rem',
       lineHeight: 1.05,
       fontFamily: ['Open Sans', 'Abel'].join(','),
       letterSpacing: '0.05em',
+    },
+    navbarLinks: {
+      fontWeight: '600',
+      fontSize: '0.9rem',
+      lineHeight: '1.2rem',
+      fontFamily: ['Abel', 'Open Sans'].join(','),
+      letterSpacing: '0.04em',
+      color: '#666',
+      [theme.breakpoints.between('sm', 'md')]: {
+        fontSize: '1rem',
+        lineHeight: '1.1rem',
+        letterSpacing: '0.02em',
+      },
+      [theme.breakpoints.between('md', 'lg')]: {
+        fontSize: '1.6rem',
+        lineHeight: '1.3rem',
+        letterSpacing: '0.01em',
+      },
+      [theme.breakpoints.up('lg')]: {
+        fontSize: '1.5rem',
+        lineHeight: '1.5rem',
+        letterSpacing: '0.01em',
+      },
+      '&:hover': {
+        color: '#75C9CC',
+      },
     },
     body2: {
       fontWeight: '400',
@@ -124,12 +150,12 @@ theme = createTheme(theme, {
       letterSpacing: '0.08em',
       color: '#8F5F45',
       [theme.breakpoints.between('xs', 'sm')]: {
-        fontSize: '1.45rem',
-        lineHeight: '1.9rem',
+        fontSize: '1.25rem',
+        lineHeight: '1.2rem',
       },
       [theme.breakpoints.between('sm', 'md')]: {
-        fontSize: '1.6rem',
-        lineHeight: '2rem',
+        fontSize: '1.8rem',
+        lineHeight: '1.4rem',
       },
     },
     subtitle: {
@@ -170,6 +196,41 @@ theme = createTheme(theme, {
           color: '#75C9CC',
           contrastText: '#fff',
           '&:hover': {},
+        },
+      },
+    },
+    MuiListItemButton: {
+      styleOverrides: {
+        root: {
+          border: 'none',
+          background: 'none',
+          '&.Mui-selected': {
+            backgroundColor: '#00bccc36',
+          },
+          contrastText: '#fff',
+          '&:hover': {
+            backgroundColor: '#00bccc',
+          },
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          [theme.breakpoints.between('sm', 'md')]: {
+            fontSize: '1.5rem',
+            lineHeight: '1.3rem',
+            letterSpacing: '0.02em',
+          },
+          [theme.breakpoints.up('md')]: {
+            fontSize: '1.2rem',
+            lineHeight: '1.5rem',
+            marginBottom: '0.01em',
+          },
+          contrastText: '#fff',
+          '&:hover': {
+            backgroundColor: '#00bccc',
+          },
         },
       },
     },

@@ -1,5 +1,5 @@
 import { Divider, Box, Typography } from '@mui/material';
-import useDb from '../../hooks/custom/useDb';
+import useDb from '../../hooks/custom/getData';
 import StyledButton from '../accessories/Button';
 import useCardStyles from '../../hooks/styles/useCardStyles';
 

@@ -1,4 +1,4 @@
-import useDb from '../../hooks/custom/useDb';
+import useDb from '../../hooks/custom/getData';
 import { Box, Typography, Grid } from '@mui/material';
 import StyledIcon from '../accessories/Icon';
 
@@ -15,7 +15,7 @@ function Partners() {
                 item
                 key={index}
                 xs={8}
-                sm={8}
+                sm={5}
                 md={3}
                 sx={{ textAlign: 'center' }}
               >

@@ -1,4 +1,28 @@
 {
+  "navbar": [
+    "Home",
+    {
+      "About us": {
+        "sectionsWithSameURL": ["Our centers", "Partners"],
+        "sectionsWithDiffURL": []
+      }
+    },
+
+    {
+      "Treatments and fares": {
+        "sectionsWithSameURL": [],
+        "sectionsWithDiffURL": [
+          "Our Fares",
+          "Promotions",
+          "Treatments in L'Illa Diagonal",
+          "Treatments in Turo Park",
+          "Treatments in Palma Mallorca"
+        ]
+      }
+    },
+
+    "Contact"
+  ],
   "carousels": [
     {
       "title": "Discover our promotions",

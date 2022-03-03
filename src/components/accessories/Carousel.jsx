@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import useCardStyles from '../../hooks/styles/useCardStyles';
-import useDb from '../../hooks/custom/useDb';
+import useDb from '../../hooks/custom/getData';
 
 import { Box, Button } from '@mui/material';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material/';

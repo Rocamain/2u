@@ -20,8 +20,7 @@ export default function StyledButton({ content }) {
       <Button
         size={sizes()}
         variant="contained"
-        sx={{ mb: 2, fontWeight: 600, letterSpacing: '0.15rem' }}
-        disableRipple
+        sx={{ fontWeight: 600, letterSpacing: '0.15rem' }}
       >
         {content}
       </Button>
