@@ -1,7 +1,7 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { styled } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Box, IconButton, Popover } from '@mui/material';
+import { Box, IconButton, Popover, CardMedia } from '@mui/material';
 import StyledButton from '../accessories/Button';
 
 import Menu from '../main/Menu';
@@ -35,12 +35,7 @@ const StyledHeader = styled(Box)(({ theme }) => ({
     width: '85vw',
   },
 }));
-
-const StyledPopover = styled(Popover)(({ theme }) => ({
-  [theme.breakpoints.up('md')]: {
-    display: 'none',
-  },
-}));
+const StyledImg = styled(CardMedia)(({ theme }) => ({}));
 
 export default function Header() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -69,30 +64,42 @@ export default function Header() {
   const id = open ? 'simple-popover' : undefined;
   return (
     <>
-      <Box ref={ref} sx={{ boxShadow: 'rgba(0, 0, 0, 0.1) 0px 1px 0px 0px' }}>
-        <StyledHeader component="nav">
-          <img
+      <Box
+        ref={ref}
+        component="header"
+        sx={{ boxShadow: 'rgba(0, 0, 0, 0.1) 0px 1px 0px 0px' }}
+      >
+        <StyledHeader component="div">
+          <StyledImg
+            component="img"
             src={logo}
             alt="clickable company logo"
-            style={
-              matchesBigScreens ? { height: 'inherit' } : { height: '2.3em' }
-            }
+            sx={{
+              width: {
+                xs: '30%',
+                sm: '30%',
+                md: '45%',
+              },
+            }}
           />
 
-          {!matchesBigScreens && (
-            <>
-              <IconButton
-                aria-describedby={id}
-                aria-label="menu burger button"
-                aria-controls={open ? 'basic-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                onClick={handleOpen}
-              >
-                <MenuIcon sx={{ fontSize: '2rem' }} />
-              </IconButton>
-            </>
-          )}
+          <IconButton
+            aria-describedby={id}
+            aria-label="menu burger button"
+            aria-controls={open ? 'basic-menu' : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? 'true' : undefined}
+            onClick={handleOpen}
+            sx={{
+              display: {
+                md: 'none',
+                lg: 'none',
+              },
+            }}
+          >
+            <MenuIcon />
+          </IconButton>
+
           {matchesBigScreens && (
             <StyledNavBar component="nav">
               <Menu
@@ -111,7 +118,7 @@ export default function Header() {
         </StyledHeader>
       </Box>
       {!matchesBigScreens && (
-        <StyledPopover
+        <Popover
           id={id}
           open={open}
           anchorEl={anchorEl}
@@ -124,9 +131,14 @@ export default function Header() {
             vertical: 'top',
             horizontal: 'center',
           }}
+          sx={{
+            display: {
+              md: 'none',
+            },
+          }}
         >
           <Menu />
-        </StyledPopover>
+        </Popover>
       )}
     </>
   );

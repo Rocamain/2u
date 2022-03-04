@@ -18,6 +18,7 @@ theme = createTheme(theme, {
     text: {
       primary: 'rgba(51,51,51,0.8)',
     },
+
     background: {
       primary: 'linear-gradient(90deg,#75c9cc 0%,#00bccc 100%)!important',
       secondary: 'rgb(244, 249, 252)',
@@ -66,15 +67,15 @@ theme = createTheme(theme, {
     },
     p: {
       fontWeight: '400',
-      fontSize: '1rem',
-      lineHeight: 1.15,
+      fontSize: '0.9rem',
+      lineHeight: 0.9,
       fontFamily: ['Abel', 'Open Sans'].join(','),
       letterSpacing: '0.007em',
     },
     body1: {
       fontWeight: '400',
-      fontSize: '1.12rem',
-      lineHeight: 1.15,
+      fontSize: '1rem',
+      lineHeight: 1.2,
       fontFamily: ['Open Sans', 'Abel'].join(','),
       letterSpacing: '0.090em',
     },
@@ -112,19 +113,19 @@ theme = createTheme(theme, {
       letterSpacing: '0.04em',
       color: '#666',
       [theme.breakpoints.between('sm', 'md')]: {
-        fontSize: '1rem',
+        fontSize: '0.9rem',
         lineHeight: '1.1rem',
-        letterSpacing: '0.02em',
+        letterSpacing: '0.04em',
       },
       [theme.breakpoints.between('md', 'lg')]: {
-        fontSize: '1.6rem',
-        lineHeight: '1.3rem',
-        letterSpacing: '0.01em',
+        fontSize: '1.15rem',
+        lineHeight: '1.1rem',
+        letterSpacing: '0.04em',
       },
       [theme.breakpoints.up('lg')]: {
-        fontSize: '1.5rem',
-        lineHeight: '1.5rem',
-        letterSpacing: '0.01em',
+        fontSize: '1.3rem',
+        lineHeight: '1.2rem',
+        letterSpacing: '0.05em',
       },
       '&:hover': {
         color: '#75C9CC',
@@ -149,6 +150,7 @@ theme = createTheme(theme, {
       fontFamily: ['Abel', 'Open Sans'].join(','),
       letterSpacing: '0.08em',
       color: '#8F5F45',
+
       [theme.breakpoints.between('xs', 'sm')]: {
         fontSize: '1.25rem',
         lineHeight: '1.2rem',
@@ -204,6 +206,7 @@ theme = createTheme(theme, {
         root: {
           border: 'none',
           background: 'none',
+          width: 'maxContent',
           '&.Mui-selected': {
             backgroundColor: '#00bccc36',
           },
@@ -218,13 +221,13 @@ theme = createTheme(theme, {
       styleOverrides: {
         root: {
           [theme.breakpoints.between('sm', 'md')]: {
-            fontSize: '1.5rem',
+            fontSize: '1.3rem',
             lineHeight: '1.3rem',
             letterSpacing: '0.02em',
           },
           [theme.breakpoints.up('md')]: {
-            fontSize: '1.2rem',
-            lineHeight: '1.5rem',
+            fontSize: '1.3rem',
+            lineHeight: '1.2rem',
             marginBottom: '0.01em',
           },
           contrastText: '#fff',

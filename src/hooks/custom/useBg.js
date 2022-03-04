@@ -15,7 +15,7 @@ export default function useBg(data, overlapContainer) {
       window.addEventListener('resize', () => setWrapperSize());
     }
     return () => window.removeEventListener('resize', setWrapperSize);
-  }, [data, height]);
+  }, [data, setHeight]);
 
   return height;
 }
