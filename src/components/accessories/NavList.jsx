@@ -1,31 +1,30 @@
 import { useContext, useState } from 'react';
 import NavLink from '../accessories/NavLink';
-
+import PopoverLink from '../accessories/PopoverLink';
 import { List } from '@mui/material';
 import { NavigationContext } from '../../hooks/context/useNavigationContext';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { styled } from '@mui/material/styles';
-import { Box, IconButton, Popover } from '@mui/material';
-
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import ExpandLess from '@mui/icons-material/ExpandLess';
 
 const StyledNavList = styled(List)(({ theme }) => ({
   width: '85vw',
   margin: '0 auto',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  backgroundColor: 'white',
+
   ariaLabel: 'navigation menu',
+  [theme.breakpoints.up('md')]: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: 'auto',
+  },
 }));
 
 function NavList() {
   const [selectedIndex, setSelectedIndex] = useState('Home');
   const { data, allPaths } = useContext(NavigationContext);
-
   const theme = useTheme();
+
   const matchesBigScreens = useMediaQuery(theme.breakpoints.up('md'), {
     noSsr: true,
   });
@@ -40,7 +39,6 @@ function NavList() {
       dense
       component="ul"
       sx={{
-        flexDirection: { md: 'row' },
         alignItems: { sm: 'flex-start', md: 'center' },
         justifyContent: 'flex-end',
         borderTop: {
@@ -49,19 +47,18 @@ function NavList() {
         },
       }}
     >
-      {data.map((route, index) => {
+      {data.map((route) => {
         if (typeof route === 'string') {
           return (
             <NavLink
-              key={route}
-              index={route}
+              key={allPaths[route]}
               to={allPaths[route]}
               selected={selectedIndex === route}
               route={route}
               handleListItemClick={handleListItemClick}
               subpath={false}
               main={false}
-              matchesBigScreens
+              matchesBigScreens={matchesBigScreens}
             />
           );
         }
@@ -74,38 +71,18 @@ function NavList() {
             ...route[mainPath].sectionsWithDiffURL,
           ];
 
-          const list = (
-            <>
-              <NavLink
-                key={mainPath}
-                index={mainPath}
-                to={allPaths[mainPath]}
-                selected={selectedIndex === mainPath}
-                route={mainPath}
-                handleListItemClick={handleListItemClick}
-                subpath={false}
-                main={true}
-                matchesBigScreens
-              >
-                <List sx={{ display: 'flex', flexDirection: 'column' }}>
-                  {sectionsPaths.map((path, index) => (
-                    <NavLink
-                      key={path}
-                      index={path}
-                      to={allPaths[path]}
-                      selected={selectedIndex === path}
-                      route={path}
-                      handleListItemClick={handleListItemClick}
-                      subpath={true}
-                      main={false}
-                      matchesBigScreens
-                    />
-                  ))}
-                </List>
-              </NavLink>
-            </>
+          return (
+            <PopoverLink
+              key={allPaths[mainPath]}
+              to={allPaths[mainPath]}
+              mainPath={mainPath}
+              sectionsPaths={sectionsPaths}
+              handleListItemClick={handleListItemClick}
+              allPaths={allPaths}
+              selectedIndex={selectedIndex}
+              matchesBigScreens={matchesBigScreens}
+            />
           );
-          return list;
         }
 
         const restOfPaths = [
@@ -113,18 +90,20 @@ function NavList() {
           ...route[mainPath].sectionsWithSameURL,
           ...route[mainPath].sectionsWithDiffURL,
         ];
-        const restOfPathsLink = restOfPaths.map((path, index) => (
-          <NavLink
-            key={path}
-            index={path}
-            to={allPaths[path]}
-            selected={selectedIndex === path}
-            route={path}
-            handleListItemClick={handleListItemClick}
-            subpath={index !== 0}
-            main={index === 0}
-          />
-        ));
+        const restOfPathsLink = restOfPaths.map((path, index) => {
+          return (
+            <NavLink
+              key={allPaths[path]}
+              to={allPaths[path]}
+              selected={selectedIndex === path}
+              route={path}
+              handleListItemClick={handleListItemClick}
+              subpath={index !== 0}
+              main={index === 0}
+              matchesBigScreens={matchesBigScreens}
+            />
+          );
+        });
 
         return restOfPathsLink;
       })}

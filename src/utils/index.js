@@ -27,7 +27,7 @@ exports.getPathsName = (navbarArray) => {
       const diffURLLinks = path[mainPath].sectionsWithDiffURL;
 
       const fetchSameURLLinks = getRestLinks(sameURLLinks, mainPathLink);
-      const fetchDiffURLLinks = getRestLinks(diffURLLinks, mainPathLink);
+      const fetchDiffURLLinks = getRestLinks(diffURLLinks);
 
       const sectionLinks = {
         [mainPath]: mainPathLink,
@@ -51,7 +51,7 @@ const underScorePath = (pathURL, mainPath) => {
     return pathURL.map((path) => putUnderScorePath(path));
   }
   return mainPath
-    ? mainPath + '#' + putUnderScorePath(pathURL)
+    ? mainPath + '/#' + putUnderScorePath(pathURL)
     : putUnderScorePath(pathURL);
 };
 

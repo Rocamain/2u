@@ -1,94 +1,75 @@
-import { useState } from 'react';
-import {
-  ListItemButton,
-  ListItemText,
-  Typography,
-  Popover,
-} from '@mui/material';
+import { forwardRef } from 'react';
+import { ListItemButton, ListItemText, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 
-function NavLink(props) {
+const NavLink = forwardRef((props, ref) => {
   const {
-    route,
+    route = 'Home',
     to,
     selected,
     handleListItemClick,
-    index,
     subpath,
     main,
     matchesBigScreens,
+    handleClick,
+    handleClose,
+    open,
+    component,
   } = props;
 
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
-  const id = open ? 'simple-popover' : undefined;
-
   return (
-    <>
-      <ListItemButton
-        dense
-        component="li"
-        selected={selected}
-        aria-describedby={id}
-        variant="contained"
-        onClick={handleClick}
-        disableRipple
-        sx={{
-          px: subpath ? '40px' : '25px',
-          width: !matchesBigScreens ? '90%' : undefined,
-          flexGrow: 0,
-          backgroundColor: main ? '#00000008' : undefined,
-        }}
-      >
-        <Link
-          style={{
-            textDecoration: 'none',
-            display: 'inline-flex',
-            minWidth: '100%',
-            alignItems: 'flex-start',
-          }}
-          to={to === 'Home' ? '/' : to}
-        >
-          <ListItemText
-            primary={
-              <Typography sx={{ wordBreak: 'keep-all' }} variant="navbarLinks">
-                {route}
-              </Typography>
-            }
-          />
-          {matchesBigScreens &&
-            main &&
-            (open ? <ExpandLess /> : <ExpandMore />)}
-        </Link>
+    <ListItemButton
+      ref={ref}
+      dense
+      component={component || 'li'}
+      selected={selected}
+      variant="contained"
+      onClick={() => handleListItemClick(route)}
+      onMouseEnter={handleClick}
+      onMouseLeave={handleClose}
+      disableRipple
+      sx={{
+        px: subpath && !matchesBigScreens ? '50px' : '10px',
+        width: !matchesBigScreens ? '90%' : undefined,
+        mx: !matchesBigScreens ? 'auto' : '0',
+        flexGrow: 0,
+        zIndex: 1200,
+        backgroundColor: main && !matchesBigScreens ? '#00000008' : undefined,
+        '&.Mui-selected': {
+          backgroundColor: 'white',
+        },
 
-        {main && open && (
-          <Popover
-            id={id}
-            open={open}
-            anchorEl={anchorEl}
-            onClose={handleClose}
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left',
-            }}
-          >
-            {props.children}
-          </Popover>
-        )}
-      </ListItemButton>
-    </>
+        '&:hover': {
+          color: '#75C9CC',
+          backgroundColor: 'white',
+        },
+      }}
+    >
+      <Link
+        style={{
+          textDecoration: 'none',
+          display: 'inline-flex',
+          minWidth: '100%',
+          alignItems: 'flex-start',
+        }}
+        to={to === 'Home' ? '/' : to}
+      >
+        <ListItemText
+          primary={<Typography variant="navbarLinks">{route}</Typography>}
+        />
+        {matchesBigScreens &&
+          main &&
+          (open ? (
+            <ExpandLess sx={{ fontSize: '1.7rem' }} />
+          ) : (
+            <ExpandMore id={route} sx={{ fontSize: '1.7rem' }} />
+          ))}
+      </Link>
+      {props.children}
+    </ListItemButton>
   );
-}
+});
 
 export default NavLink;
