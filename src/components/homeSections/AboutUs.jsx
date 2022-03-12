@@ -6,9 +6,14 @@ import shop from '../../assets/static/images/illa.jpg';
 import useCardStyles from '../../hooks/styles/useCardStyles';
 import useDb from '../../hooks/custom/getData';
 
-const AboutUs = () => {
-  const data = useDb('http://localhost:8000/sections');
+const AboutUs = (props) => {
+  const { path } = props;
 
+  let data = useDb(`http://localhost:8000/${path}`);
+
+  if (data) {
+    data = data.AboutUs;
+  }
   const { aboutUsSection, divider, aboutGridImg, aboutGridImgShadow } =
     useCardStyles();
 
@@ -26,37 +31,20 @@ const AboutUs = () => {
           }}
         >
           <Grid item component="div" xs={12} sm={12} md={6}>
-            <Typography
-              component="h2"
-              variant="title"
-              children={data[1].title}
-            />
+            <Typography component="h2" variant="title" children={data.title} />
 
             <Divider className={divider} />
 
-            <Typography
-              component="p"
-              children={data[1].content1}
-              variant="body2"
-            />
+            {data.paragraphs.map((paragraph, index) => (
+              <Typography
+                key={index}
+                component="p"
+                children={paragraph}
+                variant="body2"
+              />
+            ))}
 
-            <Typography
-              component="p"
-              variant="body2"
-              children={data[1].content2}
-            />
-            <Typography
-              component="p"
-              variant="body2"
-              children={data[1].content3}
-            />
-            <Typography
-              component="p"
-              variant="body2"
-              children={data[1].content4}
-            />
-
-            <StyledButton content={data[1].button} />
+            <StyledButton content={data.button} />
           </Grid>
           <Grid
             item

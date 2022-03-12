@@ -19,6 +19,13 @@ const NavLink = forwardRef((props, ref) => {
     component,
   } = props;
 
+  const handleClicks = (route) => {
+    if (matchesBigScreens && (main || subpath)) {
+      handleClose();
+    }
+    handleListItemClick(route);
+  };
+
   return (
     <ListItemButton
       ref={ref}
@@ -26,7 +33,7 @@ const NavLink = forwardRef((props, ref) => {
       component={component || 'li'}
       selected={selected}
       variant="contained"
-      onClick={() => handleListItemClick(route)}
+      onClick={() => handleClicks(route)}
       onMouseEnter={handleClick}
       onMouseLeave={handleClose}
       disableRipple

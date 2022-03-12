@@ -6,12 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import theme from './assets/static/theme/styledTheme';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import {
+  NavigationProvider,
+  NavigationContext,
+} from './hooks/context/useNavigationContext';
 
 ReactDOM.render(
   <React.StrictMode>
     <CssBaseline />
     <ThemeProvider theme={theme}>
-      <App />
+      <NavigationProvider>
+        <App />
+      </NavigationProvider>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

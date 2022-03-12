@@ -12,10 +12,10 @@ export default function useBg(data, overlapContainer) {
   useEffect(() => {
     if (data) {
       setWrapperSize();
-      window.addEventListener('resize', () => setWrapperSize());
+      window.addEventListener('resize', setWrapperSize);
     }
     return () => window.removeEventListener('resize', setWrapperSize);
-  }, [data, setHeight]);
+  }, [data]);
 
   return height;
 }

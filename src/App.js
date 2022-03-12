@@ -1,26 +1,18 @@
-import { useEffect, useState } from 'react';
-import getData from './hooks/custom/getData';
+import { useContext } from 'react';
 import Home from './pages/Home';
-import PlaceHolderComponent from './pages/PlaceHolderComponent';
+
 import Layout from './components/main/Layout';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { NavigationProvider } from './hooks/context/useNavigationContext';
-import { getNavbarLinks } from './utils/index';
+import {
+  NavigationProvider,
+  NavigationContext,
+} from './hooks/context/useNavigationContext';
 
 function App() {
-  const [mainPathsArray, setMainPathsArray] = useState(null);
-  const [isMounted, setIsMounted] = useState(false);
-  const data = getData('http://localhost:8000/navbar');
-  useEffect(() => {
-    if (!isMounted && data) {
-      const formattedPathArray = getNavbarLinks(data);
-      setMainPathsArray(formattedPathArray);
-    }
-    setIsMounted(false);
-  }, [data]);
+  const { allLinks } = useContext(NavigationContext);
 
   return (
-    mainPathsArray && (
+    allLinks && (
       <Router>
         <Routes>
           <Route
@@ -31,17 +23,17 @@ function App() {
               </NavigationProvider>
             }
           >
-            {mainPathsArray.map((routePath, i) =>
-              i === 0 ? (
-                <Route key={i} index element={<Home />} />
+            {allLinks.map((routePath, i) => {
+              return i === 0 ? (
+                <Route key={i} index element={<Home path={routePath} />} />
               ) : (
                 <Route
                   key={i}
                   path={routePath}
-                  element={<PlaceHolderComponent />}
+                  element={<Home path="About_us" />}
                 />
-              )
-            )}
+              );
+            })}
           </Route>
         </Routes>
       </Router>

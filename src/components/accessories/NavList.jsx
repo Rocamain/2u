@@ -20,7 +20,8 @@ const StyledNavList = styled(List)(({ theme }) => ({
   },
 }));
 
-function NavList() {
+function NavList(props) {
+  const { onClose } = props;
   const [selectedIndex, setSelectedIndex] = useState('Home');
   const { data, allPaths } = useContext(NavigationContext);
   const theme = useTheme();
@@ -30,6 +31,9 @@ function NavList() {
   });
 
   const handleListItemClick = (index) => {
+    if (onClose) {
+      onClose();
+    }
     setSelectedIndex(index);
   };
 

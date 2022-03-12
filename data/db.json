@@ -43,8 +43,29 @@
       "id": 3
     }
   ],
-  "sections": [
-    {
+  "Home": {
+    "Carousel": [
+      {
+        "title": "Discover our promotions",
+        "content": "Now beforehand before everybody all the promotions of our treatments and products.",
+        "button": "Learn More",
+        "id": 1
+      },
+      {
+        "title": "the best products",
+        "content": "Now beforehand before everybody all the promotions of our treatments and products.",
+        "button": "Learn More",
+        "id": 2
+      },
+      {
+        "title": "can you image??",
+        "content": "Now beforehand before everybody all the promotions of our treatments and products.",
+        "button": "Learn More",
+        "id": 3
+      }
+    ],
+
+    "OurServices": {
       "title": "Our services",
       "content1": "Ofrecemos una selección de tratamientos faciales y corporales de última generación con los que conseguirás resultados y objetivos reales. Déjate asesorar por nuestras profesionales y diseñaremos un tratamiento a medida y personalizado para ti.",
       "content2": "También somos especialistas en la belleza de tus manos y pies. Para ello contamos con la marca líder internacional CND con sus esmaltes semi-permanentes Shellac y esmaltes de larga duración Vinylux.",
@@ -72,25 +93,31 @@
         }
       ]
     },
-    {
+
+    "AboutUs": {
       "title": "A little bit about us",
-      "content1": "Nuestro concepto destaca por ofrecer las técnicas más vanguardistas y líderes del mercado de la mano de un gran equipo de profesionales motivadas principalmente por la pasión por su profesión.",
-      "content2": "Nuestro trabajo en equipo, constancia y dedicación están enfocados a que nuestros clientes obtengan la máxima satisfacción, objetivos y resultados.",
-      "content3": "Nuestras premisas son innovación, entusiasmo, honestidad, rigor, pasión, eficacia, todo ello enfocado a potenciar la belleza natural.",
-      "content4": "Nuestra filosofía de trabajo se basa en un correcto diagnóstico que permite diseñar un tratamiento a medida y personalizado para cada cliente lo que nos garantizará ofrecer excelentes resultados.",
+      "paragraphs": [
+        "Nuestro concepto destaca por ofrecer las técnicas más vanguardistas y líderes del mercado de la mano de un gran equipo de profesionales motivadas principalmente por la pasión por su profesión.",
+        "Nuestro trabajo en equipo, constancia y dedicación están enfocados a que nuestros clientes obtengan la máxima satisfacción, objetivos y resultados.",
+        "Nuestras premisas son innovación, entusiasmo, honestidad, rigor, pasión, eficacia, todo ello enfocado a potenciar la belleza natural.",
+        "Nuestra filosofía de trabajo se basa en un correcto diagnóstico que permite diseñar un tratamiento a medida y personalizado para cada cliente lo que nos garantizará ofrecer excelentes resultados."
+      ],
       "button": "More about us"
     },
-    {
+
+    "DownloadApp": {
       "title": "Advantages to use the app",
       "content1": "Accede a información, promociones y descuentos exclusivos para ti, además de pedir cita de manera muy intuitiva. Es fácil y rápido.",
       "button": "Download App"
     },
-    {
+
+    "AnyDoubt": {
       "title": "Any doubt?",
       "content1": "Muchas veces lo que necesitamos es que nos informen bien sobre los servicios y los tratamientos, es por ello que nos tomamos muy en serio tus consultas. Si tienes dudas estaremos encantados de ayudarte en todo lo que necesites.",
       "button": "Ask us"
     },
-    {
+
+    "Values": {
       "cards": [
         {
           "title": "Quality products",
@@ -109,7 +136,8 @@
         }
       ]
     },
-    {
+
+    "Partners": {
       "cards": [
         {
           "content": "La marca profesional internacional líder que revoluciona el sector de la belleza de manos y pies.",
@@ -134,7 +162,69 @@
         }
       ]
     }
-  ],
+  },
+  "About_us": {
+    "Hero": { "title": "About us", "subtitle": "Beauty specilist" },
+    "AboutUs": {
+      "title": "La revolución de la estética",
+      "paragraphs": [
+        "2u estètica avançada es un nuevo concepto centro de estética que destaca por un gran equipo de profesionales que ofrece las técnicas más vanguardistas en el campo de la estética. Descubre la nueva tecnología Alliance patentada por LPG, radiofrecuencia, mesoterapia digital y fotodepilación. Tratamientos de última generación especialmente diseñados para ti. Encontrarás tratamientos faciales y corporales de la mano de prestigiosas firmas de alta cosmética. También somos especialistas en la belleza de tus manos y pies, ofreciéndote la marca líder en el sector: CND, con sus esmaltes Vinylux y Shellac reconocidos a nivel internacional."
+      ],
+      "button": "Reserva tu visita"
+    },
+    "AnyDoubt": {
+      "title": "Ven a conocernos",
+      "content1": "La mejor forma de comprobar las cosas es a través de la experiencia, desde nuestros inicios contamos con clientes que han estado con nosotros año tras año. La razón es simple y se debe a que no somos un centro de estética convencional, hacemos nuestro trabajo de forma profesional para que vivas una experiencia única en cada una de tus visitas.",
+      "button": "Consult us"
+    },
+
+    "Values": {
+      "cards": [
+        {
+          "title": "Quality products",
+          "content": "Sólo utilizamos los mejores productos del mercado, razón que nos hace diferenciarnos de los demás.",
+          "iconFileName": "Quality_products.png"
+        },
+        {
+          "title": "Personalized treatments",
+          "content": "Nuestro trato es totalmente personalizado, queremos que tu experiencia con nosotros siempre sea la mejor.",
+          "iconFileName": "Personalized_treatments.png"
+        },
+        {
+          "title": "Qualified personel",
+          "content": "Contamos con el mejor personal profesional, todos altamente cualificados en terapias estéticas y con amplia experiencia.",
+          "iconFileName": "Qualified_personel.png"
+        }
+      ]
+    },
+
+    "Partners": {
+      "cards": [
+        {
+          "content": "La marca profesional internacional líder que revoluciona el sector de la belleza de manos y pies.",
+          "iconFileName": "cbeauty.jpg"
+        },
+        {
+          "title": "lpg",
+          "content": "Después de más de 30 años de experiencia y de investigación científica LPG Endermologie ofrece una alternativa natural al 100%: estimula la actividad celular latente dentro de nuestra piel para luchar contra todas las manifestaciones antiestéticas (arrugas, flacidez de la piel, la grasa resistente localizada, la apariencia de la celulitis, y más).",
+          "iconFileName": "lpg.png",
+          "black": "estimula la actividad celular latente dentro de nuestra piel"
+        },
+        {
+          "title": "alma",
+          "content": "Alma, uno de los fabricantes líderes en la industria médica y estética que ofrece tecnologías y tratamientos de última generación basados en radiofrecuencia, fotodepilación, laser y ultrasonidos.",
+          "iconFileName": "alma.svg"
+        },
+        {
+          "title": "logo thalgo",
+          "content": "Extractos marinos naturales que concentran principios activos, minerales y oligoelementos, hasta 10.000 veces superiores a las plantas terrestres.",
+          "iconFileName": "thalgo.jpg",
+          "black": "principios activos, minerales y oligoelementos"
+        }
+      ]
+    }
+  },
+
   "footer": [
     {
       "city": "Palma de Mallorca",

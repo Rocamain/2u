@@ -4,15 +4,19 @@ import useDb from '../../hooks/custom/getData';
 
 import { Box, Button } from '@mui/material';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material/';
-import Card from './Card';
-import Stepper from './Stepper';
+import Card from '../accessories/Card';
+import Stepper from '../accessories/Stepper';
 
 export default function Carousel() {
   // Hooks
   const [slide, setSlide] = useState(0);
   const [exit, setExit] = useState(false);
   // Custom Hook
-  const cards = useDb('http://localhost:8000/carousels');
+  let cards = useDb('http://localhost:8000/Home/');
+
+  if (cards) {
+    cards = cards.Carousel;
+  }
 
   // Styles
   const classes = useCardStyles();

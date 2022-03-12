@@ -6,7 +6,11 @@ import useCardStyles from '../../hooks/styles/useCardStyles';
 import hand from '../../assets/static/images/hand.png';
 
 function DownloadApp() {
-  const data = useDb('http://localhost:8000/sections');
+  let data = useDb('http://localhost:8000/Home');
+  if (data) {
+    data = data.DownloadApp;
+  }
+
   const { articlesContainer, divider, cardBg, cardWrapper, handImg } =
     useCardStyles();
 
@@ -41,7 +45,7 @@ function DownloadApp() {
               <Typography
                 component="h4"
                 variant="subtitle"
-                children={data[2].title}
+                children={data.title}
                 sx={{
                   marginBottom: '0.5em',
                 }}
@@ -54,14 +58,14 @@ function DownloadApp() {
               />
               <Typography
                 component="p"
-                children={data[2].content1}
+                children={data.content1}
                 variant="body2"
                 sx={{
                   marginBottom: '1.5em',
                 }}
               />
 
-              <StyledButton content={data[2].button} />
+              <StyledButton content={data.button} />
             </Box>
           </Box>
         </Box>

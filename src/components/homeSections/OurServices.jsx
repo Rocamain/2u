@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Divider, Box, Typography, Grid } from '@mui/material';
 
 import StyledButton from '../accessories/Button';
@@ -9,22 +9,33 @@ import useDb from '../../hooks/custom/getData';
 import useBg from '../../hooks/custom/useBg';
 
 export default function Article() {
+  const [bgHeight, setBgHeight] = useState('900px');
   // Refs
   const overlapContainer = useRef(null);
   const bgContainer = useRef(null);
 
   // Custom Hooks
 
-  const data = useDb('http://localhost:8000/sections');
-  const bgHeight = useBg(data, overlapContainer);
+  let data = useDb('http://localhost:8000/Home/');
+  if (data) {
+    data = data.OurServices;
+  }
+
+  let bg = useBg(data, overlapContainer);
 
   // Styles
+
+  useEffect(() => {
+    if (data) {
+      setBgHeight(bg);
+    }
+  }, [data]);
   const classes = useCardStyles();
 
   return (
     data && (
       <Box
-        height={bgHeight}
+        height={bg}
         className={classes.articlesContainer}
         ref={bgContainer}
         component={'section'}
@@ -41,27 +52,23 @@ export default function Article() {
           }}
         >
           <Grid item component="div" xs={12} sm={12} md={6}>
-            <Typography
-              component="h2"
-              variant="title"
-              children={data[0].title}
-            />
+            <Typography component="h2" variant="title" children={data.title} />
 
             <Divider classes={{ root: classes.divider }} />
 
             <Typography
               component="p"
-              children={data[0].content1}
+              children={data.content1}
               variant="body2"
             />
 
             <Typography
               component="p"
               variant="body2"
-              children={data[0].content2}
+              children={data.content2}
             />
 
-            <StyledButton content={data[0].button} />
+            <StyledButton content={data.button} />
           </Grid>
           <Grid
             item
@@ -80,7 +87,7 @@ export default function Article() {
               container
               rowSpacing={{ xs: 3, md: 5 }}
             >
-              {data[0].cards.map(
+              {data.cards.map(
                 (card, index) =>
                   index % 2 === 0 && (
                     <Grid key={index} item>
@@ -108,7 +115,7 @@ export default function Article() {
               alignContent="flex-start"
               rowSpacing={{ xs: 3, md: 5 }}
             >
-              {data[0].cards.map(
+              {data.cards.map(
                 (card, index, array) =>
                   index % 2 !== 0 && (
                     <Grid key={index} item>

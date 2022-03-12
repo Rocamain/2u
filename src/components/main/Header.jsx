@@ -35,8 +35,17 @@ const StyledHeader = styled(Box)(({ theme }) => ({
   alignItems: 'center',
   [theme.breakpoints.up('md')]: {
     justifyContent: 'space-between',
-
+    width: '80vw',
     height: '18vh',
+  },
+  [theme.breakpoints.up('lg')]: {
+    justifyContent: 'space-between',
+    width: '70vw',
+    height: '18vh',
+  },
+  [theme.breakpoints.up('xl')]: {
+    width: '65vw',
+    height: '20vh',
   },
 }));
 
@@ -136,7 +145,7 @@ export default function Header() {
             },
           }}
         >
-          <NavList />
+          <NavList onClose={handleClose} />
         </Popover>
       )}
     </>

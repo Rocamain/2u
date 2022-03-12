@@ -3,8 +3,10 @@ import { Box, Typography, Grid } from '@mui/material';
 import StyledIcon from '../accessories/Icon';
 
 function Values() {
-  const data = useDb('http://localhost:8000/sections');
-
+  let data = useDb('http://localhost:8000/Home/');
+  if (data) {
+    data = data.Values;
+  }
   return (
     data && (
       <Box xs={{ margin: '4em auto' }}>
@@ -16,7 +18,7 @@ function Values() {
             marginBottom: '2em',
           }}
         >
-          {data[4].cards.map((card, index) => (
+          {data.cards.map((card, index) => (
             <Grid
               item
               key={index}

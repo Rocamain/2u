@@ -4,8 +4,14 @@ import StyledButton from '../accessories/Button';
 import useCardStyles from '../../hooks/styles/useCardStyles';
 import shop from '../../assets/static/images/turo.jpg';
 
-function AnyDoubt() {
-  const data = useDb('http://localhost:8000/sections');
+function AnyDoubt(props) {
+  const { path } = props;
+
+  let data = useDb(`http://localhost:8000/${path}`);
+  if (data) {
+    data = data.AnyDoubt;
+  }
+
   const { anyDoubtSection, divider, anyDoubtImg, yellowCard } = useCardStyles();
 
   return (
@@ -15,7 +21,7 @@ function AnyDoubt() {
           <Typography
             component="h2"
             variant="title"
-            children={data[3].title}
+            children={data.title}
             sx={{
               padding: ['0', '0', '1em 0'],
               paddingRight: '1em',
@@ -28,13 +34,13 @@ function AnyDoubt() {
             <Typography
               component="h2"
               variant="body2"
-              children={data[3].content1}
+              children={data.content1}
               sx={{
                 marginBottom: '1.5em',
               }}
             />
 
-            <StyledButton content={data[3].button} />
+            <StyledButton content={data.button} />
           </Box>
         </Box>
         <Box

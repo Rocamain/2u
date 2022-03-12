@@ -13,6 +13,7 @@ export default function useDb(URL) {
     getData(URL).then((parsedData) => {
       setData(parsedData);
     });
+    return () => null;
   }, [URL]);
 
   return data;
