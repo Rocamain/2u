@@ -70,11 +70,6 @@ export const useStyles = makeStyles((theme) => {
     aboutGridImgShadow: {
       [theme.breakpoints.up('md')]: {
         boxShadow: '20vw 0px 0px 0px #00bccc',
-
-        // width: '110%',
-        // marginRight: '50px',
-        // position:"relative",
-        // left:"-50px"
       },
     },
     aboutGridImg: {

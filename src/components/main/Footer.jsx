@@ -1,5 +1,5 @@
 import { Box, Grid, Typography, Button } from '@mui/material';
-import useDb from '../../hooks/custom/getData';
+import useDb from '../../hooks/useFetch';
 import SendIcon from '@mui/icons-material/Send';
 
 function Maps() {

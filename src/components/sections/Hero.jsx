@@ -1,8 +1,9 @@
-import useDb from '../../hooks/custom/getData';
+import useFetch from '../../hooks/useFetch';
 import { Box, Typography } from '@mui/material';
 import photo from '../../assets/static/backgrounds/spa-and-wellness.jpg';
 import { styled } from '@mui/material/styles';
 import curves from '../../assets/static/backgrounds/curves.svg';
+
 const HeroContainer = styled(Box)(({ theme }) => ({
   backgroundImage: `linear-gradient(1deg,#ffffff 20%,rgba(255,255,255,0.2) 68%),url(${photo})!important`,
   backgroundSize: 'cover',
@@ -15,7 +16,8 @@ const HeroContainer = styled(Box)(({ theme }) => ({
 
 function Hero(props) {
   const { path } = props;
-  let data = useDb(`http://localhost:8000/${path}`);
+
+  let data = useFetch(`http://localhost:8000/${path}`);
   if (data) {
     data = data.Hero;
   }

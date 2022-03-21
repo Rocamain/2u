@@ -1,12 +1,12 @@
 import { useRef, useEffect, useState } from 'react';
 import { Divider, Box, Typography, Grid } from '@mui/material';
 
-import StyledButton from '../accessories/Button';
-import StyledCard from '../accessories/Card';
+import StyledButton from '../single/Button';
+import StyledCard from '../single/Card';
 
 import useCardStyles from '../../hooks/styles/useCardStyles';
-import useDb from '../../hooks/custom/getData';
-import useBg from '../../hooks/custom/useBg';
+import useFetch from '../../hooks/useFetch';
+import useBg from '../../hooks/useBg';
 
 export default function Article() {
   const [bgHeight, setBgHeight] = useState('900px');
@@ -16,7 +16,7 @@ export default function Article() {
 
   // Custom Hooks
 
-  let data = useDb('http://localhost:8000/Home/');
+  let data = useFetch('http://localhost:8000/Home/');
   if (data) {
     data = data.OurServices;
   }
@@ -35,7 +35,7 @@ export default function Article() {
   return (
     data && (
       <Box
-        height={bg}
+        height={bgHeight}
         className={classes.articlesContainer}
         ref={bgContainer}
         component={'section'}

@@ -1,9 +1,9 @@
-import useDb from '../../hooks/custom/getData';
+import useFetch from '../../hooks/useFetch';
 import { Box, Typography, Grid } from '@mui/material';
-import StyledIcon from '../accessories/Icon';
+import StyledIcon from '../single/Icon';
 
 function Partners() {
-  let data = useDb('http://localhost:8000/Home');
+  let data = useFetch('http://localhost:8000/Home');
   if (data) {
     data = data.Partners;
   }

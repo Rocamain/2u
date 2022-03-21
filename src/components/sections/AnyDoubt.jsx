@@ -1,13 +1,13 @@
 import { Divider, Box, Typography } from '@mui/material';
-import useDb from '../../hooks/custom/getData';
-import StyledButton from '../accessories/Button';
+import useFetch from '../../hooks/useFetch';
+import StyledButton from '../single/Button';
 import useCardStyles from '../../hooks/styles/useCardStyles';
 import shop from '../../assets/static/images/turo.jpg';
 
 function AnyDoubt(props) {
   const { path } = props;
 
-  let data = useDb(`http://localhost:8000/${path}`);
+  let data = useFetch(`http://localhost:8000/${path}`);
   if (data) {
     data = data.AnyDoubt;
   }

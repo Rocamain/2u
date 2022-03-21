@@ -1,12 +1,12 @@
 import { Divider, Box, Typography } from '@mui/material';
-import useDb from '../../hooks/custom/getData';
-import StyledButton from '../accessories/Button';
+import useFetch from '../../hooks/useFetch';
+import StyledButton from '../single/Button';
 import useCardStyles from '../../hooks/styles/useCardStyles';
 
 import hand from '../../assets/static/images/hand.png';
 
 function DownloadApp() {
-  let data = useDb('http://localhost:8000/Home');
+  let data = useFetch('http://localhost:8000/Home');
   if (data) {
     data = data.DownloadApp;
   }

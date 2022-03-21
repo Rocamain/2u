@@ -1,9 +1,9 @@
 import { Box, Grid, Typography, Button } from '@mui/material';
-import useDb from '../../hooks/custom/useDb';
+import useFetch from '../../hooks/useFetch';
 import SendIcon from '@mui/icons-material/Send';
 
 function Maps() {
-  const data = useDb('http://localhost:8000/footer');
+  const data = useFetch('http://localhost:8000/footer');
 
   return (
     data && (

@@ -1,12 +1,9 @@
 import { useContext } from 'react';
-import Home from './pages/Home';
+import PageComponent from './pages/PageComponent';
 
 import Layout from './components/main/Layout';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import {
-  NavigationProvider,
-  NavigationContext,
-} from './hooks/context/useNavigationContext';
+import { NavigationContext } from './context/useNavigationContext';
 
 function App() {
   const { allLinks } = useContext(NavigationContext);
@@ -15,22 +12,19 @@ function App() {
     allLinks && (
       <Router>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <NavigationProvider>
-                <Layout />
-              </NavigationProvider>
-            }
-          >
+          <Route path="/" element={<Layout />}>
             {allLinks.map((routePath, i) => {
               return i === 0 ? (
-                <Route key={i} index element={<Home path={routePath} />} />
+                <Route
+                  key={i}
+                  index
+                  element={<PageComponent key={i} path={routePath} />}
+                />
               ) : (
                 <Route
                   key={i}
                   path={routePath}
-                  element={<Home path="About_us" />}
+                  element={<PageComponent key={i} path={routePath} />}
                 />
               );
             })}

@@ -23,26 +23,6 @@
 
     "Contact"
   ],
-  "carousels": [
-    {
-      "title": "Discover our promotions",
-      "content": "Now beforehand before everybody all the promotions of our treatments and products.",
-      "button": "Learn More",
-      "id": 1
-    },
-    {
-      "title": "the best products",
-      "content": "Now beforehand before everybody all the promotions of our treatments and products.",
-      "button": "Learn More",
-      "id": 2
-    },
-    {
-      "title": "can you image??",
-      "content": "Now beforehand before everybody all the promotions of our treatments and products.",
-      "button": "Learn More",
-      "id": 3
-    }
-  ],
   "Home": {
     "Carousel": [
       {
@@ -52,13 +32,13 @@
         "id": 1
       },
       {
-        "title": "the best products",
+        "title": "The best products",
         "content": "Now beforehand before everybody all the promotions of our treatments and products.",
         "button": "Learn More",
         "id": 2
       },
       {
-        "title": "can you image??",
+        "title": "Can you image??",
         "content": "Now beforehand before everybody all the promotions of our treatments and products.",
         "button": "Learn More",
         "id": 3
@@ -69,7 +49,7 @@
       "title": "Our services",
       "content1": "Ofrecemos una selección de tratamientos faciales y corporales de última generación con los que conseguirás resultados y objetivos reales. Déjate asesorar por nuestras profesionales y diseñaremos un tratamiento a medida y personalizado para ti.",
       "content2": "También somos especialistas en la belleza de tus manos y pies. Para ello contamos con la marca líder internacional CND con sus esmaltes semi-permanentes Shellac y esmaltes de larga duración Vinylux.",
-      "button": "Make Appoinment",
+      "button": "Make apoinment",
       "cards": [
         {
           "title": "Tratamientos corporales",

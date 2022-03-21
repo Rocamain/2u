@@ -1,10 +1,10 @@
-import * as Components from '../components/homeSections/index';
-import useDb from '../hooks/custom/getData';
+import * as Components from '../components/sections/index';
+import useFetch from '../hooks/useFetch';
 
 export default function Home(props) {
   const { path } = props;
 
-  const data = useDb(`http://localhost:8000/${path}`);
+  const data = useFetch(`http://localhost:8000/${path}`);
 
   const renderComponents = (componentsObj) => {
     const componentsNames = Object.keys(componentsObj);

@@ -1,18 +1,19 @@
 import { useState } from 'react';
 import useCardStyles from '../../hooks/styles/useCardStyles';
-import useDb from '../../hooks/custom/getData';
+import useFetch from '../../hooks/useFetch';
 
 import { Box, Button } from '@mui/material';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material/';
-import Card from '../accessories/Card';
-import Stepper from '../accessories/Stepper';
+import Card from '../single/Card';
+import Stepper from '../single/Stepper';
 
-export default function Carousel() {
+export default function Carousel({ path }) {
   // Hooks
   const [slide, setSlide] = useState(0);
   const [exit, setExit] = useState(false);
   // Custom Hook
-  let cards = useDb('http://localhost:8000/Home/');
+
+  let cards = useFetch(`http://localhost:8000/${path}/`);
 
   if (cards) {
     cards = cards.Carousel;

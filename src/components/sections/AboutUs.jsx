@@ -1,15 +1,13 @@
 import { Divider, Box, Typography, Grid } from '@mui/material';
-
-import StyledButton from '../accessories/Button';
-
+import StyledButton from '../single/Button';
 import shop from '../../assets/static/images/illa.jpg';
 import useCardStyles from '../../hooks/styles/useCardStyles';
-import useDb from '../../hooks/custom/getData';
+import useFetch from '../../hooks/useFetch';
 
 const AboutUs = (props) => {
   const { path } = props;
 
-  let data = useDb(`http://localhost:8000/${path}`);
+  let data = useFetch(`http://localhost:8000/${path}`);
 
   if (data) {
     data = data.AboutUs;

@@ -1,8 +1,8 @@
 import { useContext, useState } from 'react';
-import NavLink from '../accessories/NavLink';
-import PopoverLink from '../accessories/PopoverLink';
+import NavLink from '../single/NavLink';
+import PopoverLink from '../single/PopoverLink';
 import { List } from '@mui/material';
-import { NavigationContext } from '../../hooks/context/useNavigationContext';
+import { NavigationContext } from '../../context/useNavigationContext';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { styled } from '@mui/material/styles';

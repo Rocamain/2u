@@ -2,7 +2,7 @@ import { Icon } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 import { useRef } from 'react';
-import ScrollAnimation from '../accessories/ScrollAnimation';
+import ScrollAnimation from './ScrollAnimation';
 
 const AnimatedIcon = (props) => {
   const { iconFileName } = props;
