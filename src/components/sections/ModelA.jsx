@@ -8,17 +8,19 @@ import useCardStyles from '../../hooks/styles/useCardStyles';
 import useFetch from '../../hooks/useFetch';
 import useBg from '../../hooks/useBg';
 
-export default function Article() {
-  const [bgHeight, setBgHeight] = useState('900px');
+export default function ModelA(props) {
+  const { path } = props;
+  const [bgHeight, setBgHeight] = useState(null);
   // Refs
   const overlapContainer = useRef(null);
   const bgContainer = useRef(null);
 
   // Custom Hooks
 
-  let data = useFetch('http://localhost:8000/Home/');
+  let data = useFetch(`http://localhost:8000/${path}`);
+
   if (data) {
-    data = data.OurServices;
+    data = data[0];
   }
 
   let bg = useBg(data, overlapContainer);
@@ -29,7 +31,7 @@ export default function Article() {
     if (data) {
       setBgHeight(bg);
     }
-  }, [data]);
+  }, [data, bg]);
   const classes = useCardStyles();
 
   return (
@@ -55,18 +57,14 @@ export default function Article() {
             <Typography component="h2" variant="title" children={data.title} />
 
             <Divider classes={{ root: classes.divider }} />
-
-            <Typography
-              component="p"
-              children={data.content1}
-              variant="body2"
-            />
-
-            <Typography
-              component="p"
-              variant="body2"
-              children={data.content2}
-            />
+            {data.content.map((content, index) => (
+              <Typography
+                key={index}
+                component="p"
+                variant="body2"
+                children={content}
+              />
+            ))}
 
             <StyledButton content={data.button} />
           </Grid>

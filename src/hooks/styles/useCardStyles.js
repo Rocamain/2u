@@ -82,7 +82,7 @@ export const useStyles = makeStyles((theme) => {
       boxShadow: '0px 80px 100px -40px rgb(0 0 0 / 30%)',
       marginBottom: '8em',
       [theme.breakpoints.up('sm')]: {
-        width: '90%',
+        width: '100%',
       },
       [theme.breakpoints.up('md')]: {
         width: '110%',
@@ -129,6 +129,7 @@ export const useStyles = makeStyles((theme) => {
       display: 'flex',
       flexWrap: 'wrap',
       justifyContent: 'space-evenly',
+      paddingBottom: '2em',
 
       [theme.breakpoints.up('md')]: {
         flexWrap: 'nowrap',

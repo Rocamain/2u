@@ -2,7 +2,7 @@ import { Box, Grid, Typography, Button } from '@mui/material';
 import useDb from '../../hooks/useFetch';
 import SendIcon from '@mui/icons-material/Send';
 
-function Maps() {
+function Footer() {
   const data = useDb('http://localhost:8000/footer');
 
   return (
@@ -19,7 +19,7 @@ function Maps() {
                 <Typography
                   variant="h4"
                   component="h4"
-                  sx={{ pb: '0.2em', color: 'secondary.main' }}
+                  sx={{ py: '1.2em', color: 'secondary.main' }}
                 >
                   {shop.city}
                 </Typography>
@@ -122,4 +122,4 @@ function Maps() {
   );
 }
 
-export default Maps;
+export default Footer;

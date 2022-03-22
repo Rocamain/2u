@@ -7,7 +7,6 @@
         "sectionsWithDiffURL": []
       }
     },
-
     {
       "Treatments and fares": {
         "sectionsWithSameURL": [],
@@ -20,35 +19,37 @@
         ]
       }
     },
-
     "Contact"
   ],
-  "Home": {
-    "Carousel": [
-      {
-        "title": "Discover our promotions",
-        "content": "Now beforehand before everybody all the promotions of our treatments and products.",
-        "button": "Learn More",
-        "id": 1
-      },
-      {
-        "title": "The best products",
-        "content": "Now beforehand before everybody all the promotions of our treatments and products.",
-        "button": "Learn More",
-        "id": 2
-      },
-      {
-        "title": "Can you image??",
-        "content": "Now beforehand before everybody all the promotions of our treatments and products.",
-        "button": "Learn More",
-        "id": 3
-      }
-    ],
 
-    "OurServices": {
+  "Home": [
+    {
+      "component": "Carousel",
+      "cards": [
+        {
+          "title": "Discover our promotions",
+          "content": "Now beforehand before everybody all the promotions of our treatments and products.",
+          "button": "Learn More"
+        },
+        {
+          "title": "The best products",
+          "content": "Now beforehand before everybody all the promotions of our treatments and products.",
+          "button": "Learn More"
+        },
+        {
+          "title": "Can you image??",
+          "content": "Now beforehand before everybody all the promotions of our treatments and products.",
+          "button": "Learn More"
+        }
+      ]
+    },
+    {
+      "component": "ModelA",
       "title": "Our services",
-      "content1": "Ofrecemos una selección de tratamientos faciales y corporales de última generación con los que conseguirás resultados y objetivos reales. Déjate asesorar por nuestras profesionales y diseñaremos un tratamiento a medida y personalizado para ti.",
-      "content2": "También somos especialistas en la belleza de tus manos y pies. Para ello contamos con la marca líder internacional CND con sus esmaltes semi-permanentes Shellac y esmaltes de larga duración Vinylux.",
+      "content": [
+        "Ofrecemos una selección de tratamientos faciales y corporales de última generación con los que conseguirás resultados y objetivos reales. Déjate asesorar por nuestras profesionales y diseñaremos un tratamiento a medida y personalizado para ti.",
+        "También somos especialistas en la belleza de tus manos y pies. Para ello contamos con la marca líder internacional CND con sus esmaltes semi-permanentes Shellac y esmaltes de larga duración Vinylux."
+      ],
       "button": "Make apoinment",
       "cards": [
         {
@@ -73,31 +74,37 @@
         }
       ]
     },
-
-    "AboutUs": {
+    {
+      "component": "ModelB",
       "title": "A little bit about us",
-      "paragraphs": [
+      "leavesBackground": true,
+      "imageShadow": true,
+      "content": [
         "Nuestro concepto destaca por ofrecer las técnicas más vanguardistas y líderes del mercado de la mano de un gran equipo de profesionales motivadas principalmente por la pasión por su profesión.",
         "Nuestro trabajo en equipo, constancia y dedicación están enfocados a que nuestros clientes obtengan la máxima satisfacción, objetivos y resultados.",
         "Nuestras premisas son innovación, entusiasmo, honestidad, rigor, pasión, eficacia, todo ello enfocado a potenciar la belleza natural.",
         "Nuestra filosofía de trabajo se basa en un correcto diagnóstico que permite diseñar un tratamiento a medida y personalizado para cada cliente lo que nos garantizará ofrecer excelentes resultados."
       ],
-      "button": "More about us"
+      "button": "More about us",
+      "imageFileName": "Photo-illa-3.jpg"
     },
 
-    "DownloadApp": {
+    {
+      "component": "ModelC",
       "title": "Advantages to use the app",
-      "content1": "Accede a información, promociones y descuentos exclusivos para ti, además de pedir cita de manera muy intuitiva. Es fácil y rápido.",
-      "button": "Download App"
+      "content": "Accede a información, promociones y descuentos exclusivos para ti, además de pedir cita de manera muy intuitiva. Es fácil y rápido.",
+      "button": "Download App",
+      "imageFileName": "hand.png"
     },
-
-    "AnyDoubt": {
+    {
+      "component": "ModelD",
       "title": "Any doubt?",
-      "content1": "Muchas veces lo que necesitamos es que nos informen bien sobre los servicios y los tratamientos, es por ello que nos tomamos muy en serio tus consultas. Si tienes dudas estaremos encantados de ayudarte en todo lo que necesites.",
-      "button": "Ask us"
+      "content": "Muchas veces lo que necesitamos es que nos informen bien sobre los servicios y los tratamientos, es por ello que nos tomamos muy en serio tus consultas. Si tienes dudas estaremos encantados de ayudarte en todo lo que necesites.",
+      "button": "Ask us",
+      "imageFileName": "turo.jpg"
     },
-
-    "Values": {
+    {
+      "component": "CardsGrid",
       "cards": [
         {
           "title": "Quality products",
@@ -116,8 +123,8 @@
         }
       ]
     },
-
-    "Partners": {
+    {
+      "component": "CardsGrid",
       "cards": [
         {
           "content": "La marca profesional internacional líder que revoluciona el sector de la belleza de manos y pies.",
@@ -142,23 +149,33 @@
         }
       ]
     }
-  },
-  "About_us": {
-    "Hero": { "title": "About us", "subtitle": "Beauty specilist" },
-    "AboutUs": {
+  ],
+  "About_us": [
+    {
+      "component": "Hero",
+      "title": "About us",
+      "subtitle": "Beauty specilist"
+    },
+    {
+      "component": "ModelB",
       "title": "La revolución de la estética",
-      "paragraphs": [
+      "leavesBackground": true,
+      "imageShadow": true,
+      "content": [
         "2u estètica avançada es un nuevo concepto centro de estética que destaca por un gran equipo de profesionales que ofrece las técnicas más vanguardistas en el campo de la estética. Descubre la nueva tecnología Alliance patentada por LPG, radiofrecuencia, mesoterapia digital y fotodepilación. Tratamientos de última generación especialmente diseñados para ti. Encontrarás tratamientos faciales y corporales de la mano de prestigiosas firmas de alta cosmética. También somos especialistas en la belleza de tus manos y pies, ofreciéndote la marca líder en el sector: CND, con sus esmaltes Vinylux y Shellac reconocidos a nivel internacional."
       ],
-      "button": "Reserva tu visita"
+      "button": "Reserva tu visita",
+      "imageFileName": "Photo-LIlla-2.jpg"
     },
-    "AnyDoubt": {
+    {
+      "component": "ModelC",
       "title": "Ven a conocernos",
       "content1": "La mejor forma de comprobar las cosas es a través de la experiencia, desde nuestros inicios contamos con clientes que han estado con nosotros año tras año. La razón es simple y se debe a que no somos un centro de estética convencional, hacemos nuestro trabajo de forma profesional para que vivas una experiencia única en cada una de tus visitas.",
-      "button": "Consult us"
+      "button": "Consult us",
+      "imageFileName": "hand.png"
     },
-
-    "Values": {
+    {
+      "component": "CardsGrid",
       "cards": [
         {
           "title": "Quality products",
@@ -177,8 +194,8 @@
         }
       ]
     },
-
-    "Partners": {
+    {
+      "component": "CardsGrid",
       "cards": [
         {
           "content": "La marca profesional internacional líder que revoluciona el sector de la belleza de manos y pies.",
@@ -203,7 +220,7 @@
         }
       ]
     }
-  },
+  ],
 
   "footer": [
     {

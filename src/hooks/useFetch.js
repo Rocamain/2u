@@ -1,5 +1,4 @@
 import { getPathsName, getNavbarLinks } from '../utils/index';
-
 import { useState, useEffect } from 'react';
 
 const useFetch = (url) => {
@@ -28,7 +27,7 @@ const useFetch = (url) => {
     fetchData(url);
     return () => controller?.abort();
   }, [url]);
-  console.log(data);
+
   return data;
 };
 

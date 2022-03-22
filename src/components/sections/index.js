@@ -1,8 +1,7 @@
-export { default as AboutUs } from './AboutUs';
-export { default as AnyDoubt } from './AnyDoubt';
+export { default as ModelA } from './ModelA';
+export { default as ModelB } from './ModelB';
+export { default as ModelC } from './ModelC';
+export { default as ModelD } from './ModelD';
 export { default as Carousel } from './Carousel';
-export { default as DownloadApp } from './DownloadApp';
-export { default as OurServices } from './OurServices';
-export { default as Partners } from './Partners';
-export { default as Values } from './Values';
+export { default as CardsGrid } from './CardsGrid';
 export { default as Hero } from './Hero';
