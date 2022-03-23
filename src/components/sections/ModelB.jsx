@@ -1,6 +1,8 @@
 import { Divider, Box, Typography, Grid } from '@mui/material';
 import StyledButton from '../single/Button';
 import useCardStyles from '../../hooks/styles/useCardStyles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 const ModelB = (props) => {
   const { path, ...data } = props;
@@ -8,7 +10,8 @@ const ModelB = (props) => {
 
   const { aboutUsSection, divider, aboutGridImg, aboutGridImgShadow } =
     useCardStyles();
-
+  const theme = useTheme();
+  let mdUpOnly = useMediaQuery(theme.breakpoints.up('md'));
   return (
     <Box
       component={'section'}
@@ -22,9 +25,17 @@ const ModelB = (props) => {
         sx={{
           width: '85vw',
           margin: '0 auto',
+          alignItems: mdUpOnly ? 'center' : null,
         }}
       >
-        <Grid item component="div" xs={12} sm={12} md={6}>
+        <Grid
+          item
+          component="div"
+          xs={12}
+          sm={12}
+          md={6}
+          // sx={{ height: '100%' }}
+        >
           <Typography component="h2" variant="title" children={data.title} />
 
           <Divider className={divider} />

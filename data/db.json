@@ -168,11 +168,32 @@
       "imageFileName": "Photo-LIlla-2.jpg"
     },
     {
-      "component": "ModelC",
+      "component": "ModelD",
       "title": "Ven a conocernos",
-      "content1": "La mejor forma de comprobar las cosas es a través de la experiencia, desde nuestros inicios contamos con clientes que han estado con nosotros año tras año. La razón es simple y se debe a que no somos un centro de estética convencional, hacemos nuestro trabajo de forma profesional para que vivas una experiencia única en cada una de tus visitas.",
+      "content": "La mejor forma de comprobar las cosas es a través de la experiencia, desde nuestros inicios contamos con clientes que han estado con nosotros año tras año. La razón es simple y se debe a que no somos un centro de estética convencional, hacemos nuestro trabajo de forma profesional para que vivas una experiencia única en cada una de tus visitas.",
       "button": "Consult us",
-      "imageFileName": "hand.png"
+      "imageFileName": "Photo-Turo-2.jpg"
+    },
+    {
+      "component": "ImageGrid",
+      "imagesFileName": [
+        "Photo-illa-3.jpg",
+        "Photo-LIlla-1.jpg",
+        "Photo-LIlla-2.jpg",
+        "Photo-Turo-1.jpg"
+      ]
+    },
+    {
+      "component": "ModelB",
+      "title": "The Best products of the market",
+      "leavesBackground": false,
+      "imageShadow": false,
+      "textDown": true,
+      "content": [
+        "Sólo trabajamos con los mejores productos del mercado, brindando a nuestros clientes los más altos estandares de calidad en cada uno de sus tratamientos."
+      ],
+      "button": "Make your booking",
+      "imageFileName": "products.jpg"
     },
     {
       "component": "CardsGrid",

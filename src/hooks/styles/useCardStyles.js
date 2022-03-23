@@ -146,9 +146,17 @@ export const useStyles = makeStyles((theme) => {
       justifyContent: 'center',
       alignItems: 'flex-start',
       padding: ' 0 12.5%',
-      marginBottom: '2em',
+      marginBottom: '1em',
+
       [theme.breakpoints.up('md')]: {
         flexWrap: 'nowrap',
+        marginBottom: '2em',
+      },
+      [theme.breakpoints.up('lg')]: {
+        marginBottom: '3em',
+      },
+      [theme.breakpoints.up('xl')]: {
+        marginBottom: '5em',
       },
     },
     anyDoubtImg: {
