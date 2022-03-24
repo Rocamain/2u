@@ -46,6 +46,7 @@
     {
       "component": "ModelA",
       "title": "Our services",
+      "contentLeft": false,
       "content": [
         "Ofrecemos una selección de tratamientos faciales y corporales de última generación con los que conseguirás resultados y objetivos reales. Déjate asesorar por nuestras profesionales y diseñaremos un tratamiento a medida y personalizado para ti.",
         "También somos especialistas en la belleza de tus manos y pies. Para ello contamos con la marca líder internacional CND con sus esmaltes semi-permanentes Shellac y esmaltes de larga duración Vinylux."
@@ -194,6 +195,139 @@
       ],
       "button": "Make your booking",
       "imageFileName": "products.jpg"
+    },
+    {
+      "component": "CardsGrid",
+      "cards": [
+        {
+          "title": "Quality products",
+          "content": "Sólo utilizamos los mejores productos del mercado, razón que nos hace diferenciarnos de los demás.",
+          "iconFileName": "Quality_products.png"
+        },
+        {
+          "title": "Personalized treatments",
+          "content": "Nuestro trato es totalmente personalizado, queremos que tu experiencia con nosotros siempre sea la mejor.",
+          "iconFileName": "Personalized_treatments.png"
+        },
+        {
+          "title": "Qualified personel",
+          "content": "Contamos con el mejor personal profesional, todos altamente cualificados en terapias estéticas y con amplia experiencia.",
+          "iconFileName": "Qualified_personel.png"
+        }
+      ]
+    },
+    {
+      "component": "CardsGrid",
+      "cards": [
+        {
+          "content": "La marca profesional internacional líder que revoluciona el sector de la belleza de manos y pies.",
+          "iconFileName": "cbeauty.jpg"
+        },
+        {
+          "title": "lpg",
+          "content": "Después de más de 30 años de experiencia y de investigación científica LPG Endermologie ofrece una alternativa natural al 100%: estimula la actividad celular latente dentro de nuestra piel para luchar contra todas las manifestaciones antiestéticas (arrugas, flacidez de la piel, la grasa resistente localizada, la apariencia de la celulitis, y más).",
+          "iconFileName": "lpg.png",
+          "black": "estimula la actividad celular latente dentro de nuestra piel"
+        },
+        {
+          "title": "alma",
+          "content": "Alma, uno de los fabricantes líderes en la industria médica y estética que ofrece tecnologías y tratamientos de última generación basados en radiofrecuencia, fotodepilación, laser y ultrasonidos.",
+          "iconFileName": "alma.svg"
+        },
+        {
+          "title": "logo thalgo",
+          "content": "Extractos marinos naturales que concentran principios activos, minerales y oligoelementos, hasta 10.000 veces superiores a las plantas terrestres.",
+          "iconFileName": "thalgo.jpg",
+          "black": "principios activos, minerales y oligoelementos"
+        }
+      ]
+    }
+  ],
+  "Treatments_and_fares": [
+    {
+      "component": "ModelA",
+      "title": "Our services",
+      "content": [
+        "Ofrecemos una selección de tratamientos faciales y corporales de última generación con los que conseguirás resultados y objetivos reales. Déjate asesorar por nuestras profesionales y diseñaremos un tratamiento a medida y personalizado para ti.",
+        "También somos especialistas en la belleza de tus manos y pies. Para ello contamos con la marca líder internacional CND con sus esmaltes semi-permanentes Shellac y esmaltes de larga duración Vinylux."
+      ],
+      "button": "Make apoinment",
+      "cards": [
+        {
+          "title": "Tratamientos corporales",
+          "content": "Disponemos de una amplia selección de tratamientos corporales para tratar la celulitis, remodelar, drenar o reafirmar tu piel en los que combinamos técnicas manuales con aparatología avanzada.",
+          "iconFileName": "Tratamientos_corporales.png"
+        },
+        {
+          "title": "Manicuras y pedicuras",
+          "content": "Trabajamos con productos innovadores y seguros como CND en sus versiones Vinylux y Shellac.",
+          "iconFileName": "Manicuras_y_pedicuras.png"
+        },
+        {
+          "title": "Tratamientos faciales",
+          "content": "Para nuestros tratamientos faciales elegimos Thalgo, cosmética 100% de origen marino que nace en las profundidades del océano.",
+          "iconFileName": "Tratamientos_faciales.png"
+        },
+        {
+          "title": "Fotodepilacion",
+          "content": "Olvídate del vello con nuestro tratamiento de fotodepilación IPL, luz pulsada de alta intensidad.",
+          "iconFileName": "Fotodepilacion.png"
+        }
+      ]
+    },
+    {
+      "component": "ModelA",
+      "title": "Manicures and Pedicures",
+      "contentLeft": true,
+      "imageFileName": "Manicure.jpg",
+      "content": [
+        "Trabajamos con productos innovadores y seguros como CND en sus versiones Vinylux y Shellac.",
+        "Sus esmaltes Vinylux con tecnología Prolight, patentada por CND endurece el esmalte con la luz natural. Además contienen, por primera vez, Keratina, Aceite de Jojoba y Vitamina E para el cuidado de tus uñas.",
+        "También somos especialistas en la belleza de tus manos y pies. Para ello contamos con la marca líder internacional CND con sus esmaltes semi-permanentes Shellac y esmaltes de larga duración Vinylux.",
+        "El esmaltado Shellac de CND es el único esmalte semipermanente que respeta al 100% la uña natural y que no la daña, ya que no hay que limar su superficie ni para aplicarlo ni para retirarlo. Ofrece una resistencia y un brillo únicos con una duración de hasta 14 días. Shellac de CND también es vegano y 7 free asegurando la salud de nuestras uñas y piel."
+      ],
+      "button": "Make apoinment"
+    },
+    {
+      "component": "ModelB",
+      "title": "Body treatments",
+      "leavesBackground": true,
+      "imageShadow": true,
+      "textDown": false,
+      "content": [
+        "Disponemos de una amplia selección de tratamientos corporales para tratar la celulitis, remodelar, drenar o reafirmar tu piel en los que combinamos técnicas manuales con aparatología avanzada.",
+        "Entre ellos destacamos la nueva tecnología LPG Alliance que trata las acumulaciones de grasa localizada y celulitis incluso las más resistentes a la dieta y ejercicio. Simultáneamente, gracias a su nueva patente la acción mecánica del cabezal reafirma la piel para devolverle la firmeza y la tonicidad. Resultados garantizados y visibles a partir de la tercera sesión.",
+        "La Radiofrecuencia, un tratamiento revolucionario para reafirmar tu piel. Esta técnica favorece la formación de colágeno y elastina reestructurando el tejido subcutáneo y aportando firmeza a la piel. Se trata de un tratamiento indoloro y no invasivo que ofrece resultados muy exitosos.",
+        "Si estás interesado/a en un tratamiento corporal verás que existen multitud de alternativas pero te preguntarás qué técnica es la más eficaz y adecuada para ti. Por eso te invitamos a solicitar una visita de valoración y diagnóstico sin compromiso para que te podamos ofrecer un tratamiento totalmente personalizado y adaptado a tus necesidades y objetivos para conseguir así los máximos resultados."
+      ],
+      "button": "Check offers",
+      "imageFileName": "lpg.jpg"
+    },
+    {
+      "component": "ModelB",
+      "title": "Face treatments",
+      "leavesBackground": true,
+      "imageShadow": true,
+      "textDown": false,
+      "content": [
+        "Para nuestros tratamientos faciales elegimos Thalgo, cosmética 100% de origen marino que nace en las profundidades del océano y en la que todas sus formulaciones a base de extractos marinos concentran principios activos, minerales y oligoelementos hasta 10.000 veces superiores a las plantas terrestres."
+      ],
+      "list": [
+        "Source Marine: Este tratamiento corrige el índice de hidratación de las pieles deshidratadas y las revitaliza en profundidad, proporcionándoles un tacto aterciopelado y luminosidad.",
+        "Spiruline Boost:  Tratamiento detox y energizane, rico en Magnesio Marino. Reaviva intensamente la luminosidad natural de la piel y alisa las primeras arrugas. La piel aparece más lisa y la tez más fresca, la piel respira de nuevo, la tez es más luminosa, detoxificada. Los primeros signos de la edad se difuminan.",
+        "Hyalu-Procollagene: Nuevo tratamiento filler marino que combina 3 tipos de ácido hialurónico y colágeno marino. Desde la primera sesión tu piel se alisa y las arrugas se rellenan visiblemente.",
+        "Silicium Marine: Este tratamiento estrella de THALGO destaca por su alta eficacia en la corrección de la pérdida de firmeza y el alisado de las arrugas profundas.",
+        "Lumiere Marine: Tratamiento de «luminosidad» por excelencia, magnifica y revela la belleza de las pieles apagadas y cansadas. El secreto de su eficacia: una mascarilla y un concentrado profesional unidos a una digitopresión energizante",
+        "Peeling Marine: Primer tratamiento Marino, rico en fermentos de ácidos de Algas Marinas Micronizadas , enriquecidos en ácido láctico, que renueva progresivamente la calidad de la piel para un efecto “piel nueva” visible desde la primera sesión."
+      ],
+      "content1": [
+        "Queremos destacar algunos de nuestros tratamientos con equipos de aparatología avanzada como los tratamientos faciales de Endermolift, una técnica anti-edad 100% natural desarollada por LPG capaz de estimular la síntesis natural del ácido hialurónico que ofrece resultados inmediatos: efecto luminosidad, efecto lifting natural y efecto anti-fatiga.",
+        "Y no podemos dejar de mencionar la Radiofrecuencia, una solución no invasiva e indolora que reafirma, redensifica y tensa tu piel. Su técnica se basa en provocar la estimulación de producción de colágeno de forma natural dejando tu piel más firme, más tensa y más redensificada.",
+        "La Mesoterapia Virtual es la alternativa a las inyecciones ya que su sistema permite la vehiculización transdérmica de principios activos como ácido hialurónico, vitaminas o aminoácidos a través de la electroporación. Un tratamiento indoloro y no invasivo que ofrece resultados inmediatos para rejuvenecer tu piel.",
+        "Como siempre te invitamos a reservar tu visita de valoración y diagnóstico gratuita y sin compromiso, así nuestras esteticistas podrán asesorarte y desarrollar un tratamiento adaptado y personalizado para ti."
+      ],
+      "button": "Check offers",
+      "imageFileName": "lpg.jpg"
     },
     {
       "component": "CardsGrid",

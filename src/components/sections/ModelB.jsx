@@ -23,7 +23,7 @@ const ModelB = (props) => {
         justifyContent="flex-end"
         component="div"
         sx={{
-          width: '85vw',
+          width: { sm: '85vw', lg: '75vw' },
           margin: '0 auto',
           alignItems: mdUpOnly ? 'center' : null,
         }}
@@ -33,7 +33,7 @@ const ModelB = (props) => {
           component="div"
           xs={12}
           sm={12}
-          md={6}
+          md={9}
           // sx={{ height: '100%' }}
         >
           <Typography component="h2" variant="title" children={data.title} />
@@ -48,6 +48,27 @@ const ModelB = (props) => {
               variant="body2"
             />
           ))}
+          {data.list && (
+            <ul>
+              {data.list.map((paragraph, index) => (
+                <Typography
+                  key={index}
+                  component="li"
+                  children={paragraph}
+                  variant="body2"
+                />
+              ))}
+            </ul>
+          )}
+          {data.content1 &&
+            data.content1.map((paragraph, index) => (
+              <Typography
+                key={index}
+                component="p"
+                children={paragraph}
+                variant="body2"
+              />
+            ))}
 
           <StyledButton content={data.button} />
         </Grid>
@@ -56,8 +77,9 @@ const ModelB = (props) => {
           component="div"
           xs={12}
           sm={12}
-          md={6}
+          md={3}
           className={data.imageShadow ? aboutGridImgShadow : null}
+          sx={{ height: '10%' }}
         >
           <Box
             component="img"
