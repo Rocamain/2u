@@ -49,8 +49,8 @@ export const useStyles = makeStyles((theme) => {
 
     articlesContainer: {
       backgroundImage: theme.palette.background.primary,
-      marginTop: '10em',
-      marginBottom: '24em',
+
+      marginBottom: '12em',
       width: '100%',
       position: 'relative',
       display: 'flex',
@@ -67,51 +67,31 @@ export const useStyles = makeStyles((theme) => {
       marginBottom: '10em',
     },
 
-    aboutGridImgShadow: {
-      [theme.breakpoints.up('md')]: {
-        boxShadow: '24vw 0px 0px 0px #00bccc',
-      },
-      [theme.breakpoints.up('lg')]: {
-        boxShadow: '30vw 0px 0px 0px #00bccc',
-      },
-    },
     aboutGridImg: {
       objectFit: 'cover',
-      width: '95vw',
-      minHeight: '60%',
-      // marginRight: '-10vw',
       float: 'right',
       boxSizing: 'border-box',
       boxShadow: '0px 80px 100px -40px rgb(0 0 0 / 30%)',
       marginBottom: '8em',
-      [theme.breakpoints.up('sm')]: {
-        width: '100%',
+      [theme.breakpoints.down('md')]: {
+        top: 0,
+        width: '65%',
       },
       [theme.breakpoints.up('md')]: {
         width: '100%',
       },
     },
+
     gridImg: {
       objectFit: 'cover',
-      position: 'relative',
-      top: '-15vh',
-      left: '-13vw',
-      width: '100%',
       boxSizing: 'border-box',
       boxShadow: '0px 80px 100px -40px rgb(0 0 0 / 30%)',
 
-      [theme.breakpoints.down('md')]: {
-        top: 0,
-
-        width: '65%',
-        marginTop: '-15vh',
-      },
       [theme.breakpoints.up('md')]: {
-        width: '100%',
+        width: '120%',
       },
       [theme.breakpoints.up('lg')]: {
-        width: '85%',
-        left: '-5vw',
+        width: '140%',
       },
     },
 
@@ -120,8 +100,12 @@ export const useStyles = makeStyles((theme) => {
       position: 'absolute',
       top: '-6em',
       margin: '0 auto',
+
       backgroundColor: theme.palette.background.secondary,
       padding: '1.5em',
+      [theme.breakpoints.up('lg')]: {
+        width: '70%',
+      },
     },
     cardBg: {
       width: '68%',

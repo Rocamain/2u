@@ -46,7 +46,7 @@
     {
       "component": "ModelA",
       "title": "Our services",
-      "contentLeft": false,
+      "contentLeft": true,
       "content": [
         "Ofrecemos una selección de tratamientos faciales y corporales de última generación con los que conseguirás resultados y objetivos reales. Déjate asesorar por nuestras profesionales y diseñaremos un tratamiento a medida y personalizado para ti.",
         "También somos especialistas en la belleza de tus manos y pies. Para ello contamos con la marca líder internacional CND con sus esmaltes semi-permanentes Shellac y esmaltes de larga duración Vinylux."
@@ -247,6 +247,7 @@
     {
       "component": "ModelA",
       "title": "Our services",
+      "contentLeft": false,
       "content": [
         "Ofrecemos una selección de tratamientos faciales y corporales de última generación con los que conseguirás resultados y objetivos reales. Déjate asesorar por nuestras profesionales y diseñaremos un tratamiento a medida y personalizado para ti.",
         "También somos especialistas en la belleza de tus manos y pies. Para ello contamos con la marca líder internacional CND con sus esmaltes semi-permanentes Shellac y esmaltes de larga duración Vinylux."
@@ -275,19 +276,7 @@
         }
       ]
     },
-    {
-      "component": "ModelA",
-      "title": "Manicures and Pedicures",
-      "contentLeft": true,
-      "imageFileName": "Manicure.jpg",
-      "content": [
-        "Trabajamos con productos innovadores y seguros como CND en sus versiones Vinylux y Shellac.",
-        "Sus esmaltes Vinylux con tecnología Prolight, patentada por CND endurece el esmalte con la luz natural. Además contienen, por primera vez, Keratina, Aceite de Jojoba y Vitamina E para el cuidado de tus uñas.",
-        "También somos especialistas en la belleza de tus manos y pies. Para ello contamos con la marca líder internacional CND con sus esmaltes semi-permanentes Shellac y esmaltes de larga duración Vinylux.",
-        "El esmaltado Shellac de CND es el único esmalte semipermanente que respeta al 100% la uña natural y que no la daña, ya que no hay que limar su superficie ni para aplicarlo ni para retirarlo. Ofrece una resistencia y un brillo únicos con una duración de hasta 14 días. Shellac de CND también es vegano y 7 free asegurando la salud de nuestras uñas y piel."
-      ],
-      "button": "Make apoinment"
-    },
+
     {
       "component": "ModelB",
       "title": "Body treatments",
@@ -304,8 +293,22 @@
       "imageFileName": "lpg.jpg"
     },
     {
+      "component": "ModelA",
+      "title": "Manicures and Pedicures",
+      "contentLeft": true,
+      "imageFileName": "Manicure.jpg",
+      "content": [
+        "Trabajamos con productos innovadores y seguros como CND en sus versiones Vinylux y Shellac.",
+        "Sus esmaltes Vinylux con tecnología Prolight, patentada por CND endurece el esmalte con la luz natural. Además contienen, por primera vez, Keratina, Aceite de Jojoba y Vitamina E para el cuidado de tus uñas.",
+        "También somos especialistas en la belleza de tus manos y pies. Para ello contamos con la marca líder internacional CND con sus esmaltes semi-permanentes Shellac y esmaltes de larga duración Vinylux.",
+        "El esmaltado Shellac de CND es el único esmalte semipermanente que respeta al 100% la uña natural y que no la daña, ya que no hay que limar su superficie ni para aplicarlo ni para retirarlo. Ofrece una resistencia y un brillo únicos con una duración de hasta 14 días. Shellac de CND también es vegano y 7 free asegurando la salud de nuestras uñas y piel."
+      ],
+      "button": "Make apoinment"
+    },
+
+    {
       "component": "ModelB",
-      "title": "Face treatments",
+      "title": "Facical treatments",
       "leavesBackground": true,
       "imageShadow": true,
       "textDown": false,
@@ -327,8 +330,21 @@
         "Como siempre te invitamos a reservar tu visita de valoración y diagnóstico gratuita y sin compromiso, así nuestras esteticistas podrán asesorarte y desarrollar un tratamiento adaptado y personalizado para ti."
       ],
       "button": "Check offers",
-      "imageFileName": "lpg.jpg"
+      "imageFileName": "facial-treatments.jpg"
     },
+    {
+      "component": "ModelA",
+      "title": "Photodepilation",
+      "contentLeft": false,
+      "imageFileName": "Photodepilation.jpg",
+      "content": [
+        "Olvídate del vello con nuestro tratamiento de fotodepilación IPL, luz pulsada de alta intensidad. Consiste en producir un calentamiento sobre la matriz pilosa, que es la que se encarga de producir nuestro pelo. Con este calentamiento impedimos que el folículo pueda volver a producir pelo.",
+        "La fotodepilación es una técnica eficaz y segura, sólo es necesario seguir ciertos consejos.",
+        "Solicita información sin compromiso, estaremos encantadas de asesorarte."
+      ],
+      "button": "Check Fares"
+    },
+
     {
       "component": "CardsGrid",
       "cards": [

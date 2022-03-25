@@ -7,9 +7,6 @@ import StyledCard from '../single/Card';
 
 export default function ModelA(props) {
   const { path, ...data } = props;
-  console.log(data?.cards);
-
-  data.cards ? console.log(data) : console.log('false', data);
 
   // Refs
   const overlapContainer = useRef(null);
@@ -26,19 +23,25 @@ export default function ModelA(props) {
       className={classes.articlesContainer}
       ref={bgContainer}
       component={'section'}
+      sx={
+        data.imageFileName
+          ? { marginTop: { md: '16em', lg: '23em' } }
+          : { marginTop: '10em' }
+      }
     >
       <Grid
         container
-        rowSpacing={{ xs: 2, sm: 2, md: 2, lg: 4 }}
+        rowSpacing={{ xs: 2, sm: 2, md: '0' }}
+        columnSpacing={{ md: 3 }}
         className={classes.articlesWrapper}
         ref={overlapContainer}
         component="div"
         sx={{
-          flexGrow: 1,
+          marginTop: '6em',
           boxShadow: 'rgba(56, 21, 11, 0.09) 0px 50px 80px 0px',
         }}
       >
-        {data.contentLeft === false ? (
+        {data.contentLeft === true ? (
           <>
             <GridContent data={data} classes={classes} />
             {data.cards ? (
@@ -66,8 +69,14 @@ const GridContent = (props) => {
   const { classes, data } = props;
 
   return (
-    <Grid item component="div" xs={12} sm={12} md={6}>
-      <Box sx={{ px: '1em' }}>
+    <Grid item component="div" xs={12} sm={12} md={data.imageFileName ? 7 : 6}>
+      <Box
+        sx={{
+          padding: '3em 0',
+          width: '100%',
+          mx: 'auto',
+        }}
+      >
         <Typography component="h2" variant="title" children={data.title} />
 
         <Divider classes={{ root: classes.divider }} />
@@ -90,16 +99,7 @@ const GridCards = (props) => {
   const { data } = props;
 
   return (
-    <Grid
-      item
-      component="div"
-      xs={12}
-      sm={12}
-      md={6}
-      container
-      spacing={2}
-      // sx={{ paddingTop: '400px' }}
-    >
+    <Grid item component="div" xs={12} sm={12} md={6} container spacing={2}>
       <Grid
         item
         component="div"
@@ -159,9 +159,18 @@ const GridCards = (props) => {
 };
 const GridImage = (props) => {
   const { data, classes } = props;
+
   const imageURL = require(`../../assets/static/images/${data.imageFileName}`);
   return (
-    <Grid item component="div" xs={12} sm={12} md={6}>
+    <Grid
+      item
+      component="div"
+      xs={12}
+      sm={12}
+      md={data.imageFileName ? 5 : 6}
+      className={classes.gridImgContainer}
+      sx={{ maxHeight: '90%' }}
+    >
       <Box
         component="img"
         src={imageURL}
@@ -170,6 +179,10 @@ const GridImage = (props) => {
         srcSet={`${imageURL} 1200w, ${imageURL} 980w, ${imageURL} 480w`}
         sizes="(min-width: 0px) and (max-width: 480px) 85vw, (min-width: 481px) and (max-width: 980px) 95vw, (min-width: 981px) 90vw, 100vw"
         className={classes.gridImg}
+        sx={{
+          marginLeft: data.contentLeft ? '0' : '-13vw',
+          marginTop: data.contentLeft ? 0 : '-10vh',
+        }}
       />
     </Grid>
   );

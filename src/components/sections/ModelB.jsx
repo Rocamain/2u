@@ -1,17 +1,13 @@
 import { Divider, Box, Typography, Grid } from '@mui/material';
 import StyledButton from '../single/Button';
 import useCardStyles from '../../hooks/styles/useCardStyles';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
 
 const ModelB = (props) => {
   const { path, ...data } = props;
   const imageURL = require(`../../assets/static/images/${data.imageFileName}`);
 
-  const { aboutUsSection, divider, aboutGridImg, aboutGridImgShadow } =
-    useCardStyles();
-  const theme = useTheme();
-  let mdUpOnly = useMediaQuery(theme.breakpoints.up('md'));
+  const { aboutUsSection, divider, aboutGridImg } = useCardStyles();
+
   return (
     <Box
       component={'section'}
@@ -23,9 +19,10 @@ const ModelB = (props) => {
         justifyContent="flex-end"
         component="div"
         sx={{
-          width: { sm: '85vw', lg: '75vw' },
+          width: { sm: '85vw', md: '76vw' },
           margin: '0 auto',
-          alignItems: mdUpOnly ? 'center' : null,
+
+          boxShadow: '25vw 0px 0px 0px #00bccc',
         }}
       >
         <Grid
@@ -33,35 +30,15 @@ const ModelB = (props) => {
           component="div"
           xs={12}
           sm={12}
-          md={9}
-          // sx={{ height: '100%' }}
+          md={6}
+          sx={{ marginTop: '4em' }}
         >
-          <Typography component="h2" variant="title" children={data.title} />
+          <Box sx={{ width: '85%', mx: 'auto' }}>
+            <Typography component="h2" variant="title" children={data.title} />
 
-          <Divider className={divider} />
+            <Divider className={divider} />
 
-          {data.content.map((paragraph, index) => (
-            <Typography
-              key={index}
-              component="p"
-              children={paragraph}
-              variant="body2"
-            />
-          ))}
-          {data.list && (
-            <ul>
-              {data.list.map((paragraph, index) => (
-                <Typography
-                  key={index}
-                  component="li"
-                  children={paragraph}
-                  variant="body2"
-                />
-              ))}
-            </ul>
-          )}
-          {data.content1 &&
-            data.content1.map((paragraph, index) => (
+            {data.content.map((paragraph, index) => (
               <Typography
                 key={index}
                 component="p"
@@ -69,18 +46,32 @@ const ModelB = (props) => {
                 variant="body2"
               />
             ))}
+            {data.list && (
+              <ul>
+                {data.list.map((paragraph, index) => (
+                  <Typography
+                    key={index}
+                    component="li"
+                    children={paragraph}
+                    variant="body2"
+                  />
+                ))}
+              </ul>
+            )}
+            {data.content1 &&
+              data.content1.map((paragraph, index) => (
+                <Typography
+                  key={index}
+                  component="p"
+                  children={paragraph}
+                  variant="body2"
+                />
+              ))}
 
-          <StyledButton content={data.button} />
+            <StyledButton content={data.button} />
+          </Box>
         </Grid>
-        <Grid
-          item
-          component="div"
-          xs={12}
-          sm={12}
-          md={3}
-          className={data.imageShadow ? aboutGridImgShadow : null}
-          sx={{ height: '10%' }}
-        >
+        <Grid item component="div" xs={12} sm={12} md={6}>
           <Box
             component="img"
             src={imageURL}
