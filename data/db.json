@@ -155,7 +155,9 @@
     {
       "component": "Hero",
       "title": "About us",
-      "subtitle": "Beauty specilist"
+      "subtitle": "Beauty specilist",
+      "imageFileName": "spa-and-wellness.jpg",
+      "sizeBig": false
     },
     {
       "component": "ModelB",
@@ -244,6 +246,17 @@
     }
   ],
   "Treatments_and_fares": [
+    {
+      "component": "Hero",
+      "title": "Services",
+      "subtitle": "Our Specialties",
+      "imageFileName": "services&fares.jpg",
+      "sizeBig": "true",
+      "iconFileName": "coffee.png",
+      "content": "Somos especialistas en tratamientos corporales, faciales, manicuras y pedicuras, además de realizar tratamientos a media para cada persona según su caso y exigencias.",
+      "button": "Make yout booking"
+    },
+
     {
       "component": "ModelA",
       "title": "Our services",

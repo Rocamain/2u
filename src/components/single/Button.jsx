@@ -10,7 +10,7 @@ export default function StyledButton(props) {
   const tablet = useMediaQuery(theme.breakpoints.up('sm'));
   const mobile = useMediaQuery(theme.breakpoints.up('xs'));
   const handleClick = () => {
-    console.log('clicked');
+    console.log('props', props);
   };
   const sizes = () => {
     if (desktop) return 'medium';

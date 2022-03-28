@@ -168,7 +168,6 @@ const GridImage = (props) => {
       xs={12}
       sm={12}
       md={data.imageFileName ? 5 : 6}
-      className={classes.gridImgContainer}
       sx={{ maxHeight: '90%' }}
     >
       <Box

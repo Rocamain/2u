@@ -41,10 +41,14 @@ export const useStyles = makeStyles((theme) => {
     },
 
     divider: {
-      backgroundColor: '#cc7875',
-      height: '0.1rem',
-      marginBottom: '2em',
-      width: '40%',
+      backgroundColor: '#fcb900',
+      height: '0.2em',
+
+      width: '30%',
+      [theme.breakpoints.down('md')]: {
+        width: '80%',
+        margin: '2em auto',
+      },
     },
 
     articlesContainer: {
@@ -86,12 +90,12 @@ export const useStyles = makeStyles((theme) => {
       objectFit: 'cover',
       boxSizing: 'border-box',
       boxShadow: '0px 80px 100px -40px rgb(0 0 0 / 30%)',
-
+      maxWidth: '100%',
       [theme.breakpoints.up('md')]: {
         width: '120%',
       },
       [theme.breakpoints.up('lg')]: {
-        width: '140%',
+        width: '100%',
       },
     },
 
