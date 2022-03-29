@@ -1,7 +1,6 @@
 import { ImageList, ImageListItem } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-// import useFetch from '../../hooks/custom/useFetch';
 
 function ImageGrid(props) {
   const { path, imagesFileName } = props;

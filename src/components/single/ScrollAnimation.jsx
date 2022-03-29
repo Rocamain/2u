@@ -14,15 +14,6 @@ const ScrollAnimation = (props) => {
     //  50% of the viewport
     let halfOfTheViewPort = window.innerHeight / 2;
 
-    // in case there is positon absolute realtive to the parent,
-    //we will get hte distance of the parent and added to the offset
-    if (element.offsetParent.offsetParent) {
-      offset =
-        element.offsetParent.offsetParent.offsetTop +
-        element.offsetTop -
-        element.scrollHeight;
-    }
-
     if (window.scrollY + halfOfTheViewPort > offset) {
       setAnimate(true);
     }
@@ -41,7 +32,7 @@ const ScrollAnimation = (props) => {
     <Fade
       in={animate}
       appear={animate}
-      timeout={{ appear: 3000, enter: 3800, exit: 0 }}
+      timeout={{ appear: 1000, enter: 800, exit: 0 }}
     >
       {/* <div>
         <Slide

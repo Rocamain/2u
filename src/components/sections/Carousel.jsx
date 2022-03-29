@@ -16,7 +16,7 @@ export default function Carousel(props) {
 
   // Slider Handler
   const handleSlider = (event) => {
-    const increment = event.target === 'next' ? +1 : -1;
+    const increment = event.currentTarget.value === 'next' ? +1 : -1;
     const newIndex = (slide + increment + cards.length) % cards.length;
     setExit(true);
 
@@ -30,8 +30,12 @@ export default function Carousel(props) {
     <Box alt="sea water on the background" className={classes.carousel}>
       <Box className={classes.slideContainer}>
         <Box className={classes.slideShowWrapper}>
-          <Button className={classes.slideButton} onClick={handleSlider}>
-            <KeyboardArrowLeft name="back" className={classes.chevron} />
+          <Button
+            value="back"
+            className={classes.slideButton}
+            onClick={handleSlider}
+          >
+            <KeyboardArrowLeft value="back" className={classes.chevron} />
           </Button>
           <Card
             animation={true}
@@ -39,8 +43,12 @@ export default function Carousel(props) {
             exit={exit}
             carousel={'true'}
           />
-          <Button className={classes.slideButton} onClick={handleSlider}>
-            <KeyboardArrowRight name="next" className={classes.chevron} />
+          <Button
+            value="next"
+            className={classes.slideButton}
+            onClick={handleSlider}
+          >
+            <KeyboardArrowRight value="next" className={classes.chevron} />
           </Button>
         </Box>
         <Stepper steps={cards.length} activeStep={slide} />

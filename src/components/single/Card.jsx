@@ -26,24 +26,26 @@ export default function StyledCard(props) {
       <Card
         key={'index'}
         className={carousel && animatedCard}
-        elevation={8}
+        elevation={0}
         sx={{
           color: carousel ? 'carousel.main' : 'text.primary',
           ...cardStyles,
         }}
       >
         {iconFileName && <StyledIcon iconFileName={iconFileName} />}
-        <CardHeader
-          title={
-            <Typography
-              align="center"
-              variant={carousel ? 'title1' : 'title2'}
-              component="h3"
-            >
-              {cardInfo.title}
-            </Typography>
-          }
-        />
+        {cardInfo.title && (
+          <CardHeader
+            title={
+              <Typography
+                align="center"
+                variant={carousel ? 'title1' : 'title2'}
+                component="h3"
+              >
+                {cardInfo.title}
+              </Typography>
+            }
+          />
+        )}
 
         <CardContent sx={{ pb: '0.5em' }}>
           <Typography variant={carousel ? 'body1' : 'body2'}>

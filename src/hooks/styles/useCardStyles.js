@@ -33,17 +33,23 @@ export const useStyles = makeStyles((theme) => {
 
     slideButton: {
       minWidth: '2.7em',
-      position: 'relative',
+      // position: 'relative',
+      // zIndex: 100,
+      '&:hover': {
+        color: 'pink',
+      },
     },
     chevron: {
       color: 'white',
       fontSize: '3.4rem',
+      '&:hover': {
+        color: 'pink',
+      },
     },
 
     divider: {
       backgroundColor: '#fcb900',
       height: '0.2em',
-
       width: '30%',
       [theme.breakpoints.down('md')]: {
         width: '80%',
@@ -53,7 +59,6 @@ export const useStyles = makeStyles((theme) => {
 
     articlesContainer: {
       backgroundImage: theme.palette.background.primary,
-
       marginBottom: '12em',
       width: '100%',
       position: 'relative',
