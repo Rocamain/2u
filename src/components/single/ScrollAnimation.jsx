@@ -28,6 +28,8 @@ const ScrollAnimation = (props) => {
       window.removeEventListener('scroll', triggerAnimation, { passive: true });
   }, [animate, ref]);
 
+  // ISSUES IN COMBINATION WITH SLIDE. #1 Slide and Fade Animation not working  together in Icon Component
+
   return (
     <Fade
       in={animate}
