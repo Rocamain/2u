@@ -56,6 +56,16 @@ export const useStyles = makeStyles((theme) => {
         margin: '2em auto',
       },
     },
+    divider: {
+      backgroundColor: '#fcb900',
+      height: '0.2em',
+      width: '20%',
+      [theme.breakpoints.down('md')]: {
+        height: '0.1em',
+        width: '30%',
+        margin: '2em auto',
+      },
+    },
 
     articlesContainer: {
       backgroundImage: theme.palette.background.primary,

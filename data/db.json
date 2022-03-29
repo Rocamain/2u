@@ -126,27 +126,23 @@
     },
     {
       "component": "CardsGrid",
+      "title": "Partners",
       "cards": [
         {
           "content": "La marca profesional internacional líder que revoluciona el sector de la belleza de manos y pies.",
           "iconFileName": "cbeauty.jpg"
         },
         {
-          "title": "lpg",
           "content": "Después de más de 30 años de experiencia y de investigación científica LPG Endermologie ofrece una alternativa natural al 100%: estimula la actividad celular latente dentro de nuestra piel para luchar contra todas las manifestaciones antiestéticas (arrugas, flacidez de la piel, la grasa resistente localizada, la apariencia de la celulitis, y más).",
-          "iconFileName": "lpg.png",
-          "black": "estimula la actividad celular latente dentro de nuestra piel"
+          "iconFileName": "lpg.png"
         },
         {
-          "title": "alma",
           "content": "Alma, uno de los fabricantes líderes en la industria médica y estética que ofrece tecnologías y tratamientos de última generación basados en radiofrecuencia, fotodepilación, laser y ultrasonidos.",
           "iconFileName": "alma.svg"
         },
         {
-          "title": "logo thalgo",
           "content": "Extractos marinos naturales que concentran principios activos, minerales y oligoelementos, hasta 10.000 veces superiores a las plantas terrestres.",
-          "iconFileName": "thalgo.jpg",
-          "black": "principios activos, minerales y oligoelementos"
+          "iconFileName": "thalgo.jpg"
         }
       ]
     }
@@ -220,27 +216,23 @@
     },
     {
       "component": "CardsGrid",
+      "title": "Partners",
       "cards": [
         {
           "content": "La marca profesional internacional líder que revoluciona el sector de la belleza de manos y pies.",
           "iconFileName": "cbeauty.jpg"
         },
         {
-          "title": "lpg",
           "content": "Después de más de 30 años de experiencia y de investigación científica LPG Endermologie ofrece una alternativa natural al 100%: estimula la actividad celular latente dentro de nuestra piel para luchar contra todas las manifestaciones antiestéticas (arrugas, flacidez de la piel, la grasa resistente localizada, la apariencia de la celulitis, y más).",
-          "iconFileName": "lpg.png",
-          "black": "estimula la actividad celular latente dentro de nuestra piel"
+          "iconFileName": "lpg.png"
         },
         {
-          "title": "alma",
           "content": "Alma, uno de los fabricantes líderes en la industria médica y estética que ofrece tecnologías y tratamientos de última generación basados en radiofrecuencia, fotodepilación, laser y ultrasonidos.",
           "iconFileName": "alma.svg"
         },
         {
-          "title": "logo thalgo",
           "content": "Extractos marinos naturales que concentran principios activos, minerales y oligoelementos, hasta 10.000 veces superiores a las plantas terrestres.",
-          "iconFileName": "thalgo.jpg",
-          "black": "principios activos, minerales y oligoelementos"
+          "iconFileName": "thalgo.jpg"
         }
       ]
     }
@@ -380,27 +372,23 @@
     },
     {
       "component": "CardsGrid",
+      "title": "Partners",
       "cards": [
         {
           "content": "La marca profesional internacional líder que revoluciona el sector de la belleza de manos y pies.",
           "iconFileName": "cbeauty.jpg"
         },
         {
-          "title": "lpg",
           "content": "Después de más de 30 años de experiencia y de investigación científica LPG Endermologie ofrece una alternativa natural al 100%: estimula la actividad celular latente dentro de nuestra piel para luchar contra todas las manifestaciones antiestéticas (arrugas, flacidez de la piel, la grasa resistente localizada, la apariencia de la celulitis, y más).",
-          "iconFileName": "lpg.png",
-          "black": "estimula la actividad celular latente dentro de nuestra piel"
+          "iconFileName": "lpg.png"
         },
         {
-          "title": "alma",
           "content": "Alma, uno de los fabricantes líderes en la industria médica y estética que ofrece tecnologías y tratamientos de última generación basados en radiofrecuencia, fotodepilación, laser y ultrasonidos.",
           "iconFileName": "alma.svg"
         },
         {
-          "title": "logo thalgo",
           "content": "Extractos marinos naturales que concentran principios activos, minerales y oligoelementos, hasta 10.000 veces superiores a las plantas terrestres.",
-          "iconFileName": "thalgo.jpg",
-          "black": "principios activos, minerales y oligoelementos"
+          "iconFileName": "thalgo.jpg"
         }
       ]
     }

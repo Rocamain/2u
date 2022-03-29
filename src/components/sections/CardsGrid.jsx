@@ -1,11 +1,25 @@
-import { Grid } from '@mui/material';
+import { Grid, Box, Typography, Divider } from '@mui/material';
 import Card from '../../components/single/Card';
+import useCardStyles from '../../hooks/styles/useCardStyles';
 
 function CardsGrid(props) {
-  const { path, cards } = props;
-
+  const { path, cards, title } = props;
+  const classes = useCardStyles();
+  console.log(props);
   return (
-    <div>
+    <Box>
+      {title && (
+        <>
+          <Typography
+            variant="title1"
+            component="h3"
+            sx={{ textAlign: 'center' }}
+          >
+            {title}
+          </Typography>
+          <Divider className={classes.divider} />
+        </>
+      )}
       <Grid
         container
         spacing={2}
@@ -38,7 +52,7 @@ function CardsGrid(props) {
           );
         })}
       </Grid>
-    </div>
+    </Box>
   );
 }
 
