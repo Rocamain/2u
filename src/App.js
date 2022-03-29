@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import PageComponent from './pages/PageComponent';
-
+import NotFound from '../src/components/main/NotFound';
 import Layout from './components/main/Layout';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { NavigationContext } from './context/useNavigationContext';
@@ -28,6 +28,7 @@ function App() {
                 />
               );
             })}
+            <Route path={'*'} element={<NotFound />} />
           </Route>
         </Routes>
       </Router>
