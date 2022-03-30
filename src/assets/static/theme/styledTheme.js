@@ -105,6 +105,41 @@ theme = createTheme(theme, {
       fontFamily: ['Open Sans', 'Abel'].join(','),
       letterSpacing: '0.05em',
     },
+    title3: {
+      fontWeight: '600',
+      fontSize: '1.2rem',
+      color: '#00BCCC',
+      lineHeight: 1.25,
+      fontFamily: ['Abel', 'Open Sans'].join(','),
+      letterSpacing: '0.05em',
+      // marginBottom: '0.5em',
+      [theme.breakpoints.between('xs', 'sm')]: {
+        fontWeight: '700',
+        fontSize: '1.3rem',
+        lineHeight: '1.3rem',
+        letterSpacing: '0.04em',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        fontSize: '1.45rem',
+        lineHeight: '1.3rem',
+        letterSpacing: '0.03em',
+      },
+      [theme.breakpoints.up('md')]: {
+        fontSize: '1.6rem',
+        lineHeight: '1.5rem',
+        letterSpacing: '0.02em',
+      },
+    },
+    subtitle1: {
+      fontWeight: '700',
+      fontSize: '0.9rem',
+      color: '#666',
+      fontFamily: ['Open Sans', 'Abel'].join(','),
+      marginBottom: '0.5em',
+      fontSize: '0.9rem',
+      lineHeight: '1rem',
+      letterSpacing: '0.01em',
+    },
     navbarLinks: {
       fontWeight: '600',
       fontSize: '0.9rem',
@@ -134,17 +169,27 @@ theme = createTheme(theme, {
     body2: {
       fontWeight: '400',
       fontSize: '1rem',
-      color: theme.palette.text.primary,
-      lineHeight: 1.63,
+      color: '#666',
+      lineHeight: '0.9rem',
       fontFamily: ['Abel', 'Open Sans'].join(','),
-      letterSpacing: '0.05rem',
+      letterSpacing: '0.02rem',
       marginBottom: '0.6em',
       [theme.breakpoints.up('md')]: {
         fontSize: '1.14rem',
+        lineHeight: '1.08rem',
+        letterSpacing: '0.03rem',
       },
     },
+    body3: {
+      fontWeight: '500',
+      fontSize: '1rem',
+      color: '#666',
+      lineHeight: '0.9rem',
+      fontFamily: ['Abel', 'Open Sans'].join(','),
+      marginBottom: '0.5em',
+    },
     title2: {
-      fontWeight: '400',
+      fontWeight: '600',
       fontSize: '1.4rem',
       lineHeight: 1.05,
       fontFamily: ['Abel', 'Open Sans'].join(','),
@@ -186,6 +231,22 @@ theme = createTheme(theme, {
           flexDirection: 'column',
           alignItems: 'center',
           boxShadow: '0px 50px 80px 0px rgb(12 2 2 / 10%)',
+          '&:hover': {},
+        },
+      },
+    },
+    MuiCardHeader: {
+      styleOverrides: {
+        root: {
+          padding: '0.2em',
+          '&:hover': {},
+        },
+      },
+    },
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+          padding: '0.5em',
           '&:hover': {},
         },
       },

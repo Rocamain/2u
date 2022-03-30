@@ -25,21 +25,34 @@
   "Home": [
     {
       "component": "Carousel",
+
       "cards": [
         {
           "title": "Discover our promotions",
-          "content": "Now beforehand before everybody all the promotions of our treatments and products.",
-          "button": "Learn More"
+          "content": [
+            "Now beforehand before everybody all the promotions of our treatments and products."
+          ],
+          "button": "Learn More",
+          "variantTitle": "title1",
+          "variantContent": "body1"
         },
         {
           "title": "The best products",
-          "content": "Now beforehand before everybody all the promotions of our treatments and products.",
-          "button": "Learn More"
+          "content": [
+            "Now beforehand before everybody all the promotions of our treatments and products."
+          ],
+          "button": "Learn More",
+          "variantTitle": "title1",
+          "variantContent": "body1"
         },
         {
           "title": "Can you image??",
-          "content": "Now beforehand before everybody all the promotions of our treatments and products.",
-          "button": "Learn More"
+          "content": [
+            "Now beforehand before everybody all the promotions of our treatments and products."
+          ],
+          "button": "Learn More",
+          "variantTitle": "title1",
+          "variantContent": "body1"
         }
       ]
     },
@@ -55,23 +68,39 @@
       "cards": [
         {
           "title": "Tratamientos corporales",
-          "content": "Disponemos de una amplia selección de tratamientos corporales para tratar la celulitis, remodelar, drenar o reafirmar tu piel en los que combinamos técnicas manuales con aparatología avanzada.",
-          "iconFileName": "Tratamientos_corporales.png"
+          "content": [
+            "Disponemos de una amplia selección de tratamientos corporales para tratar la celulitis, remodelar, drenar o reafirmar tu piel en los que combinamos técnicas manuales con aparatología avanzada."
+          ],
+          "iconFileName": "Tratamientos_corporales.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         },
         {
           "title": "Manicuras y pedicuras",
-          "content": "Trabajamos con productos innovadores y seguros como CND en sus versiones Vinylux y Shellac.",
-          "iconFileName": "Manicuras_y_pedicuras.png"
+          "content": [
+            "Trabajamos con productos innovadores y seguros como CND en sus versiones Vinylux y Shellac."
+          ],
+          "iconFileName": "Manicuras_y_pedicuras.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         },
         {
           "title": "Tratamientos faciales",
-          "content": "Para nuestros tratamientos faciales elegimos Thalgo, cosmética 100% de origen marino que nace en las profundidades del océano.",
-          "iconFileName": "Tratamientos_faciales.png"
+          "content": [
+            "Para nuestros tratamientos faciales elegimos Thalgo, cosmética 100% de origen marino que nace en las profundidades del océano."
+          ],
+          "iconFileName": "Tratamientos_faciales.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         },
         {
           "title": "Fotodepilacion",
-          "content": "Olvídate del vello con nuestro tratamiento de fotodepilación IPL, luz pulsada de alta intensidad.",
-          "iconFileName": "Fotodepilacion.png"
+          "content": [
+            "Olvídate del vello con nuestro tratamiento de fotodepilación IPL, luz pulsada de alta intensidad."
+          ],
+          "iconFileName": "Fotodepilacion.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         }
       ]
     },
@@ -109,18 +138,30 @@
       "cards": [
         {
           "title": "Quality products",
-          "content": "Sólo utilizamos los mejores productos del mercado, razón que nos hace diferenciarnos de los demás.",
-          "iconFileName": "Quality_products.png"
+          "content": [
+            "Sólo utilizamos los mejores productos del mercado, razón que nos hace diferenciarnos de los demás."
+          ],
+          "iconFileName": "Quality_products.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         },
         {
           "title": "Personalized treatments",
-          "content": "Nuestro trato es totalmente personalizado, queremos que tu experiencia con nosotros siempre sea la mejor.",
-          "iconFileName": "Personalized_treatments.png"
+          "content": [
+            "Nuestro trato es totalmente personalizado, queremos que tu experiencia con nosotros siempre sea la mejor."
+          ],
+          "iconFileName": "Personalized_treatments.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         },
         {
           "title": "Qualified personel",
-          "content": "Contamos con el mejor personal profesional, todos altamente cualificados en terapias estéticas y con amplia experiencia.",
-          "iconFileName": "Qualified_personel.png"
+          "content": [
+            "Contamos con el mejor personal profesional, todos altamente cualificados en terapias estéticas y con amplia experiencia."
+          ],
+          "iconFileName": "Qualified_personel.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         }
       ]
     },
@@ -129,20 +170,32 @@
       "title": "Partners",
       "cards": [
         {
-          "content": "La marca profesional internacional líder que revoluciona el sector de la belleza de manos y pies.",
-          "iconFileName": "cbeauty.jpg"
+          "content": [
+            "La marca profesional internacional líder que revoluciona el sector de la belleza de manos y pies."
+          ],
+          "iconFileName": "cbeauty.jpg",
+          "variantContent": "body2"
         },
         {
-          "content": "Después de más de 30 años de experiencia y de investigación científica LPG Endermologie ofrece una alternativa natural al 100%: estimula la actividad celular latente dentro de nuestra piel para luchar contra todas las manifestaciones antiestéticas (arrugas, flacidez de la piel, la grasa resistente localizada, la apariencia de la celulitis, y más).",
-          "iconFileName": "lpg.png"
+          "content": [
+            "Después de más de 30 años de experiencia y de investigación científica LPG Endermologie ofrece una alternativa natural al 100%: estimula la actividad celular latente dentro de nuestra piel para luchar contra todas las manifestaciones antiestéticas (arrugas, flacidez de la piel, la grasa resistente localizada, la apariencia de la celulitis, y más)."
+          ],
+          "iconFileName": "lpg.png",
+          "variantContent": "body2"
         },
         {
-          "content": "Alma, uno de los fabricantes líderes en la industria médica y estética que ofrece tecnologías y tratamientos de última generación basados en radiofrecuencia, fotodepilación, laser y ultrasonidos.",
-          "iconFileName": "alma.svg"
+          "content": [
+            "Alma, uno de los fabricantes líderes en la industria médica y estética que ofrece tecnologías y tratamientos de última generación basados en radiofrecuencia, fotodepilación, laser y ultrasonidos."
+          ],
+          "iconFileName": "alma.svg",
+          "variantContent": "body2"
         },
         {
-          "content": "Extractos marinos naturales que concentran principios activos, minerales y oligoelementos, hasta 10.000 veces superiores a las plantas terrestres.",
-          "iconFileName": "thalgo.jpg"
+          "content": [
+            "Extractos marinos naturales que concentran principios activos, minerales y oligoelementos, hasta 10.000 veces superiores a las plantas terrestres."
+          ],
+          "iconFileName": "thalgo.jpg",
+          "variantContent": "body2"
         }
       ]
     }
@@ -199,18 +252,30 @@
       "cards": [
         {
           "title": "Quality products",
-          "content": "Sólo utilizamos los mejores productos del mercado, razón que nos hace diferenciarnos de los demás.",
-          "iconFileName": "Quality_products.png"
+          "content": [
+            "Sólo utilizamos los mejores productos del mercado, razón que nos hace diferenciarnos de los demás."
+          ],
+          "iconFileName": "Quality_products.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         },
         {
           "title": "Personalized treatments",
-          "content": "Nuestro trato es totalmente personalizado, queremos que tu experiencia con nosotros siempre sea la mejor.",
-          "iconFileName": "Personalized_treatments.png"
+          "content": [
+            "Nuestro trato es totalmente personalizado, queremos que tu experiencia con nosotros siempre sea la mejor."
+          ],
+          "iconFileName": "Personalized_treatments.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         },
         {
           "title": "Qualified personel",
-          "content": "Contamos con el mejor personal profesional, todos altamente cualificados en terapias estéticas y con amplia experiencia.",
-          "iconFileName": "Qualified_personel.png"
+          "content": [
+            "Contamos con el mejor personal profesional, todos altamente cualificados en terapias estéticas y con amplia experiencia."
+          ],
+          "iconFileName": "Qualified_personel.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         }
       ]
     },
@@ -219,20 +284,33 @@
       "title": "Partners",
       "cards": [
         {
-          "content": "La marca profesional internacional líder que revoluciona el sector de la belleza de manos y pies.",
-          "iconFileName": "cbeauty.jpg"
+          "content": [
+            "La marca profesional internacional líder que revoluciona el sector de la belleza de manos y pies."
+          ],
+          "iconFileName": "cbeauty.jpg",
+
+          "variantContent": "body2"
         },
         {
-          "content": "Después de más de 30 años de experiencia y de investigación científica LPG Endermologie ofrece una alternativa natural al 100%: estimula la actividad celular latente dentro de nuestra piel para luchar contra todas las manifestaciones antiestéticas (arrugas, flacidez de la piel, la grasa resistente localizada, la apariencia de la celulitis, y más).",
-          "iconFileName": "lpg.png"
+          "content": [
+            "Después de más de 30 años de experiencia y de investigación científica LPG Endermologie ofrece una alternativa natural al 100%: estimula la actividad celular latente dentro de nuestra piel para luchar contra todas las manifestaciones antiestéticas (arrugas, flacidez de la piel, la grasa resistente localizada, la apariencia de la celulitis, y más)."
+          ],
+          "iconFileName": "lpg.png",
+          "variantContent": "body2"
         },
         {
-          "content": "Alma, uno de los fabricantes líderes en la industria médica y estética que ofrece tecnologías y tratamientos de última generación basados en radiofrecuencia, fotodepilación, laser y ultrasonidos.",
-          "iconFileName": "alma.svg"
+          "content": [
+            "Alma, uno de los fabricantes líderes en la industria médica y estética que ofrece tecnologías y tratamientos de última generación basados en radiofrecuencia, fotodepilación, laser y ultrasonidos."
+          ],
+          "iconFileName": "alma.svg",
+          "variantContent": "body2"
         },
         {
-          "content": "Extractos marinos naturales que concentran principios activos, minerales y oligoelementos, hasta 10.000 veces superiores a las plantas terrestres.",
-          "iconFileName": "thalgo.jpg"
+          "content": [
+            "Extractos marinos naturales que concentran principios activos, minerales y oligoelementos, hasta 10.000 veces superiores a las plantas terrestres."
+          ],
+          "iconFileName": "thalgo.jpg",
+          "variantContent": "body2"
         }
       ]
     }
@@ -261,23 +339,39 @@
       "cards": [
         {
           "title": "Tratamientos corporales",
-          "content": "Disponemos de una amplia selección de tratamientos corporales para tratar la celulitis, remodelar, drenar o reafirmar tu piel en los que combinamos técnicas manuales con aparatología avanzada.",
-          "iconFileName": "Tratamientos_corporales.png"
+          "content": [
+            "Disponemos de una amplia selección de tratamientos corporales para tratar la celulitis, remodelar, drenar o reafirmar tu piel en los que combinamos técnicas manuales con aparatología avanzada."
+          ],
+          "iconFileName": "Tratamientos_corporales.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         },
         {
           "title": "Manicuras y pedicuras",
-          "content": "Trabajamos con productos innovadores y seguros como CND en sus versiones Vinylux y Shellac.",
-          "iconFileName": "Manicuras_y_pedicuras.png"
+          "content": [
+            "Trabajamos con productos innovadores y seguros como CND en sus versiones Vinylux y Shellac."
+          ],
+          "iconFileName": "Manicuras_y_pedicuras.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         },
         {
           "title": "Tratamientos faciales",
-          "content": "Para nuestros tratamientos faciales elegimos Thalgo, cosmética 100% de origen marino que nace en las profundidades del océano.",
-          "iconFileName": "Tratamientos_faciales.png"
+          "content": [
+            "Para nuestros tratamientos faciales elegimos Thalgo, cosmética 100% de origen marino que nace en las profundidades del océano."
+          ],
+          "iconFileName": "Tratamientos_faciales.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         },
         {
           "title": "Fotodepilacion",
-          "content": "Olvídate del vello con nuestro tratamiento de fotodepilación IPL, luz pulsada de alta intensidad.",
-          "iconFileName": "Fotodepilacion.png"
+          "content": [
+            "Olvídate del vello con nuestro tratamiento de fotodepilación IPL, luz pulsada de alta intensidad."
+          ],
+          "iconFileName": "Fotodepilacion.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         }
       ]
     },
@@ -349,24 +443,81 @@
       ],
       "button": "Check Fares"
     },
+    {
+      "component": "CardsGrid",
+      "title": "Our Centers",
+      "cards": [
+        {
+          "title": "Barcelona",
+          "subtitle": "L'ILL DIAGONAL",
+          "content": [
+            "Avda. Diagonal, 569",
+            "08029 – Barcelona",
+            "Telf: 93 410 14 87",
+            "Móvil: 640 725 935"
+          ],
+          "variantTitle": "title3",
+          "variantSubtitle": "subtitle1",
+          "variantContent": "body3"
+        },
+        {
+          "title": "Barcelona",
+          "subtitle": "TURO PARK",
+          "content": [
+            "C/ Tenor Viñas, 3",
+            "08021 – Barcelona",
+            "Telf: 93 200 96 56",
+            "Móvil: 640 725 934"
+          ],
+          "variantTitle": "title3",
+          "variantSubtitle": "subtitle1",
+          "variantContent": "body3"
+        },
+        {
+          "title": "Palma de Malloca",
+          "subtitle": "PALMA",
+          "content": [
+            "C/ Josep Anselm Clavé, 6",
+            "07002 – Palma de Mallorca",
+            "Telf: 971 707 281",
+            "Móvil: 646 531 481"
+          ],
+          "variantTitle": "title3",
+          "variantSubtitle": "subtitle1",
+          "variantContent": "body3"
+        }
+      ]
+    },
 
     {
       "component": "CardsGrid",
       "cards": [
         {
           "title": "Quality products",
-          "content": "Sólo utilizamos los mejores productos del mercado, razón que nos hace diferenciarnos de los demás.",
-          "iconFileName": "Quality_products.png"
+          "content": [
+            "Sólo utilizamos los mejores productos del mercado, razón que nos hace diferenciarnos de los demás."
+          ],
+          "iconFileName": "Quality_products.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         },
         {
           "title": "Personalized treatments",
-          "content": "Nuestro trato es totalmente personalizado, queremos que tu experiencia con nosotros siempre sea la mejor.",
-          "iconFileName": "Personalized_treatments.png"
+          "content": [
+            "Nuestro trato es totalmente personalizado, queremos que tu experiencia con nosotros siempre sea la mejor."
+          ],
+          "iconFileName": "Personalized_treatments.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         },
         {
           "title": "Qualified personel",
-          "content": "Contamos con el mejor personal profesional, todos altamente cualificados en terapias estéticas y con amplia experiencia.",
-          "iconFileName": "Qualified_personel.png"
+          "content": [
+            "Contamos con el mejor personal profesional, todos altamente cualificados en terapias estéticas y con amplia experiencia."
+          ],
+          "iconFileName": "Qualified_personel.png",
+          "variantTitle": "title2",
+          "variantContent": "body2"
         }
       ]
     },
@@ -375,20 +526,32 @@
       "title": "Partners",
       "cards": [
         {
-          "content": "La marca profesional internacional líder que revoluciona el sector de la belleza de manos y pies.",
-          "iconFileName": "cbeauty.jpg"
+          "content": [
+            "La marca profesional internacional líder que revoluciona el sector de la belleza de manos y pies."
+          ],
+          "iconFileName": "cbeauty.jpg",
+          "variantContent": "body2"
         },
         {
-          "content": "Después de más de 30 años de experiencia y de investigación científica LPG Endermologie ofrece una alternativa natural al 100%: estimula la actividad celular latente dentro de nuestra piel para luchar contra todas las manifestaciones antiestéticas (arrugas, flacidez de la piel, la grasa resistente localizada, la apariencia de la celulitis, y más).",
-          "iconFileName": "lpg.png"
+          "content": [
+            "Después de más de 30 años de experiencia y de investigación científica LPG Endermologie ofrece una alternativa natural al 100%: estimula la actividad celular latente dentro de nuestra piel para luchar contra todas las manifestaciones antiestéticas (arrugas, flacidez de la piel, la grasa resistente localizada, la apariencia de la celulitis, y más)."
+          ],
+          "iconFileName": "lpg.png",
+          "variantContent": "body2"
         },
         {
-          "content": "Alma, uno de los fabricantes líderes en la industria médica y estética que ofrece tecnologías y tratamientos de última generación basados en radiofrecuencia, fotodepilación, laser y ultrasonidos.",
-          "iconFileName": "alma.svg"
+          "content": [
+            "Alma, uno de los fabricantes líderes en la industria médica y estética que ofrece tecnologías y tratamientos de última generación basados en radiofrecuencia, fotodepilación, laser y ultrasonidos."
+          ],
+          "iconFileName": "alma.svg",
+          "variantContent": "body2"
         },
         {
-          "content": "Extractos marinos naturales que concentran principios activos, minerales y oligoelementos, hasta 10.000 veces superiores a las plantas terrestres.",
-          "iconFileName": "thalgo.jpg"
+          "content": [
+            "Extractos marinos naturales que concentran principios activos, minerales y oligoelementos, hasta 10.000 veces superiores a las plantas terrestres."
+          ],
+          "iconFileName": "thalgo.jpg",
+          "variantContent": "body2"
         }
       ]
     }

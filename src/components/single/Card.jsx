@@ -14,6 +14,7 @@ import StyledButton from './Button';
 
 export default function StyledCard(props) {
   const { cardInfo, exit, carousel, iconFileName, cardStyles } = props;
+  const { variantContent, variantTitle, variantSubtitle } = cardInfo;
 
   let animationStyles = useSlideAnimation();
 
@@ -36,21 +37,22 @@ export default function StyledCard(props) {
         {cardInfo.title && (
           <CardHeader
             title={
-              <Typography
-                align="center"
-                variant={carousel ? 'title1' : 'title2'}
-                component="h3"
-              >
+              <Typography align="center" variant={variantTitle} component="h3">
                 {cardInfo.title}
               </Typography>
             }
           />
         )}
 
-        <CardContent sx={{ pb: '0.5em' }}>
-          <Typography variant={carousel ? 'body1' : 'body2'}>
-            {cardInfo.content}
+        <CardContent sx={{ pb: '0' }}>
+          <Typography align="center" variant={variantSubtitle} component="h5">
+            {cardInfo.subtitle}
           </Typography>
+          {cardInfo.content.map((paragraph, index) => (
+            <Typography key={index} variant={variantContent} component="p">
+              {paragraph}
+            </Typography>
+          ))}
         </CardContent>
         {carousel && (
           <CardActions sx={{ py: '1em' }}>

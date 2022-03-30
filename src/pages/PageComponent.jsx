@@ -3,7 +3,7 @@ import useFetch from '../hooks/useFetch';
 
 export default function PageComponent(props) {
   const { path } = props;
-  console.log(path);
+
   const data = useFetch(`http://localhost:8000/${path}`);
 
   const renderComponents = (routeComponents) => {

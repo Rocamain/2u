@@ -50,20 +50,12 @@ export const useStyles = makeStyles((theme) => {
     divider: {
       backgroundColor: '#fcb900',
       height: '0.2em',
-      width: '30%',
+      width: '80%',
+      margin: '0.4em auto',
       [theme.breakpoints.down('md')]: {
         width: '80%',
-        margin: '2em auto',
-      },
-    },
-    divider: {
-      backgroundColor: '#fcb900',
-      height: '0.2em',
-      width: '20%',
-      [theme.breakpoints.down('md')]: {
-        height: '0.1em',
-        width: '30%',
-        margin: '2em auto',
+        height: '0.15em',
+        margin: '0.25em auto',
       },
     },
 

@@ -5,7 +5,7 @@ import useCardStyles from '../../hooks/styles/useCardStyles';
 function CardsGrid(props) {
   const { path, cards, title } = props;
   const classes = useCardStyles();
-  console.log(props);
+
   return (
     <Box>
       {title && (
@@ -36,8 +36,8 @@ function CardsGrid(props) {
               item
               key={index}
               xs={8}
-              sm={cards.length > 3 ? 5 : 4}
-              md={3}
+              sm={cards.length > 3 ? 5 : 8}
+              md={4}
               sx={{
                 textAlign: 'center',
                 width: cards.length > 3 ? '100%' : '80%',
