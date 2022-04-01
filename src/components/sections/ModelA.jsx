@@ -10,22 +10,19 @@ export default function ModelA(props) {
 
   // Refs
   const overlapContainer = useRef(null);
-  const bgContainer = useRef(null);
 
   // Custom Hooks
   let bgHeight = useBg(data, overlapContainer);
-
   const classes = useCardStyles();
 
   return (
     <Box
       height={bgHeight}
       className={classes.articlesContainer}
-      ref={bgContainer}
       component={'section'}
       sx={
         data.imageFileName
-          ? { marginTop: { md: '16em', lg: '23em' } }
+          ? { marginTop: { md: '16em', lg: '23em', xl: '29em' } }
           : { marginTop: '10em' }
       }
     >
@@ -73,7 +70,7 @@ const GridContent = (props) => {
       <Box
         sx={{
           padding: '3em 0',
-          width: '100%',
+          width: '90%',
           mx: 'auto',
         }}
       >
@@ -99,7 +96,16 @@ const GridCards = (props) => {
   const { data } = props;
 
   return (
-    <Grid item component="div" xs={12} sm={12} md={6} container spacing={2}>
+    <Grid
+      item
+      component="div"
+      xs={12}
+      sm={12}
+      md={6}
+      lg={6}
+      container
+      spacing={2}
+    >
       <Grid
         item
         component="div"

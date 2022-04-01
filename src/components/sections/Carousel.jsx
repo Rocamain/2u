@@ -1,18 +1,49 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import clsx from 'clsx';
+import usePhotoAnimation from '../../hooks/styles/usePhotoAnimation';
 import useCardStyles from '../../hooks/styles/useCardStyles';
-import { Box, Button } from '@mui/material';
+import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material/';
 import Card from '../single/Card';
 import Stepper from '../single/Stepper';
+import useBg from '../../hooks/useBg';
+import { useTheme } from '@mui/material/styles';
 
 export default function Carousel(props) {
-  const { path, cards } = props;
+  const { path, cards, title, subtitle, variantTitle, variantSubtitle } = props;
 
   const [slide, setSlide] = useState(0);
   const [exit, setExit] = useState(false);
+  const [isHover, setIsHover] = useState(false);
 
   // Styles
+  const theme = useTheme();
+  let isBigScreen = useMediaQuery(theme.breakpoints.up('md'));
+
   const classes = useCardStyles();
+  let animationStyles = usePhotoAnimation();
+
+  let animatedPhoto = `${clsx(animationStyles.animatedItem, {
+    [animationStyles.animatedItemExiting]: exit,
+  })}`;
+
+  let animatedChevronR = `${clsx(classes.chevronR, {
+    [classes.onMouseOverChevronR]: isHover,
+    [classes.onMouseOutChevronR]: !isHover,
+  })}`;
+  let animatedChevronL = `${clsx(classes.chevronL, {
+    [classes.onMouseOverChevronL]: isHover,
+    [classes.onMouseOutChevronL]: !isHover,
+  })}`;
+
+  // Ref
+  const overlapContainer = useRef(null);
+  const chevronRefR = useRef(null);
+  const chevronRefL = useRef(null);
+
+  // Custom Hooks
+
+  let bgHeight = useBg(cards, overlapContainer, true);
 
   // Slider Handler
   const handleSlider = (event) => {
@@ -26,29 +57,69 @@ export default function Carousel(props) {
     }, 500);
   };
 
+  const handleChevron = (event) => {
+    event.type === 'mouseover' ? setIsHover(true) : setIsHover(false);
+  };
+
   return (
-    <Box alt="sea water on the background" className={classes.carousel}>
-      <Box className={classes.slideContainer}>
-        <Box className={classes.slideShowWrapper}>
+    <Box className={classes.carousel} component={'section'}>
+      {isBigScreen && (
+        <Box className={classes.heroHeader}>
+          <Typography component="h1" variant={variantTitle}>
+            {title}
+          </Typography>
+          <Typography component="h4" variant={variantSubtitle}>
+            {subtitle}
+          </Typography>
+        </Box>
+      )}
+
+      <Box
+        className={classes.slideContainer}
+        height={bgHeight}
+        onMouseOver={handleChevron}
+        onMouseLeave={handleChevron}
+      >
+        <Box className={classes.slideShowWrapper} ref={overlapContainer}>
           <Button
             value="back"
             className={classes.slideButton}
             onClick={handleSlider}
           >
-            <KeyboardArrowLeft value="back" className={classes.chevron} />
+            <KeyboardArrowLeft
+              value="back"
+              className={animatedChevronL}
+              ref={chevronRefR}
+            />
           </Button>
-          <Card
-            animation={true}
-            cardInfo={cards[slide]}
-            exit={exit}
-            carousel={'true'}
-          />
+          {isBigScreen && (
+            <img
+              src={require(`../../assets/static/icons/${cards[slide].iconFileName}`)}
+              alt="woman face"
+              className={animatedPhoto}
+            />
+          )}
+          <Box className={classes.carouselCardContainer}>
+            <Card
+              component={'section'}
+              animation={true}
+              cardInfo={cards[slide]}
+              exit={exit}
+              carousel
+              bigScreen={isBigScreen}
+            />
+          </Box>
+
           <Button
             value="next"
             className={classes.slideButton}
             onClick={handleSlider}
           >
-            <KeyboardArrowRight value="next" className={classes.chevron} />
+            <KeyboardArrowRight
+              value="next"
+              className={animatedChevronR}
+              ref={chevronRefL}
+            />
           </Button>
         </Box>
         <Stepper steps={cards.length} activeStep={slide} />

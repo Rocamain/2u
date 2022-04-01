@@ -25,7 +25,10 @@
   "Home": [
     {
       "component": "Carousel",
-
+      "title": "2U Aesthetics",
+      "subtitle": "Beauty Specialists",
+      "variantTitle": "heroTitle",
+      "variantSubtitle": "heroSubtitle",
       "cards": [
         {
           "title": "Discover our promotions",
@@ -34,7 +37,8 @@
           ],
           "button": "Learn More",
           "variantTitle": "title1",
-          "variantContent": "body1"
+          "variantContent": "body1",
+          "iconFileName": "face1.jpg"
         },
         {
           "title": "The best products",
@@ -43,7 +47,8 @@
           ],
           "button": "Learn More",
           "variantTitle": "title1",
-          "variantContent": "body1"
+          "variantContent": "body1",
+          "iconFileName": "face2.jpg"
         },
         {
           "title": "Can you image??",
@@ -52,7 +57,8 @@
           ],
           "button": "Learn More",
           "variantTitle": "title1",
-          "variantContent": "body1"
+          "variantContent": "body1",
+          "iconFileName": "face1.jpg"
         }
       ]
     },

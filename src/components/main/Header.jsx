@@ -30,7 +30,7 @@ const StyledNavBar = styled(Box)(({ theme }) => ({
 
 const StyledHeader = styled(Box)(({ theme }) => ({
   width: '85vw',
-  height: '14vh',
+  height: '13vh',
   margin: '0 auto',
   borderRadius: '0px',
   display: 'flex',
@@ -45,11 +45,11 @@ const StyledHeader = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up('lg')]: {
     justifyContent: 'space-between',
     width: '70vw',
-    height: '18vh',
+    height: '17vh',
   },
   [theme.breakpoints.up('xl')]: {
     width: '65vw',
-    height: '20vh',
+    height: '15.5vh',
   },
 }));
 

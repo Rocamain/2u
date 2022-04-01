@@ -1,17 +1,34 @@
 import { makeStyles } from '@mui/styles';
 
 const useSlideAnimation = makeStyles((theme) => ({
-  animatedItem: {
-    animation: `$myEffect 2000ms ${theme.transitions.easing.easeInOut}`,
+  carouselCard: {
+    [theme.breakpoints.down('md')]: {
+      padding: '1.5em 2.5em',
+    },
+    [theme.breakpoints.between('md', 'lg')]: {
+      width: '66%%',
+      padding: '5em 3em',
+    },
+    [theme.breakpoints.between('lg', 'xl')]: {
+      width: '66%%',
+      padding: '6.5em 5em',
+    },
+    [theme.breakpoints.up('xl')]: {
+      width: '64%%',
+      padding: '7.5em 5em',
+    },
   },
-  animatedItemExiting: {
+  carouselCardAnimation: {
+    animation: `$myEffect 1400ms ${theme.transitions.easing.easeInOut}`,
+  },
+  carouselCardAnimationExiting: {
     animation: `$myEffectExit 500ms ${theme.transitions.easing.easeInOut}`,
     opacity: 0,
   },
   '@keyframes myEffect': {
     '0%': {
       opacity: 0,
-      transform: 'translateY(25%)',
+      transform: 'translateY(15%)',
     },
     '50%': {
       opacity: 0.2,

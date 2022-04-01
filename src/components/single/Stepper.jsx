@@ -6,12 +6,12 @@ export default function DotsMobileStepper({ steps, activeStep }) {
       variant="dots"
       steps={steps}
       activeStep={activeStep}
+      position="bottom"
       sx={{
         p: '0',
-        width: '100%',
-        marginTop: '10px',
-        mx: 'auto',
-        top: 0,
+        width: { xs: '100%', md: '76%' },
+        mt: '1em',
+        ml: 'auto',
         position: 'relative',
         justifyContent: 'center',
       }}

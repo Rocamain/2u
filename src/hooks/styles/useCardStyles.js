@@ -6,7 +6,8 @@ import backgroundImage2 from '../../assets/static/backgrounds/bg2.jpg';
 export const useStyles = makeStyles((theme) => {
   return {
     carousel: {
-      height: '85vh',
+      paddingTop: '9em',
+      paddingBottom: '10em',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -15,35 +16,138 @@ export const useStyles = makeStyles((theme) => {
       backgroundAttachment: 'fixed',
       backgroundPosition: 'center',
       backgroundSize: 'cover',
+      [theme.breakpoints.up('md')]: {
+        paddingTop: '2em',
+      },
+    },
+    heroHeader: {
+      marginLeft: 'auto',
+      position: 'relative',
+      zIndex: 100,
+      marginTop: '1em',
+      top: 0,
+      [theme.breakpoints.between('md', 'lg')]: {
+        width: '52.4%',
+        top: '-0.4em',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+        width: '50%',
+        top: '0.4em',
+      },
+      [theme.breakpoints.up('xl')]: {
+        width: '50.5%',
+        top: '0.4em',
+      },
     },
 
     slideContainer: {
       width: '100%',
       margin: '0 auto',
       backgroundImage: theme.palette.background.primary,
-      paddingBottom: '0.7em',
-      paddingTop: '1.5em',
+      '&:hover:': {
+        backgroundImage: 'pink',
+      },
     },
     slideShowWrapper: {
+      width: '100%',
+      gap: '1em',
       display: 'flex',
       flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
+      alignItems: 'stretch',
+      justifyContent: 'space-between',
+      marginTop: '-2em',
+      [theme.breakpoints.up('md')]: {
+        justifyContent: 'flex-end',
+      },
+    },
+    carouselCardContainer: {
+      display: 'flex',
+      justifyContent: 'flex-end',
+      width: '60%',
+      marginTop: '-2em',
+      [theme.breakpoints.down('md')]: {
+        width: '80%',
+      },
     },
 
     slideButton: {
       minWidth: '2.7em',
-      // position: 'relative',
-      // zIndex: 100,
-      '&:hover': {
-        color: 'pink',
+      width: '6.5vw',
+      overflow: 'hidden',
+      '&:hover ': {
+        background: 'transparent',
       },
     },
-    chevron: {
+    chevronR: {
       color: 'white',
       fontSize: '3.4rem',
-      '&:hover': {
-        color: 'pink',
+      transform: 'translateX(9vw)',
+    },
+
+    onMouseOverChevronR: {
+      animation: `$moveToLeft 1000ms ${theme.transitions.easing.easeInOut}`,
+      animationFillMode: 'both',
+    },
+    onMouseOutChevronR: {
+      color: 'white',
+      fontSize: '3.4rem',
+      animation: `$moveBackToRight 1000ms ${theme.transitions.easing.easeInOut}`,
+      animationFillMode: 'both',
+    },
+
+    '@keyframes moveToLeft': {
+      from: {
+        transform: 'translateX(9vw)',
+      },
+
+      to: {
+        transform: 'translateX(0)',
+      },
+    },
+
+    '@keyframes moveBackToRight': {
+      from: {
+        transform: 'translateX(0)',
+      },
+
+      to: {
+        transform: 'translateX(9vw)',
+      },
+    },
+
+    chevronL: {
+      color: 'white',
+      fontSize: '3.4rem',
+      transform: 'translateX(-9vw)',
+    },
+    onMouseOverChevronL: {
+      animation: `$moveToRight 1000ms ${theme.transitions.easing.easeInOut}`,
+      animationFillMode: 'both',
+    },
+    onMouseOutChevronL: {
+      color: 'white',
+      fontSize: '3.4rem',
+      animation: `$moveBackToLeft 1000ms ${theme.transitions.easing.easeInOut}`,
+      animationFillMode: 'both',
+    },
+
+    '@keyframes moveToRight': {
+      from: {
+        transform: 'translateX(-9vw)',
+      },
+
+      to: {
+        transform: 'translateX(0)',
+      },
+    },
+
+    '@keyframes moveBackToLeft': {
+      from: {
+        transform: 'translateX(0)',
+      },
+
+      to: {
+        transform: 'translateX(-9vw)',
       },
     },
 
@@ -116,6 +220,11 @@ export const useStyles = makeStyles((theme) => {
       padding: '1.5em',
       [theme.breakpoints.up('lg')]: {
         width: '70%',
+        padding: '2.5em',
+      },
+      [theme.breakpoints.up('xl')]: {
+        maxWidth: '1480px',
+        padding: '3.5em',
       },
     },
     cardBg: {

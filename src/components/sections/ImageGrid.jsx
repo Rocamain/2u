@@ -1,5 +1,5 @@
-import { ImageList, ImageListItem } from '@mui/material';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import { ImageList, ImageListItem, useMediaQuery } from '@mui/material';
+
 import { useTheme } from '@mui/material/styles';
 
 function ImageGrid(props) {
