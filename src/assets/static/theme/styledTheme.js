@@ -73,7 +73,7 @@ theme = createTheme(theme, {
       letterSpacing: '0.007em',
     },
     body1: {
-      fontWeight: '400',
+      fontWeight: '500',
       fontSize: '1.2rem',
       fontFamily: ['Open Sans', 'Abel'].join(','),
       letterSpacing: '0.03em',
@@ -330,6 +330,7 @@ theme = createTheme(theme, {
         },
       },
     },
+
     MuiSvgIcon: {
       styleOverrides: {
         root: {
@@ -341,6 +342,7 @@ theme = createTheme(theme, {
         },
       },
     },
+
     MuiListItemButton: {
       styleOverrides: {
         root: {

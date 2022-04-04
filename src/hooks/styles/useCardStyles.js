@@ -28,15 +28,15 @@ export const useStyles = makeStyles((theme) => {
       top: 0,
       [theme.breakpoints.between('md', 'lg')]: {
         width: '52.4%',
-        top: '-0.4em',
+        top: '1.9em',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         width: '50%',
-        top: '0.4em',
+        top: '2.8em',
       },
       [theme.breakpoints.up('xl')]: {
         width: '50.5%',
-        top: '0.4em',
+        top: '2.8em',
       },
     },
 
@@ -50,38 +50,55 @@ export const useStyles = makeStyles((theme) => {
     },
     slideShowWrapper: {
       width: '100%',
-      gap: '1em',
+
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'stretch',
       justifyContent: 'space-between',
-      marginTop: '-2em',
+      marginTop: '-1.5em',
       [theme.breakpoints.up('md')]: {
         justifyContent: 'flex-end',
       },
     },
     carouselCardContainer: {
       display: 'flex',
-      justifyContent: 'flex-end',
-      width: '60%',
-      marginTop: '-2em',
+      justifyContent: 'center',
+      width: '60vw',
+
       [theme.breakpoints.down('md')]: {
+        justifyContent: 'flex-end',
         width: '80%',
       },
     },
 
-    slideButton: {
+    slideButtonR: {
       minWidth: '2.7em',
       width: '6.5vw',
       overflow: 'hidden',
+      [theme.breakpoints.up('md')]: {
+        minWidth: '10vw',
+        justifyContent: 'flex-end',
+      },
       '&:hover ': {
         background: 'transparent',
       },
     },
+    slideButtonL: {
+      minWidth: '2.7em',
+      width: '6.5vw',
+      [theme.breakpoints.up('md')]: {
+        minWidth: '35vw',
+        justifyContent: 'flex-start',
+      },
+      '&:hover ': {
+        background: 'transparent',
+      },
+    },
+
     chevronR: {
       color: 'white',
       fontSize: '3.4rem',
-      transform: 'translateX(9vw)',
+      transform: 'translateX(15em)',
     },
 
     onMouseOverChevronR: {
@@ -97,7 +114,7 @@ export const useStyles = makeStyles((theme) => {
 
     '@keyframes moveToLeft': {
       from: {
-        transform: 'translateX(9vw)',
+        transform: 'translateX(15em)',
       },
 
       to: {
@@ -111,14 +128,14 @@ export const useStyles = makeStyles((theme) => {
       },
 
       to: {
-        transform: 'translateX(9vw)',
+        transform: 'translateX(15em)',
       },
     },
 
     chevronL: {
       color: 'white',
       fontSize: '3.4rem',
-      transform: 'translateX(-9vw)',
+      transform: 'translateX(-15em)',
     },
     onMouseOverChevronL: {
       animation: `$moveToRight 1000ms ${theme.transitions.easing.easeInOut}`,
@@ -133,7 +150,7 @@ export const useStyles = makeStyles((theme) => {
 
     '@keyframes moveToRight': {
       from: {
-        transform: 'translateX(-9vw)',
+        transform: 'translateX(-15em)',
       },
 
       to: {
@@ -147,7 +164,7 @@ export const useStyles = makeStyles((theme) => {
       },
 
       to: {
-        transform: 'translateX(-9vw)',
+        transform: 'translateX(-15em)',
       },
     },
 

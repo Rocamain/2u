@@ -31,6 +31,7 @@ export default function Carousel(props) {
     [classes.onMouseOverChevronR]: isHover,
     [classes.onMouseOutChevronR]: !isHover,
   })}`;
+
   let animatedChevronL = `${clsx(classes.chevronL, {
     [classes.onMouseOverChevronL]: isHover,
     [classes.onMouseOutChevronL]: !isHover,
@@ -83,7 +84,7 @@ export default function Carousel(props) {
         <Box className={classes.slideShowWrapper} ref={overlapContainer}>
           <Button
             value="back"
-            className={classes.slideButton}
+            className={classes.slideButtonL}
             onClick={handleSlider}
           >
             <KeyboardArrowLeft
@@ -92,6 +93,7 @@ export default function Carousel(props) {
               ref={chevronRefR}
             />
           </Button>
+
           {isBigScreen && (
             <img
               src={require(`../../assets/static/icons/${cards[slide].iconFileName}`)}
@@ -112,7 +114,7 @@ export default function Carousel(props) {
 
           <Button
             value="next"
-            className={classes.slideButton}
+            className={classes.slideButtonR}
             onClick={handleSlider}
           >
             <KeyboardArrowRight
@@ -122,8 +124,8 @@ export default function Carousel(props) {
             />
           </Button>
         </Box>
-        <Stepper steps={cards.length} activeStep={slide} />
       </Box>
+      <Stepper steps={cards.length} activeStep={slide} />
     </Box>
   );
 }

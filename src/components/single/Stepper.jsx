@@ -10,10 +10,11 @@ export default function DotsMobileStepper({ steps, activeStep }) {
       sx={{
         p: '0',
         width: { xs: '100%', md: '76%' },
-        mt: '1em',
+        mt: '2em',
         ml: 'auto',
         position: 'relative',
         justifyContent: 'center',
+        '& MuiMobileStepper-dotActive': { color: 'red' },
       }}
     />
   );

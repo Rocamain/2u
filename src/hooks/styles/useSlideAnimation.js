@@ -2,8 +2,11 @@ import { makeStyles } from '@mui/styles';
 
 const useSlideAnimation = makeStyles((theme) => ({
   carouselCard: {
-    [theme.breakpoints.down('md')]: {
-      padding: '1.5em 2.5em',
+    [theme.breakpoints.down('sm')]: {
+      padding: '2em 0.9em',
+    },
+    [theme.breakpoints.between('sm', 'md')]: {
+      padding: '4em 1.8em',
     },
     [theme.breakpoints.between('md', 'lg')]: {
       width: '66%%',
