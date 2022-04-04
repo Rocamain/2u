@@ -5,7 +5,7 @@ import useCardStyles from '../../hooks/styles/useCardStyles';
 function CardsGrid(props) {
   const { path, cards, title } = props;
   const classes = useCardStyles();
-
+  console.log(props);
   return (
     <Box>
       {title && (

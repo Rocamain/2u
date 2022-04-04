@@ -10,7 +10,15 @@ import useBg from '../../hooks/useBg';
 import { useTheme } from '@mui/material/styles';
 
 export default function Carousel(props) {
-  const { path, cards, title, subtitle, variantTitle, variantSubtitle } = props;
+  const {
+    path,
+    cards,
+    title,
+    subtitle,
+    variantTitle,
+    variantSubtitle,
+    component,
+  } = props;
 
   const [slide, setSlide] = useState(0);
   const [exit, setExit] = useState(false);
@@ -103,11 +111,10 @@ export default function Carousel(props) {
           )}
           <Box className={classes.carouselCardContainer}>
             <Card
-              component={'section'}
+              component={component}
               animation={true}
               cardInfo={cards[slide]}
               exit={exit}
-              carousel
               bigScreen={isBigScreen}
             />
           </Box>

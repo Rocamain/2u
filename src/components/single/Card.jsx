@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import clsx from 'clsx';
 import useSlideAnimation from '../../hooks/styles/useSlideAnimation';
-
+import useCardStyles from '../../hooks/styles/modelACardStyles';
 import {
   Card,
   CardHeader,
@@ -12,29 +13,67 @@ import {
 
 import StyledIcon from './Icon';
 import StyledButton from './Button';
-
+import modelACardStyles from '../../hooks/styles/modelACardStyles';
 export default function StyledCard(props) {
-  const { cardInfo, exit, carousel, iconFileName, cardStyles } = props;
+  const { cardInfo, exit, carousel, iconFileName, cardStyles, component } =
+    props;
   const { variantContent, variantTitle, variantSubtitle } = cardInfo;
+  const [isHover, setIsHover] = useState(false);
 
-  let animationStyles = useSlideAnimation();
+  // ModelA component Styles
 
-  let animatedCard = `${clsx(
-    animationStyles.carouselCard,
-    animationStyles.carouselCardAnimation,
+  let modelACardStyle = modelACardStyles();
+
+  let modelACardClasses = `${clsx(modelACardStyle.modelACard, {
+    [modelACardStyle.onMouseOverModelACard]: isHover,
+    [modelACardStyle.onMouseOutModelACard]: !isHover,
+  })}`;
+
+  // Carousel component Styles
+
+  let carouselCardStyle = useSlideAnimation();
+
+  let carouselCardClasses = `${clsx(
+    carouselCardStyle.carouselCard,
+    carouselCardStyle.carouselCardAnimation,
     {
-      [animationStyles.carouselCardAnimationExiting]: exit,
+      [carouselCardStyle.carouselCardAnimationExiting]: exit,
     }
   )}`;
+
+  //
+
+  const handleHover = (event) => {
+    event.type === 'mouseover' ? setIsHover(true) : setIsHover(false);
+  };
+
+  // class Selector according component
+  let selectedClass;
+  const style = (component) => {
+    switch (component) {
+      case 'Carousel':
+        selectedClass = carouselCardClasses;
+        break;
+      case 'ModelA':
+        selectedClass = modelACardClasses;
+        break;
+      default:
+        selectedClass = '';
+    }
+  };
+
+  style(component);
+
   return (
     cardInfo && (
       <Card
         key={'index'}
-        className={carousel && animatedCard}
+        className={selectedClass}
         elevation={0}
+        onMouseOver={component === 'ModelA' ? handleHover : null}
+        onMouseOut={component === 'ModelA' ? handleHover : null}
         sx={{
           color: carousel ? 'carousel.main' : 'text.primary',
-
           ...cardStyles,
         }}
       >

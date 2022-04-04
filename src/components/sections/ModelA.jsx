@@ -6,7 +6,7 @@ import StyledButton from '../single/Button';
 import StyledCard from '../single/Card';
 
 export default function ModelA(props) {
-  const { path, ...data } = props;
+  const { path, component, ...data } = props;
 
   // Refs
   const overlapContainer = useRef(null);
@@ -42,7 +42,7 @@ export default function ModelA(props) {
           <>
             <GridContent data={data} classes={classes} />
             {data.cards ? (
-              <GridCards data={data} />
+              <GridCards data={data} component={component} />
             ) : (
               <GridImage data={data} classes={classes} />
             )}
@@ -50,7 +50,7 @@ export default function ModelA(props) {
         ) : (
           <>
             {data.cards ? (
-              <GridCards data={data} />
+              <GridCards data={data} component={component} />
             ) : (
               <GridImage data={data} classes={classes} />
             )}
@@ -93,7 +93,7 @@ const GridContent = (props) => {
 };
 
 const GridCards = (props) => {
-  const { data } = props;
+  const { data, component } = props;
 
   return (
     <Grid
@@ -119,6 +119,7 @@ const GridCards = (props) => {
             index % 2 === 0 && (
               <Grid key={index} item>
                 <StyledCard
+                  component={component}
                   cardInfo={card}
                   iconFileName={card.iconFileName}
                   {...(index === 0 && {
@@ -148,6 +149,7 @@ const GridCards = (props) => {
               <Grid key={index} item>
                 <StyledCard
                   cardInfo={card}
+                  component={component}
                   iconFileName={card.iconFileName}
                   {...(index === array.length - 1 && {
                     cardStyles: {

@@ -17,6 +17,7 @@ export default function PageComponent(props) {
             key={index}
             {...info}
             path={path + '?component=' + routeInfo.component}
+            component={component}
           />
         )
       );
