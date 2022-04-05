@@ -2,6 +2,7 @@ import { makeStyles } from '@mui/styles';
 import image from '../../assets/static/backgrounds/water.jpg';
 import backgroundImage from '../../assets/static/backgrounds/bg.jpg';
 import backgroundImage2 from '../../assets/static/backgrounds/bg2.jpg';
+import curves from '../../assets/static/backgrounds/curves.svg';
 
 export const useStyles = makeStyles((theme) => {
   return {
@@ -20,7 +21,7 @@ export const useStyles = makeStyles((theme) => {
         paddingTop: '2em',
       },
     },
-    heroHeader: {
+    carouselHeader: {
       marginLeft: 'auto',
       position: 'relative',
       zIndex: 100,
@@ -50,7 +51,6 @@ export const useStyles = makeStyles((theme) => {
     },
     slideShowWrapper: {
       width: '100%',
-
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'stretch',
@@ -165,6 +165,47 @@ export const useStyles = makeStyles((theme) => {
 
       to: {
         transform: 'translateX(-15em)',
+      },
+    },
+    heroHeader: {
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'column',
+      zIndex: 100,
+      width: '80%',
+      margin: '0 auto',
+
+      [theme.breakpoints.up('md')]: {
+        justifyContent: 'flex-end',
+        paddingTop: '14em',
+      },
+      [theme.breakpoints.up('lg')]: {
+        width: '70%',
+      },
+      [theme.breakpoints.up('xl')]: {
+        width: '60%',
+      },
+    },
+    heroBackgroundCurves: {
+      backgroundImage: `url(${curves})`,
+      backgroundRepeatY: 'no-repeat',
+      backgroundSize: '100% 500px',
+      width: '100%',
+      position: 'absolute',
+      bottom: '-2em',
+      left: 0,
+      right: 0,
+      height: '500px',
+      // height: { xs: '400px', sm: '500px', md: '500px' },
+      zIndex: 10,
+      [theme.breakpoints.up('xs')]: {
+        height: '400px',
+      },
+      [theme.breakpoints.up('sm')]: {
+        height: '500px',
+      },
+      [theme.breakpoints.up('md')]: {
+        height: '500px',
       },
     },
 

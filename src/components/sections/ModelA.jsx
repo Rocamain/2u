@@ -1,9 +1,10 @@
 import { useRef } from 'react';
 import useCardStyles from '../../hooks/styles/useCardStyles';
 import useBg from '../../hooks/useBg';
-import { Divider, Box, Typography, Grid } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
 import StyledButton from '../single/Button';
 import StyledCard from '../single/Card';
+import StyledDivider from '../single/Divider';
 
 export default function ModelA(props) {
   const { path, component, ...data } = props;
@@ -76,7 +77,7 @@ const GridContent = (props) => {
       >
         <Typography component="h2" variant="title" children={data.title} />
 
-        <Divider classes={{ root: classes.divider }} />
+        <StyledDivider sizeWidth={'25%'} />
         {data.content.map((content, index) => (
           <Typography
             key={index}

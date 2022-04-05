@@ -59,6 +59,7 @@ const PopoverLink = (props) => {
               <NavLink
                 key={allPaths[path]}
                 to={allPaths[path]}
+                borderTop={index === 0 ? '3px solid #2ea3f2' : 'none'}
                 selected={selectedIndex === path}
                 route={path}
                 handleListItemClick={handleListItemClick}

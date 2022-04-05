@@ -327,7 +327,7 @@
       "title": "Services",
       "subtitle": "Our Specialties",
       "imageFileName": "services&fares.jpg",
-      "sizeBig": "true",
+      "sizeBig": true,
       "iconFileName": "coffee.png",
       "content": "Somos especialistas en tratamientos corporales, faciales, manicuras y pedicuras, además de realizar tratamientos a media para cada persona según su caso y exigencias.",
       "button": "Make yout booking"

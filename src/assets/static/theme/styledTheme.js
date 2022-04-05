@@ -91,41 +91,64 @@ theme = createTheme(theme, {
         textShadow: '0em 0em 4.8em #ffffff',
       },
     },
-    heroTitle: {
-      fontWeight: '700',
-      color: '#00BCCC',
-      fontFamily: ['Abel', 'Open Sans'].join(','),
-      bottomPadding: '2.8em',
-      textShadow: '0em 0em 4.8em #ffffff',
 
-      [theme.breakpoints.between('md', 'lg')]: {
-        fontSize: '5.2rem',
-        lineHeight: '4.7rem',
-        letterSpacing: '-0.3rem',
+    heroTitle: {
+      fontFamily: ['Abel', 'Open Sans'].join(','),
+      fontWeight: 700,
+      fontSize: '4rem',
+      color: '#00BCCC !important',
+      letterSpacing: '-0.017em',
+      textAlign: 'center',
+      textShadow: '0em 0em 0.3em #ffffff',
+      lineHeight: 1,
+
+      [theme.breakpoints.up('sm')]: {
+        fontSize: '6rem',
+        letterSpacing: '-0.037em',
+        textAlign: 'justify',
+      },
+      [theme.breakpoints.up('md')]: {
+        fontSize: '7rem',
+        lineHeight: 1.2,
+        // letterSpacing: '-0.047em',
       },
       [theme.breakpoints.up('lg')]: {
-        fontSize: '6.2rem',
-        lineHeight: '5.8rem',
-        letterSpacing: '-0.3rem',
+        fontSize: '8rem',
+        // lineHeight: '7rem',
+        // letterSpacing: '-0.057em',
+      },
+      [theme.breakpoints.up('xl')]: {
+        fontSize: '9rem',
+        // lineHeight: '8rem',
+        // letterSpacing: '-0.07em',
       },
     },
 
     heroSubtitle: {
-      fontWeight: '300',
       color: '#666',
       fontFamily: ['Abel', 'Open Sans'].join(','),
+      fontWeight: 600,
+      textAlign: 'center',
+      fontSize: '1.9rem',
+      // lineHeight: '1rem',
+      textShadow: '-17em 7em 0.3em #ffffff',
 
-      [theme.breakpoints.between('md', 'lg')]: {
-        fontSize: '2.8rem',
-        lineHeight: '2.5rem',
-        letterSpacing: '-0.1rem',
-        textShadow: '0em 0em 4.8em #ffffff',
+      [theme.breakpoints.up('sm')]: {
+        fontSize: '2.1rem',
+        lineHeight: '1.3rem',
+      },
+      [theme.breakpoints.up('md')]: {
+        fontSize: '2.7rem',
+        // lineHeight: '1.9rem',
+        maxWidth: '60%',
       },
       [theme.breakpoints.up('lg')]: {
-        fontSize: '3.2rem',
-        lineHeight: '3.1rem',
-        letterSpacing: '-0.1rem',
-        textShadow: '0em 0em 4.8em #ffffff',
+        fontSize: '2.7rem',
+        // lineHeight: '1.8rem',
+      },
+      [theme.breakpoints.up('lg')]: {
+        fontSize: '2.8rem',
+        // lineHeight: '2.1rem',
       },
     },
 

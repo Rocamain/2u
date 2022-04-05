@@ -5,7 +5,7 @@ import { useRef } from 'react';
 import ScrollAnimation from './ScrollAnimation';
 
 const AnimatedIcon = (props) => {
-  const { iconFileName, carousel } = props;
+  const { iconFileName } = props;
   let ref = useRef(null);
 
   let iconURL = null;

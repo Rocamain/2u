@@ -1,5 +1,6 @@
-import { Divider, Box, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import StyledButton from '../single/Button';
+import StyledDivider from '../single/Divider';
 import useCardStyles from '../../hooks/styles/useCardStyles';
 
 function ModelC(props) {
@@ -7,8 +8,7 @@ function ModelC(props) {
 
   const imageURL = require(`../../assets/static/images/${data.imageFileName}`);
 
-  const { articlesContainer, divider, cardBg, cardWrapper, handImg } =
-    useCardStyles();
+  const { articlesContainer, cardBg, cardWrapper, handImg } = useCardStyles();
 
   return (
     <Box
@@ -45,12 +45,7 @@ function ModelC(props) {
                 marginBottom: '0.5em',
               }}
             />
-            <Divider
-              className={divider}
-              sx={{
-                marginBottom: '10px',
-              }}
-            />
+            <StyledDivider sizeWidth={'25%'} />
             <Typography
               component="p"
               children={data.content}

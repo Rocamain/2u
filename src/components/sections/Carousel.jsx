@@ -73,7 +73,7 @@ export default function Carousel(props) {
   return (
     <Box className={classes.carousel} component={'section'}>
       {isBigScreen && (
-        <Box className={classes.heroHeader}>
+        <Box className={classes.carouselHeader}>
           <Typography component="h1" variant={variantTitle}>
             {title}
           </Typography>

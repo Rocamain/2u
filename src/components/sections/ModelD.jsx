@@ -1,12 +1,13 @@
-import { Divider, Box, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import StyledButton from '../single/Button';
+import StyledDivider from '../single/Divider';
 import useCardStyles from '../../hooks/styles/useCardStyles';
 
 function ModelD(props) {
   const { path, ...data } = props;
 
   const imageURL = require(`../../assets/static/images/${data.imageFileName}`);
-  const { anyDoubtSection, divider, anyDoubtImg, yellowCard } = useCardStyles();
+  const { anyDoubtSection, anyDoubtImg, yellowCard } = useCardStyles();
 
   return (
     <Box className={anyDoubtSection}>
@@ -23,7 +24,7 @@ function ModelD(props) {
         />
 
         <Box className={yellowCard}>
-          <Divider className={divider} />
+          <StyledDivider sizeWidth={'25%'} />
           <Typography
             component="h2"
             variant="body2"
@@ -32,7 +33,6 @@ function ModelD(props) {
               marginBottom: '1.5em',
             }}
           />
-
           <StyledButton content={data.button} />
         </Box>
       </Box>

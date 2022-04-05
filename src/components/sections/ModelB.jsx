@@ -1,12 +1,13 @@
-import { Divider, Box, Typography, Grid } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
 import StyledButton from '../single/Button';
 import useCardStyles from '../../hooks/styles/useCardStyles';
+import StyledDivider from '../single/Divider';
 
 const ModelB = (props) => {
   const { path, ...data } = props;
   const imageURL = require(`../../assets/static/images/${data.imageFileName}`);
 
-  const { aboutUsSection, divider, aboutGridImg } = useCardStyles();
+  const { aboutUsSection, aboutGridImg } = useCardStyles();
 
   return (
     <Box
@@ -36,7 +37,7 @@ const ModelB = (props) => {
           <Box sx={{ width: '85%', mx: 'auto' }}>
             <Typography component="h2" variant="title" children={data.title} />
 
-            <Divider className={divider} />
+            <StyledDivider sizeWidth={'25%'} />
 
             {data.content.map((paragraph, index) => (
               <Typography
