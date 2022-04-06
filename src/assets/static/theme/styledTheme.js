@@ -283,12 +283,12 @@ theme = createTheme(theme, {
       },
     },
     body3: {
-      fontWeight: '500',
-      fontSize: '1rem',
-      color: '#666',
-      lineHeight: '0.9rem',
+      fontWeight: '600',
+      fontSize: '1.5rem',
+      color: 'white',
+      lineHeight: 1.4,
       fontFamily: ['Abel', 'Open Sans'].join(','),
-      marginBottom: '0.5em',
+      // marginBottom: '0.5em',
     },
     title2: {
       fontWeight: '600',

@@ -29,6 +29,7 @@
       "subtitle": "Beauty Specialists",
       "variantTitle": "heroTitle",
       "variantSubtitle": "heroSubtitle",
+      "card": null,
       "cards": [
         {
           "title": "Discover our promotions",
@@ -70,6 +71,7 @@
         "Ofrecemos una selección de tratamientos faciales y corporales de última generación con los que conseguirás resultados y objetivos reales. Déjate asesorar por nuestras profesionales y diseñaremos un tratamiento a medida y personalizado para ti.",
         "También somos especialistas en la belleza de tus manos y pies. Para ello contamos con la marca líder internacional CND con sus esmaltes semi-permanentes Shellac y esmaltes de larga duración Vinylux."
       ],
+      "card": null,
       "button": "Make apoinment",
       "cards": [
         {
@@ -386,6 +388,7 @@
         "Ofrecemos una selección de tratamientos faciales y corporales de última generación con los que conseguirás resultados y objetivos reales. Déjate asesorar por nuestras profesionales y diseñaremos un tratamiento a medida y personalizado para ti.",
         "También somos especialistas en la belleza de tus manos y pies. Para ello contamos con la marca líder internacional CND con sus esmaltes semi-permanentes Shellac y esmaltes de larga duración Vinylux."
       ],
+      "card": null,
       "button": "Make apoinment",
       "cards": [
         {
@@ -453,6 +456,7 @@
         "También somos especialistas en la belleza de tus manos y pies. Para ello contamos con la marca líder internacional CND con sus esmaltes semi-permanentes Shellac y esmaltes de larga duración Vinylux.",
         "El esmaltado Shellac de CND es el único esmalte semipermanente que respeta al 100% la uña natural y que no la daña, ya que no hay que limar su superficie ni para aplicarlo ni para retirarlo. Ofrece una resistencia y un brillo únicos con una duración de hasta 14 días. Shellac de CND también es vegano y 7 free asegurando la salud de nuestras uñas y piel."
       ],
+      "card": null,
       "button": "Make apoinment"
     },
 
@@ -492,6 +496,7 @@
         "La fotodepilación es una técnica eficaz y segura, sólo es necesario seguir ciertos consejos.",
         "Solicita información sin compromiso, estaremos encantadas de asesorarte."
       ],
+      "card": null,
       "button": "Check Fares"
     },
 
@@ -682,6 +687,77 @@
       "content": [
         "Tratamiento reductor, anticelulítico, reafirmante y drenante",
         "Descuento del 50%"
+      ],
+      "card": {
+        "content": [
+          "2 envolturas de algas",
+          "4 masajes reductores",
+          "2 radiofrecuencias",
+          "4 presoterapias"
+        ],
+        "discountedPrice": 280,
+        "price": 580,
+        "priceList": null
+      },
+
+      "button": "I want the Promotion"
+    },
+    {
+      "component": "ModelA",
+      "title": "Body radiofrequency",
+      "contentLeft": false,
+      "imageFileName": "radio-prom.jpg",
+      "background": false,
+      "card": {
+        "content": ["30% de descuento (ahorras 117€)"],
+        "discountedPrice": 273,
+        "price": 463,
+        "priceList": null
+      },
+      "content": [
+        "Tratamiento reafirmante para abdomen, piernas, glúteos, brazos. Combate la flacidez con el tratamiento más eficaz, la radiofrecuencia estimula la producción de colágeno para reafirmar y regenerar tu piel en profundidad."
+      ],
+      "button": "I want the Promotion"
+    },
+    {
+      "component": "ModelA",
+      "title": "Photodepilation",
+      "contentLeft": true,
+      "imageFileName": "photodepilation-prom.jpg",
+      "background": true,
+      "card": {
+        "discountedPrice": null,
+        "price": null,
+        "priceList": [
+          { "content": "Pack axilas + ingles", "price": 45 },
+          { "content": "Pack pecho+abdomen", "price": 56.25 },
+          { "content": "Pack piernas enteras+ingles", "price": 67.5 }
+        ]
+      },
+      "content": [
+        "Oferta de Fotodepilación. Válido tanto hombres como para mujeres.",
+        "4 Packs disponibles en la oferta"
+      ],
+      "button": "I want the Promotion"
+    },
+    {
+      "component": "ModelA",
+      "title": "LPG – Body and Face",
+      "contentLeft": true,
+      "imageFileName": "lpg-face-prom.jpg",
+      "background": true,
+      "card": {
+        "content": [
+          "12 sesiones LPG corporal 30 min: 520€",
+          "12 sesiones LPG corporal 40 min + 2 sesiones LPG facial: 690€"
+        ],
+        "discountedPrice": null,
+        "price": null,
+        "priceList": null
+      },
+      "content": [
+        "PARA EL ROSTRO: Ilumina, redensifica, rellena y reafirma tu piel.",
+        "PARA EL CUERPO: Alisa la celulitis, reafirma y elimina grasas resistentes a la dieta y el ejercicio."
       ],
       "button": "I want the Promotion"
     }

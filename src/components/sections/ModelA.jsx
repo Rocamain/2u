@@ -21,16 +21,13 @@ export default function ModelA(props) {
       height={bgHeight}
       className={classes.articlesContainer}
       component={'section'}
-      sx={
-        data.imageFileName
-          ? { marginTop: { md: '16em', lg: '23em', xl: '29em' } }
-          : { marginTop: '10em' }
-      }
     >
       <Grid
         container
         rowSpacing={{ xs: 2, sm: 2, md: '0' }}
         columnSpacing={{ md: 3 }}
+        direction={'row'}
+        spacing={24}
         className={classes.articlesWrapper}
         ref={overlapContainer}
         component="div"
@@ -66,6 +63,8 @@ export default function ModelA(props) {
 const GridContent = (props) => {
   const { classes, data } = props;
 
+  // console.log(data.card.priceList);
+
   return (
     <Grid item component="div" xs={12} sm={12} md={data.imageFileName ? 7 : 6}>
       <Box
@@ -86,7 +85,69 @@ const GridContent = (props) => {
             children={content}
           />
         ))}
+        {data.card !== null && (
+          <Box
+            sx={{
+              backgroundColor: 'pink',
+              padding: '1.5em 3em',
+              borderRadius: '15px',
+              mb: '1.5em',
+            }}
+          >
+            {data.card.content && (
+              <Box sx={{ mb: '1em' }}>
+                {data.card.content.map((paragraph, index) => (
+                  <Typography
+                    key={index}
+                    component="p"
+                    variant="body3"
+                    children={paragraph}
+                  />
+                ))}
+              </Box>
+            )}
 
+            {data.card.discountedPrice && (
+              <Typography
+                component="p"
+                variant="body3"
+                children={`Price: £ ${data.card.discountedPrice}`}
+              />
+            )}
+            {data.card.price && (
+              <Typography
+                component="p"
+                variant="body3"
+                children={`Price: £ ${data.card.price}`}
+                sx={{ textDecoration: 'line-through' }}
+              />
+            )}
+            {data.card.priceList &&
+              data.card.priceList.map((paragraph, index) => (
+                <Box
+                  key={index}
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                  }}
+                >
+                  <Typography
+                    component="p"
+                    variant="body3"
+                    sx={{ color: 'white' }}
+                    children={paragraph.content}
+                  />
+                  <Typography
+                    key={index}
+                    component="p"
+                    variant="body3"
+                    aling="right"
+                    children={paragraph.price}
+                  />
+                </Box>
+              ))}
+          </Box>
+        )}
         <StyledButton content={data.button} />
       </Box>
     </Grid>
@@ -177,7 +238,7 @@ const GridImage = (props) => {
       xs={12}
       sm={12}
       md={data.imageFileName ? 5 : 6}
-      sx={{ maxHeight: '90%' }}
+      // sx={{ marginRight: '-25vw' }}
     >
       <Box
         component="img"
@@ -188,8 +249,8 @@ const GridImage = (props) => {
         sizes="(min-width: 0px) and (max-width: 480px) 85vw, (min-width: 481px) and (max-width: 980px) 95vw, (min-width: 981px) 90vw, 100vw"
         className={classes.gridImg}
         sx={{
-          marginLeft: data.contentLeft ? '0' : '-13vw',
-          marginTop: data.contentLeft ? 0 : '-10vh',
+          marginLeft: data.contentLeft ? '0' : '-33vw',
+          marginTop: data.contentLeft ? '0' : '-13vh',
         }}
       />
     </Grid>

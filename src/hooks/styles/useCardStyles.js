@@ -225,13 +225,19 @@ export const useStyles = makeStyles((theme) => {
 
     articlesContainer: {
       backgroundImage: theme.palette.background.primary,
-      marginBottom: '12em',
+      marginBottom: '23vh',
       width: '100%',
       position: 'relative',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       overflowX: 'visible',
+      [theme.breakpoints.up('md')]: {
+        marginBottom: '27vh',
+      },
+      [theme.breakpoints.up('lg')]: {
+        marginBottom: '30vh',
+      },
     },
     aboutUsSection: {
       backgroundImage: `url(${backgroundImage})`,
@@ -261,12 +267,17 @@ export const useStyles = makeStyles((theme) => {
       objectFit: 'cover',
       boxSizing: 'border-box',
       boxShadow: '0px 80px 100px -40px rgb(0 0 0 / 30%)',
-      maxWidth: '100%',
+
+      width: '80%',
       [theme.breakpoints.up('md')]: {
-        width: '120%',
+        width: '110%',
       },
       [theme.breakpoints.up('lg')]: {
-        width: '100%',
+        width: '120%',
+      },
+      [theme.breakpoints.up('xl')]: {
+        width: '95%',
+        marginRight: '-15vw',
       },
     },
 
