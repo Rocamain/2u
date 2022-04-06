@@ -17,6 +17,7 @@ theme = createTheme(theme, {
     },
     text: {
       primary: 'rgba(51,51,51,0.8)',
+      secondary: '#75C9CC',
     },
 
     background: {
@@ -53,17 +54,17 @@ theme = createTheme(theme, {
     },
     h4: {
       fontWeight: '600',
-      fontSize: '1.4rem',
-      lineHeight: 1.5,
+      fontSize: '2rem',
+      lineHeight: 1.1,
       fontFamily: ['Abel', 'Open Sans'].join(','),
-      letterSpacing: '0.08em',
+      letterSpacing: '-0.04rem',
     },
     h5: {
-      fontWeight: '600',
-      fontSize: '0.9rem',
-      lineHeight: 1.4,
+      fontWeight: '400',
+      fontSize: '1.5rem',
+      lineHeight: 1.1,
       fontFamily: ['Abel', 'Open Sans'].join(','),
-      letterSpacing: '0.07em',
+      letterSpacing: '-0.01rem',
     },
     p: {
       fontWeight: '400',
@@ -108,12 +109,13 @@ theme = createTheme(theme, {
         textAlign: 'justify',
       },
       [theme.breakpoints.up('md')]: {
-        fontSize: '7rem',
-        lineHeight: 1.2,
+        fontSize: '6rem',
+        lineHeight: 1.4,
         // letterSpacing: '-0.047em',
       },
       [theme.breakpoints.up('lg')]: {
-        fontSize: '8rem',
+        fontSize: '7rem',
+        lineHeight: 1.3,
         // lineHeight: '7rem',
         // letterSpacing: '-0.057em',
       },
@@ -130,25 +132,23 @@ theme = createTheme(theme, {
       fontWeight: 600,
       textAlign: 'center',
       fontSize: '1.9rem',
-      // lineHeight: '1rem',
+
       textShadow: '-17em 7em 0.3em #ffffff',
 
       [theme.breakpoints.up('sm')]: {
         fontSize: '2.1rem',
-        lineHeight: '1.3rem',
+        lineHeight: 0.9,
       },
       [theme.breakpoints.up('md')]: {
-        fontSize: '2.7rem',
-        // lineHeight: '1.9rem',
+        fontSize: '2.4rem',
+
         maxWidth: '60%',
       },
       [theme.breakpoints.up('lg')]: {
         fontSize: '2.7rem',
-        // lineHeight: '1.8rem',
       },
       [theme.breakpoints.up('lg')]: {
         fontSize: '2.8rem',
-        // lineHeight: '2.1rem',
       },
     },
 
@@ -184,12 +184,12 @@ theme = createTheme(theme, {
       },
       [theme.breakpoints.between('sm', 'md')]: {
         fontWeight: '500',
-        fontSize: '2.6rem',
+        fontSize: '2rem',
         lineHeight: '2.3rem',
         letterSpacing: '-0.02em',
       },
       [theme.breakpoints.between('md', 'lg')]: {
-        fontSize: '2.4rem',
+        fontSize: '2.3rem',
         lineHeight: '2.3rem',
         letterSpacing: '-0.04em',
       },

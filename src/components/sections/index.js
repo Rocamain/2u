@@ -5,4 +5,6 @@ export { default as ModelD } from './ModelD';
 export { default as Carousel } from './Carousel';
 export { default as CardsGrid } from './CardsGrid';
 export { default as ImageGrid } from './ImageGrid';
+export { default as LinksGrid } from './LinksGrid';
+export { default as CardsBlock } from './CardsBlock';
 export { default as Hero } from './Hero';

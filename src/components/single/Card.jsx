@@ -90,6 +90,7 @@ export default function StyledCard(props) {
           {iconFileName && <StyledIcon iconFileName={iconFileName} />}
           {cardInfo.title && (
             <CardHeader
+              sx={{ mt: carousel ? { md: '2em' } : '' }}
               title={
                 <Typography
                   align={carousel ? 'left' : 'center'}

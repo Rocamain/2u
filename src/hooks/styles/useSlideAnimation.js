@@ -9,16 +9,16 @@ const useSlideAnimation = makeStyles((theme) => ({
       padding: '4em 1.8em',
     },
     [theme.breakpoints.between('md', 'lg')]: {
-      width: '66%%',
+      width: '70vw',
       padding: '5em 3em',
     },
     [theme.breakpoints.between('lg', 'xl')]: {
-      width: '66%%',
-      padding: '6.5em 5em',
+      width: '70vw',
+      padding: '5em 5em',
     },
     [theme.breakpoints.up('xl')]: {
-      width: '64%%',
-      padding: '7.5em 5em',
+      width: '70vw',
+      padding: '5.5em 5em',
     },
   },
   carouselCardAnimation: {

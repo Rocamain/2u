@@ -15,10 +15,11 @@ const HeroContainer = styled(Box)(({ theme, fileName, sizeBig }) => {
     position: 'relative',
 
     [theme.breakpoints.up('md')]: {
-      height: sizeBig ? '85vh' : '45vw',
+      height: sizeBig ? '85vh' : 'inherit',
     },
     [theme.breakpoints.up('lg')]: {
-      height: sizeBig ? '90vh' : '30vw',
+      height: sizeBig ? '90vh' : 'inherit',
+      marginBottom: '1em',
     },
   };
 });
@@ -34,13 +35,13 @@ function Hero(props) {
   }
 
   return (
-    <Box sx={{ mb: '10vh' }}>
+    <Box sx={{ mb: { sx: '2vh', md: '10vh' } }}>
       <HeroContainer fileName={data.imageFileName} sizeBig={data.sizeBig}>
         <Box
           className={classes.heroHeader}
           sx={{
             paddingTop: {
-              xs: data.sizeBig ? '8em' : '7em',
+              xs: data.sizeBig ? '9em' : '7em',
             },
           }}
         >

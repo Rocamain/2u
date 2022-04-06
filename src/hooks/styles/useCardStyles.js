@@ -28,16 +28,16 @@ export const useStyles = makeStyles((theme) => {
       marginTop: '1em',
       top: 0,
       [theme.breakpoints.between('md', 'lg')]: {
-        width: '52.4%',
-        top: '1.9em',
+        width: '55.4%',
+        top: '3em',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-        width: '50%',
-        top: '2.8em',
+        width: '53%',
+        top: '3.3em',
       },
       [theme.breakpoints.up('xl')]: {
-        width: '50.5%',
-        top: '2.8em',
+        width: '53%',
+        top: '4em',
       },
     },
 
@@ -177,13 +177,15 @@ export const useStyles = makeStyles((theme) => {
 
       [theme.breakpoints.up('md')]: {
         justifyContent: 'flex-end',
-        paddingTop: '14em',
+        paddingTop: '16em',
       },
       [theme.breakpoints.up('lg')]: {
         width: '70%',
+        paddingTop: '16em',
       },
       [theme.breakpoints.up('xl')]: {
         width: '60%',
+        paddingTop: '19em',
       },
     },
     heroBackgroundCurves: {

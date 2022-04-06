@@ -2,20 +2,20 @@ import { makeStyles } from '@mui/styles';
 
 const usePhotoAnimation = makeStyles((theme) => ({
   animatedItem: {
-    maxWidth: '20vw',
-    height: 'auto',
-    position: 'absolute',
+    // maxWidth: '23vw',
+    // height: 'auto',
+
     boxShadow: '0px 12px 18px -6px rgb(0 0 0 / 30%)',
-    left: '20%',
-    top: '25%',
+
     zIndex: 200,
     animation: `$myEffect 1200ms ${theme.transitions.easing.easeInOut}`,
 
     [theme.breakpoints.between('lg', 'xl')]: {
-      maxWidth: '20vw',
+      // maxWidth: '23vw',
     },
     [theme.breakpoints.up('xl')]: {
-      maxWidth: '20vw',
+      // width: '19vw',
+      // maxWidth: '23vw',
     },
   },
   animatedItemExiting: {

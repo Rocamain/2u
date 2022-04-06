@@ -9,7 +9,7 @@ function StyledDivider(props) {
       backgroundColor: '#fcb900',
       height: '0.17em',
       width: width,
-      marginBottom: '1em',
+      marginBottom: center ? '05em' : '1em',
       marginRight: 'auto',
       margin: center ? '0 auto' : '',
       [theme.breakpoints.down('md')]: {
