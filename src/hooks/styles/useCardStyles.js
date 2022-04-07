@@ -20,6 +20,10 @@ export const useStyles = makeStyles((theme) => {
       [theme.breakpoints.up('md')]: {
         paddingTop: '2em',
       },
+      [theme.breakpoints.up('lg')]: {
+        paddingTop: '3em',
+        paddingBottom: '15em',
+      },
     },
     carouselHeader: {
       marginLeft: 'auto',
@@ -44,10 +48,9 @@ export const useStyles = makeStyles((theme) => {
     slideContainer: {
       width: '100%',
       margin: '0 auto',
+      // overflowX: 'visible',
       backgroundImage: theme.palette.background.primary,
-      '&:hover:': {
-        backgroundImage: 'pink',
-      },
+      '&:hover:': {},
     },
     slideShowWrapper: {
       width: '100%',
@@ -64,6 +67,7 @@ export const useStyles = makeStyles((theme) => {
       display: 'flex',
       justifyContent: 'center',
       width: '60vw',
+      marginBottom: '-2em',
 
       [theme.breakpoints.down('md')]: {
         justifyContent: 'flex-end',
@@ -86,9 +90,10 @@ export const useStyles = makeStyles((theme) => {
     slideButtonL: {
       minWidth: '2.7em',
       width: '6.5vw',
+
       [theme.breakpoints.up('md')]: {
-        minWidth: '35vw',
         justifyContent: 'flex-start',
+        flexGrow: '1',
       },
       '&:hover ': {
         background: 'transparent',

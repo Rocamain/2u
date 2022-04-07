@@ -13,14 +13,14 @@ export default function useBg(data, overlapContainer, carousel) {
   };
 
   useEffect(() => {
-    if (data) {
+    if (overlapContainer) {
       setWrapperSize();
 
       window.addEventListener('resize', setWrapperSize);
     }
 
     return () => window.removeEventListener('resize', setWrapperSize);
-  }, [data]);
+  }, [overlapContainer, data]);
 
   if (height) {
     return height;

@@ -6,8 +6,6 @@ import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material/';
 import Card from '../single/Card';
 import Stepper from '../single/Stepper';
-import useBg from '../../hooks/useBg';
-import usePictureResize from '../../hooks/usePictureResize';
 import { useTheme } from '@mui/material/styles';
 
 export default function Carousel(props) {
@@ -25,7 +23,7 @@ export default function Carousel(props) {
   const [exit, setExit] = useState(false);
   const [isHover, setIsHover] = useState(false);
 
-  // Styles
+  // Styles and animations
   const theme = useTheme();
   let isBigScreen = useMediaQuery(theme.breakpoints.up('md'));
 
@@ -47,17 +45,9 @@ export default function Carousel(props) {
   })}`;
 
   // Ref
-  const overlapContainer = useRef(null);
-  const card = useRef(null);
+
   const chevronRefR = useRef(null);
   const chevronRefL = useRef(null);
-
-  // Custom Hooks
-
-  let bgHeight = useBg(cards, overlapContainer, true);
-  let photoResize = usePictureResize(card);
-
-  console.log(photoResize);
 
   // Slider Handler
   const handleSlider = (event) => {
@@ -90,11 +80,10 @@ export default function Carousel(props) {
 
       <Box
         className={classes.slideContainer}
-        height={bgHeight}
         onMouseOver={handleChevron}
         onMouseLeave={handleChevron}
       >
-        <Box className={classes.slideShowWrapper} ref={overlapContainer}>
+        <Box className={classes.slideShowWrapper}>
           <Button
             value="back"
             className={classes.slideButtonL}
@@ -113,22 +102,9 @@ export default function Carousel(props) {
               src={require(`../../assets/static/icons/${cards[slide].iconFileName}`)}
               alt="woman face"
               className={animatedPhoto}
-              sx={{
-                top: {
-                  md: photoResize.axis.top - 50 + 'px',
-                  xl: photoResize.axis.top - 150 + 'px',
-                },
-
-                left: { md: '13%', xl: '16%' },
-                position: 'absolute',
-
-                width: { md: '300px', xl: '420px' },
-
-                maxWidth: { md: '23vw', xl: '20vw' },
-              }}
             />
           )}
-          <Box ref={card} className={classes.carouselCardContainer}>
+          <Box className={classes.carouselCardContainer}>
             <Card
               component={component}
               animation={true}
