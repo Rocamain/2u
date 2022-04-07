@@ -10,11 +10,17 @@ function Footer() {
       <Box sx={{ backgroundColor: '#333333', color: 'primary.contrastText' }}>
         <Grid
           container
-          // spacing={4}
-          sx={{ justifyContent: 'center', width: '90%', mx: 'auto' }}
+          spacing={4}
+          sx={{
+            justifyContent: 'center',
+            width: '100%',
+            mx: 'auto',
+
+            pb: '5vh',
+          }}
         >
           {data.map((shop, index) => (
-            <Grid key={index} item xs={10} md={4}>
+            <Grid key={index} item xs={10} md={3}>
               <Box sx={{ marginBottom: '2em' }}>
                 <Typography
                   variant="h4"

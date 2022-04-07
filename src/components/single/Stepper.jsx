@@ -10,7 +10,7 @@ export default function DotsMobileStepper({ steps, activeStep }) {
       sx={{
         p: '0',
         width: { xs: '100%', md: '76%' },
-        mt: '2em',
+        mt: '3.5em',
         ml: 'auto',
         zIndex: 100,
         position: 'relative',

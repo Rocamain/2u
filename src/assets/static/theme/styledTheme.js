@@ -104,25 +104,20 @@ theme = createTheme(theme, {
       lineHeight: 1,
 
       [theme.breakpoints.up('sm')]: {
-        fontSize: '6rem',
+        fontSize: '3rem',
         letterSpacing: '-0.037em',
         textAlign: 'justify',
       },
       [theme.breakpoints.up('md')]: {
-        fontSize: '6rem',
+        fontSize: '5rem',
         lineHeight: 1.4,
-        // letterSpacing: '-0.047em',
       },
       [theme.breakpoints.up('lg')]: {
-        fontSize: '7rem',
+        fontSize: '6rem',
         lineHeight: 1.3,
-        // lineHeight: '7rem',
-        // letterSpacing: '-0.057em',
       },
       [theme.breakpoints.up('xl')]: {
-        fontSize: '9rem',
-        // lineHeight: '8rem',
-        // letterSpacing: '-0.07em',
+        fontSize: '8rem',
       },
     },
 

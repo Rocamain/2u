@@ -14,7 +14,7 @@ const useSlideAnimation = makeStyles((theme) => ({
     },
     [theme.breakpoints.between('lg', 'xl')]: {
       width: '70vw',
-      padding: '5em 5em',
+      padding: '5em 3em',
     },
     [theme.breakpoints.up('xl')]: {
       width: '70vw',

@@ -7,7 +7,6 @@ import curves from '../../assets/static/backgrounds/curves.svg';
 export const useStyles = makeStyles((theme) => {
   return {
     carousel: {
-      paddingTop: '9em',
       paddingBottom: '10em',
       display: 'flex',
       flexDirection: 'column',
@@ -17,12 +16,9 @@ export const useStyles = makeStyles((theme) => {
       backgroundAttachment: 'fixed',
       backgroundPosition: 'center',
       backgroundSize: 'cover',
-      [theme.breakpoints.up('md')]: {
-        paddingTop: '2em',
-      },
+      [theme.breakpoints.up('md')]: {},
       [theme.breakpoints.up('lg')]: {
-        paddingTop: '3em',
-        paddingBottom: '15em',
+        paddingBottom: '30vh',
       },
     },
     carouselHeader: {
@@ -80,7 +76,7 @@ export const useStyles = makeStyles((theme) => {
       width: '6.5vw',
       overflow: 'hidden',
       [theme.breakpoints.up('md')]: {
-        minWidth: '10vw',
+        minWidth: '6vw',
         justifyContent: 'flex-end',
       },
       '&:hover ': {
@@ -230,19 +226,12 @@ export const useStyles = makeStyles((theme) => {
 
     articlesContainer: {
       backgroundImage: theme.palette.background.primary,
-      marginBottom: '23vh',
       width: '100%',
       position: 'relative',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       overflowX: 'visible',
-      [theme.breakpoints.up('md')]: {
-        marginBottom: '27vh',
-      },
-      [theme.breakpoints.up('lg')]: {
-        marginBottom: '30vh',
-      },
     },
     aboutUsSection: {
       backgroundImage: `url(${backgroundImage})`,
@@ -251,6 +240,13 @@ export const useStyles = makeStyles((theme) => {
       backgroundRepeat: 'no-repeat',
       overflow: 'hidden',
       marginBottom: '10em',
+    },
+    leavesBackground: {
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundPosition: '50%',
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed',
     },
 
     aboutGridImg: {

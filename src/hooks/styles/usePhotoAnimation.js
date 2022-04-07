@@ -7,21 +7,22 @@ const usePhotoAnimation = makeStyles((theme) => ({
     position: 'absolute',
     animation: `$myEffect 1200ms ${theme.transitions.easing.easeInOut}`,
     [theme.breakpoints.between('md', 'lg')]: {
-      top: '30%',
+      top: '32%',
       left: '10%',
       width: '300px',
       maxWidth: '27vw',
     },
     [theme.breakpoints.between('lg', 'xl')]: {
+      top: '32%',
       left: '13%',
       width: '400px',
       maxWidth: '23vw',
     },
     [theme.breakpoints.up('xl')]: {
-      top: '28%',
-      left: '13%',
-      width: '440px',
-      maxWidth: '18vw',
+      top: '22%',
+      left: '15%',
+      width: '450px',
+      maxWidth: '21vw',
     },
   },
   animatedItemExiting: {

@@ -35,7 +35,7 @@ function Hero(props) {
   }
 
   return (
-    <Box sx={{ mb: { xs: '10vh', md: '14vh' } }}>
+    <Box sx={{ mb: { xs: '15vh', md: '26vh' } }}>
       <HeroContainer fileName={data.imageFileName} sizeBig={data.sizeBig}>
         <Box
           className={classes.heroHeader}

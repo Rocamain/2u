@@ -5,6 +5,7 @@ import { Box, Typography, Grid } from '@mui/material';
 import StyledButton from '../single/Button';
 import StyledCard from '../single/Card';
 import StyledDivider from '../single/Divider';
+import clsx from 'clsx';
 
 export default function ModelA(props) {
   const { path, component, ...data } = props;
@@ -16,11 +17,21 @@ export default function ModelA(props) {
   let bgHeight = useBg(data, overlapContainer);
   const classes = useCardStyles();
 
+  let gridStyles = `${clsx(classes.articlesWrapper, {
+    [classes.leavesBackground]: data.background,
+  })}`;
+
   return (
     <Box
       height={bgHeight}
       className={classes.articlesContainer}
       component={'section'}
+      sx={{
+        marginBottom: {
+          xs: data.contentLeft && data.imageFileName ? '40vh' : '30vh',
+          md: data.imageFileName ? '35vh' : '15vh',
+        },
+      }}
     >
       <Grid
         container
@@ -28,7 +39,7 @@ export default function ModelA(props) {
         columnSpacing={{ md: 3 }}
         direction={'row'}
         spacing={24}
-        className={classes.articlesWrapper}
+        className={gridStyles}
         ref={overlapContainer}
         component="div"
         sx={{
@@ -62,8 +73,6 @@ export default function ModelA(props) {
 
 const GridContent = (props) => {
   const { classes, data } = props;
-
-  // console.log(data.card.priceList);
 
   return (
     <Grid item component="div" xs={12} sm={12} md={data.imageFileName ? 7 : 6}>
@@ -232,14 +241,7 @@ const GridImage = (props) => {
 
   const imageURL = require(`../../assets/static/images/${data.imageFileName}`);
   return (
-    <Grid
-      item
-      component="div"
-      xs={12}
-      sm={12}
-      md={data.imageFileName ? 5 : 6}
-      // sx={{ marginRight: '-25vw' }}
-    >
+    <Grid item component="div" xs={12} sm={12} md={data.imageFileName ? 5 : 6}>
       <Box
         component="img"
         src={imageURL}
@@ -249,7 +251,7 @@ const GridImage = (props) => {
         sizes="(min-width: 0px) and (max-width: 480px) 85vw, (min-width: 481px) and (max-width: 980px) 95vw, (min-width: 981px) 90vw, 100vw"
         className={classes.gridImg}
         sx={{
-          marginLeft: data.contentLeft ? '0' : '-33vw',
+          marginLeft: data.contentLeft ? '0' : '-23vw',
           marginTop: data.contentLeft ? '0' : '-13vh',
         }}
       />
